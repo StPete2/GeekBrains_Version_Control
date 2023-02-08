@@ -1,5 +1,17 @@
+# New file begins
+
 Hello!
+
 '''Начинаем знакомство с контролем версий'''
+
 *Курсив*
+
 **Полужирный**
-Test new
+
+## Rows
+
+* Element 1
+* Element 2
+
+1. New element 1
+2. New element 2
