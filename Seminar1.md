@@ -7,3 +7,8 @@
 **git add file_name** - track a file name
 
 **git add .** - track all files
+
+**git commit -m "message"** - set changes in our project
+
+**git commit -am "message"** - let us to avoid using git add again
+
