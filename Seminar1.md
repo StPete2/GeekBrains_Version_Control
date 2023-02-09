@@ -12,3 +12,5 @@
 
 **git commit -am "message"** - let us to avoid using git add again
 
+**git config user.name** - to see the user name
+
