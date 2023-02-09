@@ -14,3 +14,7 @@
 
 **git config user.name** - to see the user name
 
+**git checkout hash_number** - switch our commits
+
+**git diff** - show the differences between actual state and last commit
+
