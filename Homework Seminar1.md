@@ -21,7 +21,7 @@ But this text is both ***bold and italic***. We have used *** for it.
 
 **Columns and rows**
 
-: : :row: : :
+: : : row : : :
 
     : : :column span="2": : :
     
@@ -60,6 +60,19 @@ Headings are simple. We use # for them. Like:
 ## Heading 2 second
 
 I can navigate my document using headings! Cool!
+
+![picture](unnamed-file-64.jpg)
+
+**Fantastic!!! This is a real miracle!**
+
+## Wonderful!
+
+Once again I will write the syntax of this command: ![picture] and without a space (file.name)
+
+:::image type="content" source="<folderPath>" alt-text="<alt text>":::
+
+I guess, it needs some refreshing in my memory later.
+
 
 
 
