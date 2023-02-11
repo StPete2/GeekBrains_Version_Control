@@ -81,7 +81,45 @@ Above is a long image description
 
 *Above is an icon description*
 
-[!INCLUDE [<title>](<Fileinclude1.md>)]
+<!---[!INCLUDE [<title>](<FileInclude1.md>)]--->
+
+Something went wrong perhaps... with Include as it didn't work...
+
+## Indentation
+1. This is a number list example. The sentence is indented three spaces.
+
+- this is a bulleted list example. It is indented two spaces.
+
+>[!TIP] This tip is indented two spaces.
+
+>This is a quote block.
+
+1. This is 
+1. a parent numbered list.
+    1. and this is 
+    1. a nested numbered list
+1. **We don't need to write numbers, we can write only 1s.** The program will put the correct number automatically.
+
+- This is
+- a parent bulleted list
+    - and this is 
+    - a nested bulleted list
+- all clear? :-)
+
+Yes, Sir! Thank you, Sir!
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
