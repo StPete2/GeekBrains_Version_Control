@@ -2,8 +2,8 @@
 
 ## Text formatting
 
-Bold: use (**). For example: **bold**
-Italic: use (*). For example: *italic*
+To make text bold, use (**). For example: **bold**
+To make text italic: use (*). For example: *italic*
 
 Alternatevely, we can use (_) for italic, like: _italic_. 
 
