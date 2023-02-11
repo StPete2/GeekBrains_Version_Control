@@ -14,6 +14,7 @@ Text _italic and italic, and **bold and italic**_.
 >This is great! Hurrah!
 
 ## Lists
+In order to make a list, please use (*).
 
 ## Pictures
 To insert a picture, please, use the following syntax:
