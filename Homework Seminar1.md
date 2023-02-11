@@ -73,6 +73,17 @@ Once again I will write the syntax of this command: ![picture] and without a spa
 
 I guess, it needs some refreshing in my memory later.
 
+:::image type="complex" source="<folderPath>" alt-text="<alt text>"::: <long description here> :::image-end:::
+
+Above is a long image description
+
+:::image type="icon" source="<folderPath>":::
+
+*Above is an icon description*
+
+[!INCLUDE [<title>](<Fileinclude1.md>)]
+
+
 
 
 
