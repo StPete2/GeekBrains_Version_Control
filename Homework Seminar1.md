@@ -108,6 +108,29 @@ Something went wrong perhaps... with Include as it didn't work...
 
 Yes, Sir! Thank you, Sir!
 
+1. is numbered list continued?
+1. No, this is a new one.
+    1. Thanks!
+
+> [!div class="checklist"]
+> * List item 1
+> * List item 2
+> * List item 3
+
+doesn't work.
+
+> [!div class="nextstepaction"]
+
+> [Click here to access FileInclude1.md](FileInclude1.md)
+
+It works! Hurrah!
+
+Hello! This is <sub>subscript</sub>. Fantastic!!!
+
+Hello! This is <sup>superscript</sup>. Great!!!
+
+
+
 
 
 
