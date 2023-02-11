@@ -16,10 +16,6 @@ Text _italic and italic, and **bold and italic**_.
 ## Lists
 
 ## Pictures
-To insert a picture, please use the following syntax:
-![Picture, flowers](unnamed-file-64.jpg)
-
-Miracle! Once again... :-)
 
 ## Links
 
