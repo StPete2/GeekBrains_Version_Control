@@ -25,6 +25,7 @@ And there are bulletted lists, for example:
 * Element 2
 * Element 3
 + Element 4
++ Element 5
 
 ## Pictures
 To insert a picture, please, use the following syntax:
