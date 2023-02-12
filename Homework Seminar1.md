@@ -1,3 +1,5 @@
+## Notes
+
 >[!NOTE]
 
 >Information the user should notice even if skimming
@@ -7,11 +9,15 @@ Doesn't work. Although, there are some changes in layout... Will see the differe
 >[!IMPORTANT]
 >Essential information required for user success.
 
+## <>
+
 \<script name> - that's cool. I haven't heard about it.
 
 Why the colors are different?
 
 > ">" sumbol is also used for citations...
+
+## Formatting
 
 This text is **bold** and we use ** for it on both sides of the text.
 
@@ -19,7 +25,7 @@ This text is *italic* and we use * for it on both sides of the text.
 
 But this text is both ***bold and italic***. We have used *** for it.
 
-**Columns and rows**
+## **Columns and rows**
 
 : : : row : : :
 
@@ -38,6 +44,8 @@ But this text is both ***bold and italic***. We have used *** for it.
 
 *Seems that columns and rows don't work, or I don't understand how they work...*
 
+## Comments
+
 *Comments* are used with **"<!---Text--->"**
 <!---Here is my comment--->
 <!---And I see absolutely nothing on the preview--->
@@ -46,6 +54,8 @@ But this text is both ***bold and italic***. We have used *** for it.
 Please note that your comments can be read by everybody!
 
 This is how we use it once again "<!---Comment --->" And... here is a new comment!
+
+## Headings
 
 Headings are simple. We use # for them. Like:
 # Heading1
@@ -60,6 +70,8 @@ Headings are simple. We use # for them. Like:
 ## Heading 2 second
 
 I can navigate my document using headings! Cool!
+
+## Images
 
 ![picture](unnamed-file-64.jpg)
 
@@ -86,6 +98,7 @@ Above is a long image description
 Something went wrong perhaps... with Include as it didn't work...
 
 ## Indentation
+
 1. This is a number list example. The sentence is indented three spaces.
 
 - this is a bulleted list example. It is indented two spaces.
@@ -125,10 +138,54 @@ doesn't work.
 
 It works! Hurrah!
 
+## Sub and Supscript
+
 Hello! This is <sub>subscript</sub>. Fantastic!!!
 
 Hello! This is <sup>superscript</sup>. Great!!!
 
+## Tables
+
+|This is    |a simple  |table header|
+|-----------|----------|------------|
+|table      | data     | here and there|
+|it doesn't | have to line up| nicely!|
+
+>Really so! Thanks! Now I see!
+
+|Fun        |with       |Tables |
+|:----------|----------:|:-------:|
+|left-aligned column|right-aligned column|centered column|
+|$100       |$100       |$100|
+|$10        |$10        |$10|
+|$1         |$1         |$1|
+
+Another table example:
+
+|           |Header 1   |Header 2|
+|-----------|:-----------:|:--------:|
+|__First column A__|Cell A1|Cell A2|
+|__First column B__|Cell B1|Cell B2|
+
+
+>[!div class="op_single_selector"]
+> - [Universal Windows](Hello!.md)
+> - [Windows Phone](unnamed-file-64.jpg)
+
+It looks like a link... Interesting!
+
+> [!div class="op_multipl_selector" title1="Platform" title2="Backend"]
+> - [(iOS, Net)](Hello!.md)
+> - [(Windows Universal C#)](unnamed-file-64.jpg)
+
+
+Just the same.
+
+## Conclusion
+
+The homework job is done.
+
+Thank you, Alexander!
 
 
 
