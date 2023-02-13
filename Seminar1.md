@@ -26,4 +26,7 @@
 
 **git merge branch_name** - to merge the branch with a branch_name to the current branch
 
+we write some text here...
 **git branch -d branch_name** - to delete a branch with a branch_name
+
+We update some new lines of code here... A new update
