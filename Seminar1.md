@@ -18,7 +18,12 @@
 
 **git diff** - show the differences between actual state and last commit
 
-**git branch** - 
+**git branch** - to show all available branches
 
-**git branch name** - 
+**git branch branch_name** - to create a new branch with branch_name
 
+**git checkout branch_name** - to switch to a branch to with a branch_name
+
+**git merge branch_name** - to merge the branch with a branch_name to the current branch
+
+**git branch -d branch_name** - to delete a branch with a branch_name
