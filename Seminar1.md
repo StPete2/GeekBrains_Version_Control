@@ -18,3 +18,7 @@
 
 **git diff** - show the differences between actual state and last commit
 
+**git branch** - 
+
+**git branch name** - 
+
