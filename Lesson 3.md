@@ -14,3 +14,7 @@ git push -u origin main
 > Can we rename the main branch back to master?
 
 Some additional changes to test the pull command
+
+git submodule add <url> group_903
+
+git rm --cached group_903
