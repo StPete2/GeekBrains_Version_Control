@@ -15,9 +15,9 @@ git push -u origin main
 
 > Can we rename the main branch back to master?
 
-Some additional changes to test the pull command
-
 Added a new comment in the Lesson 3.md file.
+
+> Added a new comment and deleted some info from the above comment.
 
 > Can we rename the main branch back to master?
 
