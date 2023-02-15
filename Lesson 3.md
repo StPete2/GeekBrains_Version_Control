@@ -1,5 +1,7 @@
 ## Instruction to push local repository to GitHub
 
+<!--- это инструкция для создания репозитория на GitHub--->
+
 1. Step 1
 git remote add origin https://github.com/StPete2/GeekBrains_Version_Control.git
 
