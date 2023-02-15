@@ -11,5 +11,6 @@ git push -u origin main
 
 > You can change the name of the master branch by writing either "main" or "master" in steps 2 and 3. This is important
 
->Can we rename the main branch back to master?
+> Can we rename the main branch back to master?
 
+Some additional changes to test the pull command
