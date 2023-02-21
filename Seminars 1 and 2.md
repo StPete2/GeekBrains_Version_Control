@@ -32,3 +32,5 @@ we write some text here...
 We update some new lines of code here... A new update
 
 git log --pretty=oneline --all --graph - показывает все коммиты сразу! Это круто!
+
+git push --set-upstream origin <branch_name> - создание push request для pull request в дальнейшем.
