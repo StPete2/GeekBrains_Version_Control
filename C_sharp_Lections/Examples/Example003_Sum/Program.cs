@@ -1,0 +1,10 @@
+﻿//int NumberA = 3;
+//int NumberB = 5;
+//Console.WriteLine(NumberA + NumberB);
+//int Result = NumberA + NumberB;
+//Console.WriteLine(Result);
+int NumberF = new Random().Next(1,10);
+Console.WriteLine(NumberF);
+int NumberG = new Random().Next(1,10);
+Console.WriteLine(NumberG);
+Console.WriteLine(NumberF+NumberG);
