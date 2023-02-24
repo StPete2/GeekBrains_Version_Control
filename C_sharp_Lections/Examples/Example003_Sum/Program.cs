@@ -8,3 +8,5 @@ Console.WriteLine(NumberF);
 int NumberG = new Random().Next(1,10);
 Console.WriteLine(NumberG);
 Console.WriteLine(NumberF+NumberG);
+int NumberI = new Random().Next(2,20);
+Console.WriteLine(NumberI);
