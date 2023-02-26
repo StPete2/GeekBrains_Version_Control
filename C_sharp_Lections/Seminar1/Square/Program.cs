@@ -10,4 +10,5 @@ else
 {    
     Console.WriteLine("Первое число не является квадратом второго");
 }
-
+Console.WriteLine("");
+// int ThirdNumber = Convert.ToInt32(Console.ReadLine());

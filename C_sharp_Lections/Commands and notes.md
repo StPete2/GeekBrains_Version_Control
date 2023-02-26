@@ -13,3 +13,13 @@ __ReadLine();__ - to input from the line
 __bool__ - boolean type
 
 __string__ - string time
+
+for(start;finish;step)
+{
+
+}
+
+while(condition) <!-- по сути, здесь, фишин показан --->
+{
+
+}
