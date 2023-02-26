@@ -4,14 +4,31 @@ Console.WriteLine("Введите второе целое число");
 int SecondNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите третье целое число");
 int ThirdNumber = Convert.ToInt32(Console.ReadLine());
-int max = 0;
-if (SecondNumber > max)
+
+int Max = FirstNumber;
+
+if (SecondNumber > Max)
 {
-    SecondNumber = max;
+    Max = SecondNumber;
 }
-else if (ThirdNumber > max)
+if (ThirdNumber > Max)
 {
-    ThirdNumber = max;
+    Max = ThirdNumber;
 }
+
 Console.WriteLine();
-Console.WriteLine("Максимальное число из трех: " + max);
+//Console.WriteLine("Максимальное число из трех: " + Max);
+string A = "первое число";
+if (Max == FirstNumber)
+{
+    A = "первое число";
+}
+if (Max == SecondNumber)
+{
+    A = "второе число";
+}
+if (Max == ThirdNumber)
+{
+    A = "третье число";
+}
+Console.WriteLine("Максимальное число из трех: " + Max + ". Это " + A + ", которое Вы ввели.");
