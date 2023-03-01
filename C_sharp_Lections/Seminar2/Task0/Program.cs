@@ -1,0 +1,14 @@
+﻿// Random rand = new Random();
+// int Number = rand.Next(10,100);
+Random rand = new Random();
+int Number = rand.Next(100,1000);
+Console.WriteLine("Случайное трехзначное число: " + Number);
+int FirstDigit = Number / 100;
+Console.WriteLine("Первая цифра = " + FirstDigit);
+int firstinterim = Number / 10;
+int seconddigit = firstinterim % 10;
+Console.WriteLine("Вторая цифра = " + seconddigit);
+int ThirdDigit = Number % 10;
+Console.WriteLine("Третья цифра = " + ThirdDigit);
+int NewNumber = FirstDigit*10 + ThirdDigit;
+Console.WriteLine("Новое число из первой и третьей цифры = " + NewNumber);
