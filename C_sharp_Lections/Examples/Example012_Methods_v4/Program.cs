@@ -7,9 +7,9 @@ string Method4(int count, string text)
 
     while (i < count)
     {
-        result = result + text;
+        result = result + text + " ";
         i++;
-        Console.WriteLine(result + " ");//введено мной для лучшего понимания метода!
+        Console.WriteLine(result + " " + "7");//введено мной для лучшего понимания метода!
     }
     return result;
 }
