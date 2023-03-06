@@ -8,8 +8,8 @@ int min = array[index];
 int sortedIndex = 0;
 for (sortedIndex = 0; sortedIndex < size; sortedIndex++)
 {
-    index = 1;
-    for (index = index + sortedIndex; index < size; index++)
+    minIndex = sortedIndex;
+    for (index = 0; index < size; index++)
     {
         //Console.Write(index);
         if (array[index] < min)
@@ -18,11 +18,15 @@ for (sortedIndex = 0; sortedIndex < size; sortedIndex++)
             minIndex = index;
         }
     }
+    Console.Write(sortedIndex);
     //Console.WriteLine($"{array[index-1]}, {minIndex}, {min}");
-    temp = array[index];  
-    array[index] = array[minIndex];
+    
+    temp = array[sortedIndex];  
+    array[sortedIndex] = array[minIndex];
     array[minIndex] = temp;
     //Console.WriteLine($"{array[index]}, {index}");
     //Console.WriteLine(sortedIndex);
 }
-Console.WriteLine(array[7]);
+Console.WriteLine();
+for (index = 0; index < size; index++)
+Console.Write(array[index]);
