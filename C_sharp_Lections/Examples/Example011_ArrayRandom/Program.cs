@@ -4,7 +4,7 @@
     int index = 0;
     while (index < length)
     {
-        collection[index]= new Random().Next(1,10);
+        collection[index]= new Random().Next(1,20);
         index = index + 1;
     }
 }
@@ -18,6 +18,13 @@ void PrintArray(int[] col)
         position = position + 1;
     }
 }
+int[] array = new int [10]; /*так объявляется массив */ /* и это круто! */
+FillArray(array);
+PrintArray(array);
+Console.WriteLine();
+// FillArray(array);
+// PrintArray(array); // все работает. Работает дважды, каждый раз по-новому.
+
 int IndexF(int[] collection, int find)
 {
     int count = collection.Length;
@@ -35,11 +42,11 @@ int IndexF(int[] collection, int find)
     return position;
 }
 
-int[] array = new int[10];
-int find = new Random().Next(0,10);
-FillArray(array);
-PrintArray(array);
+int[] array2 = new int[20];
+int find = new Random().Next(0,20);
+FillArray(array2);
+PrintArray(array2);
 Console.WriteLine();
 Console.WriteLine("Ищем индекс элемента со значением " + find);
-int pos = IndexF(array, find);
+int pos = IndexF(array2, find);
 Console.WriteLine(pos);

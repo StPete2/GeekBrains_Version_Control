@@ -4,9 +4,9 @@
 // 78 -> 2
 // 89126 -> 5
 /* Задача 28: Напишите программу, которая принимает на вход число N и выдаёт
-// произведение чисел от 1 до N.
-// 4 -> 24 
-// 5 -> 120*/
+произведение чисел от 1 до N.
+4 -> 24 
+5 -> 120*/
 int Prompt()
 {
     Console.WriteLine("Введите число");
@@ -23,8 +23,9 @@ int NumQuantity(int number)
     }
     return i;
 }
+Console.Write("Первая задача. ");
 int a = Prompt();
-//Console.WriteLine(NumQuantity(a));
+Console.WriteLine($"Количество цифр в числе равно: {NumQuantity(a)}");
 
 int NumMultiply (int number)
 {
@@ -39,4 +40,5 @@ int NumMultiply (int number)
         multiply *= i;
     return multiply;
 }
-Console.WriteLine(NumMultiply(a));
+int b = new Random().Next(1,10);
+Console.WriteLine($"Произведение чисел от 1 до сгенерированного числа {b} равно {NumMultiply(b)}");
