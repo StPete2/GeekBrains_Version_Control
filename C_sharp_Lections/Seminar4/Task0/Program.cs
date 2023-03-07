@@ -17,6 +17,7 @@ int SumNums(int number)
     }
     return sum;
 }
-
+//Prompt(); // тоже работает на ввод числа! но никуда не используется
 int a = Prompt();
-Console.WriteLine(SumNums(a)); 
+int b = Prompt();
+Console.WriteLine($"{SumNums(a)}, текст тут {SumNums(b) + a}"); //тренировка вывода через $
