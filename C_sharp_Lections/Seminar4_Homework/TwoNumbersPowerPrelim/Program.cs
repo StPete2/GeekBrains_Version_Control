@@ -14,7 +14,6 @@ int InputNumber(string text)
 int Random(string name, int min, int max)
 {
     int number = new Random().Next(min,max);
-    Console.WriteLine($"Случайное число {name} равно " + number);
     return number;
 }
 string maximal = "Введите максимальное значение";
@@ -27,3 +26,4 @@ string def = "Peace";
 // int d = Random(def,1,10);
 int e = Random(abc,min2,max2);
 
+//int powerbase = InputNumber("Введите что-нибудь ...");
