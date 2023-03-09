@@ -16,16 +16,23 @@ int InputNumber(string text)
     Console.WriteLine(text);
     return Convert.ToInt32(Console.ReadLine());
 }
-string text2 = "Введите размер массива";
-int size2 = InputNumber(text2);
-int [] newArray = GetArray(size2);
-void ChangeNumber(int[] array, int sizeArray)
+int sizeArray = InputNumber("Введите размер массива");
+int [] newArray = GetArray(sizeArray);
+void ChangeSign(int[] array, int size)
 {
-    for (int i = 0; i < sizeArray; i++)
+    for (int i = 0; i < size; i++)
     {
-        array[i] = array[i]*(-1);
-    }    
+        array[i] = array[i]*-1;
+    }        
 }
+// int [] ChangeSign(int []array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = array[i]*-1;
+//     }
+//     return array;
+// }
 Console.WriteLine(String.Join(" ", newArray));
-ChangeNumber(newArray, size2);
+ChangeSign(newArray, sizeArray);
 Console.WriteLine(String.Join(" ", newArray));

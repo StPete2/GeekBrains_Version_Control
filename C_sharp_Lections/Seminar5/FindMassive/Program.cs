@@ -16,8 +16,7 @@ int InputNumber(string text)
     Console.WriteLine(text);
     return Convert.ToInt32(Console.ReadLine());
 }
-string text2 = "Введите размер массива";
-int size2 = InputNumber(text2);
+int size2 = InputNumber("Введите размер массива");
 int [] newArray = GetArray(size2);
 
 Console.WriteLine("Введите произвольное целое число");
@@ -36,6 +35,16 @@ while (index < size2)
 }
 if (b == 0)
     {
-        Console.WriteLine("Искомый элемент не найдет в массиве.");
+        Console.WriteLine($"Искомый элемент {find} не найдет в массиве.");
     }
 Console.WriteLine(String.Join(" ", newArray));
+// bool FindDigit(int [] array, int num)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array [i] == num)
+//         return true;
+//     }
+//     return false;
+// }
+// Console.WriteLine(FindDigit(newArray, find));
