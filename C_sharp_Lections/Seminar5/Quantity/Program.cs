@@ -7,14 +7,17 @@
 int []array = new int [123];
 for (int i = 0; i < array.Length; i++)
 {
-    array [i] = new Random().Next(-50,151);    
+    array [i] = new Random().Next(0,151);    
 }
-int a = 0;
+int quantity = 0;
+int sum = 0;
 for (int i = 0; i < array.Length; i ++)
 {
     if (array[i] >= 10 && array [i] <= 99)
     {
-        a ++;
+        quantity ++;
+        sum = sum + array[i];
     }
 }
-Console.WriteLine(a);
+Console.WriteLine(String.Join(" ", array));
+Console.WriteLine($"Количество элементов от 10 до 99 равняется {quantity}, их сумма равняется {sum}");
