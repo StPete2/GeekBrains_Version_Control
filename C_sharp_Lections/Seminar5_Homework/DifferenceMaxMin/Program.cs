@@ -13,12 +13,12 @@ double [] GetArray(int size)
     double [] array = new double [size];
     for (int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(0,100);
+        array[i] = Math.Round(new Random().NextDouble()*100, 2);
     }
     return array;
 }
 double [] array = GetArray(sizeArray);
-Console.WriteLine(String.Join(" ", array));
+Console.WriteLine(String.Join("; ", array));
 
 double MinElement(double []array)
 {
@@ -49,5 +49,5 @@ double MaxElement(double []array)
     return max;
 }
 double b = MaxElement(array);
-double c = b - a;
+double c = Math.Round(b - a, 2);
 Console.WriteLine("Разница между максимальным и минимальным значениями массива равняется " + c);

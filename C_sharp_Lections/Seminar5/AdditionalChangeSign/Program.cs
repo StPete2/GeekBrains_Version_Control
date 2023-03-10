@@ -19,5 +19,5 @@ int [] ChangeSign(int []array, int size)
     return modArray;
 }
 Console.WriteLine(String.Join(" ", newArray));
-//int [] changedArray = ChangeSign(newArray, 8);
-//Console.WriteLine(String.Join(" ", changedArray));
+int [] changedArray = ChangeSign(newArray, 8);
+Console.WriteLine(String.Join(" ", changedArray));
