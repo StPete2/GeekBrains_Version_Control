@@ -1,4 +1,6 @@
-﻿int InputNumber(string text)
+﻿// Задачка вне зачета. Для того, чтобы спросить на занятии вопрос.
+
+int InputNumber(string text)
 {
     Console.WriteLine(text);
     return Convert.ToInt32(Console.ReadLine());
