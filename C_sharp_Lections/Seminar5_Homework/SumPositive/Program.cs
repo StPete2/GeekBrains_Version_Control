@@ -23,7 +23,8 @@ int PositiveQuantity(int [] array)
     int quantity = 0;
     foreach (int el in array)
     {
-        quantity += el %2 == 0  ? el: 0;
+        quantity += el%2 == 0  ? 1: 0;
+        //quantity += el > 0  ? 1: 0;
     }
     return quantity;
 }
