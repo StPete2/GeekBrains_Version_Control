@@ -48,37 +48,3 @@ string NewFuction(int dec)
 }
 string a = NewFuction(Prompt("Введите натуральное десятичное число"));
 Console.WriteLine(a);
-
-// int[] GetArray()
-
-// {
-
-//     Console.WriteLine("Введите  размер массива: ");
-
-//     int arraySize = Convert.ToInt32(Console.ReadLine());
-
-//     Console.WriteLine("Задайте пределы перебора случайных чисел. Нижняя граница: ");
-
-//     int randomLow = Convert.ToInt32(Console.ReadLine());
-
-//     Console.WriteLine("Задайте пределы перебора случайных чисел. Верхняя граница: ");
-
-//     int randomHigh = Convert.ToInt32(Console.ReadLine());
-
-//     int[] array = new int[arraySize];
-
-//     for (int i = 0; i < array.Length; i++)
-
-//     {
-
-//         array[i] = new Random().Next(randomLow,randomHigh);
-
-//     }
-
-//     return array;
-
-// }
-
-// int[] array = GetArray();
-
-// Console.WriteLine(String.Join(" | ", array));
