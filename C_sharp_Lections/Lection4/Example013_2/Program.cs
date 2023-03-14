@@ -56,5 +56,5 @@ void FillImage(int row, int col)
 }
 
 PrintImage(pic);
-FillImage(13,13);
+FillImage(10,10);
 PrintImage(pic);

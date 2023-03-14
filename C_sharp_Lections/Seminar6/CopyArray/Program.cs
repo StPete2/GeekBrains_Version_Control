@@ -9,7 +9,7 @@ int Prompt()
 
 int size = Prompt();
 
-int[] GetArray()
+int[] GetArray(int size)
 {
     int[] array = new int[size];
     for (int i = 0; i < size; i++)
@@ -19,10 +19,17 @@ int[] GetArray()
     return array;
 }
 
-int[] newarray = GetArray();
+int[] newarray = GetArray(size);
 Console.WriteLine(string.Join(" ", newarray));
 
-int [] CopyArray(int array)
+int [] CopyArray(int [] array, int size)
 {
-    int [array] = new int [size]
+    int [] copiedArray = new int [size];
+    for (int i = 0; i < size; i++)
+    {
+        copiedArray[i] = array[i];
+        //copiedArray[i] = array[size - 1 - i];
+    }
+    return copiedArray;
 }
+Console.WriteLine(String.Join(" ", CopyArray(newarray, size)));
