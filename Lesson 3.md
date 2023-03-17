@@ -21,4 +21,15 @@ Added a new comment in the Lesson 3.md file.
 
 > Can we rename the main branch back to master?
 
+Added a new comment in the Lesson 3.md file.
+
+> Added a new comment and deleted some info from the above comment.
+
+> Can we rename the main branch back to master?
+
 Some additional changes to test the pull command
+Some additional changes to test the pull command
+
+git submodule add <url> group_903
+
+git rm --cached group_903
