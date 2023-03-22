@@ -48,4 +48,33 @@ int [] sumOfLines(int [,]array)
     return sum;
 }
 int []sum = sumOfLines(array);
-//Console.WriteLine(String.Join(" ", sum));
+Console.WriteLine("Построчная сумма элементов массива:");
+Console.WriteLine(String.Join(" ", sum));
+Console.WriteLine();
+
+int minIndex = 0;
+int MinimumSum(int []sum, ref int minIndex)
+{
+    int min = sum[0];    
+    // int count = 0;
+    for (int i = 1; i < sum.Length; i++)
+    {
+        if (sum[i] < min)
+        {
+            min = sum[i];
+            minIndex = i;
+        }
+    }
+    return min;
+}
+
+// for (int i = 0; i < sum.Length; i++)
+// {
+//     if (sum[i] == min)
+//     {
+//         count++;
+//     }
+// }
+int min = MinimumSum(sum, ref minIndex);
+Console.WriteLine($"Минимальная сумма элементов, равная {min}, содержится в строке с индексом {minIndex}");
+// Console.WriteLine($"Всего минимальная сумма элементов встречается в количестве строк: {count}");
