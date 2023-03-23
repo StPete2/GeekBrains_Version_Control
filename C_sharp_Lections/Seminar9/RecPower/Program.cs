@@ -3,8 +3,11 @@
 // A = 3; B = 5 -> 243 (3⁵)
 // A = 2; B = 3 -> 8
 
-int a = 3;
-int b = 5;
+int Prompt (string text)
+{
+    Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
 
 int RecPower(int a, int b)
 {
@@ -17,4 +20,6 @@ int RecPower(int a, int b)
         return a*RecPower(a, b-1);
     }
 }
+int a = Prompt("Введите основание степени");
+int b = Prompt("Введите степень");
 Console.WriteLine(RecPower(a,b));
