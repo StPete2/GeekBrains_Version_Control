@@ -1,6 +1,15 @@
 ﻿int [,] matrixA = {{2,4},{3,2}};
 int [,] matrixB = {{3,4},{3,3}};
-int [,] matrixC = new int [matrixB.GetLength(0), matrixA.GetLength(1)];
+if (matrixA.GetLength(1) == matrixB.GetLength(0))
+{
+    Console.WriteLine("Умножение матриц возможно");
+}
+else
+{
+    Console.WriteLine("Перемножение матриц невозможно");
+}
+
+int [,] matrixC = new int [matrixA.GetLength(0), matrixB.GetLength(1)];
 for (int i = 0; i < matrixC.GetLength(0); i++)
 {
     for (int j = 0; j < matrixC.GetLength(1); j++)

@@ -8,7 +8,7 @@
 // 15 18
 int [,] matrixA = {{2,4},{3,2}};
 int [,] matrixB = {{3,4},{3,3}};
-int [,] matrixC = new int [matrixB.GetLength(0), matrixA.GetLength(1)];
+int [,] matrixC = new int [matrixA.GetLength(0), matrixB.GetLength(1)];
 matrixC[0,0] = matrixA[0,0]*matrixB[0,0] + matrixA[0,1]*matrixB[1,0];
 matrixC[0,1] = matrixA[0,0]*matrixB[0,1] + matrixA[0,1]*matrixB[1,1];
 matrixC[1,0] = matrixA[1,0]*matrixB[0,0] + matrixA[1,1]*matrixB[1,0];
