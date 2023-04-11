@@ -4,9 +4,21 @@
 // выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
 // лучше обойтись исключительно массивами.
 
-Console.WriteLine("Введите строку из слов или символов через пробел");
-string s = Convert.ToString(Console.ReadLine());
+// Примеры:
+// [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
+// [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
+// [“Russia”, “Denmark”, “Kazan”] → []
+
+string InputString (string text)
+{
+    Console.WriteLine(text);
+    return Convert.ToString(Console.ReadLine());
+}
+
+string s = InputString("Введите строку из слов или символов через пробел");
+
 string [] stringArray = s.Split(' ');
+
 int count3orLessCharNum = 0;
 int [] numberOfCharacters = new int [stringArray.Length];
 int i = 0;
@@ -19,20 +31,27 @@ foreach (var item in stringArray)
     }
     i++;
 }
-string [] resultArray = new string [count3orLessCharNum];
 
-i=0;
-int j =0;
-foreach (var item in stringArray)
+if (count3orLessCharNum>=1)
 {
-    if (numberOfCharacters[i]<=3)
+    string[] resultArray = new string[count3orLessCharNum];
+    i = 0;
+    int j = 0;
+    foreach (var item in stringArray)
     {
-        resultArray[j] = item;
-        j++;
+        if (numberOfCharacters[i] <= 3)
+        {
+            resultArray[j] = item;
+            j++;
+        }
+        i++;
     }
-    i++;
+// Console.WriteLine(count3orLessCharNum);
+// Console.WriteLine(String.Join(" ", numberOfCharacters));
+Console.WriteLine(String.Join(" ", resultArray));
+}
+else
+{
+    Console.WriteLine("Во введенном Вами массиве нет последовательности, длина которой меньше или равна трем символам");
 }
 
-Console.WriteLine(count3orLessCharNum);
-Console.WriteLine(String.Join(" ", numberOfCharacters));
-Console.WriteLine(String.Join(" ", resultArray));
