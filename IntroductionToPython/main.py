@@ -15,10 +15,11 @@ print(f"{f}, {f2}")
 # ctrl+k+c
 # ctrl+k+u
 
-# a = 5
-# b = 6.78 #что это было?
-# c = 'string'
-# print(a, ' - ', b, '-', c)
+a = 5
+b = 6.78 #что это было?
+c = 'string'
+print(a, ' - ', b, '-', c)
+print(type(b))
 # print(f"{a} - {b} - {c}")
 # print("{} - {} - {}".format(a,b,c))
 # print('Введите первое число: ')
@@ -41,16 +42,16 @@ print(f"{f}, {f2}")
 # a = 1!=2
 # print (a)
 
-username = str(input('Введите имя: '))
-if username == 'Маша':
-    print('Ура! Это же Маша')
-elif username == 'Ильнар':
-    print('Ильнар - топ)')
-else:
-    print('Привет,', username)
+# username = (input('Введите имя: '))
+# if username == 'Маша':
+#     print('Ура! Это же Маша')
+# elif username == 'Ильнар':
+#     print('Ильнар - топ)')
+# else:
+#     print('Привет,', username)
 
-n = int(input('Введите число: '))
-if n%2 == 0 and n%3 == 0:
-    print('Число кратно 6')
-else:
-    print('Число не кратно 2 и 3 одновременно')
+# n = int(input('Введите число: '))
+# if n%2 == 0 and n%3 == 0:
+#     print('Число кратно 6')
+# else:
+#     print('Число не кратно 2 и 3 одновременно')
