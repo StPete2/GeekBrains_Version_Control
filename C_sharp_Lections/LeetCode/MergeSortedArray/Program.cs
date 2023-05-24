@@ -5,31 +5,37 @@
         for (int i = 0; i < n; i++)
         {
             nums1[i] = nums2[i];
-        }
+        }       
+        return; 
     }
+    else if (n == 0)
+    {
+        return;
+    }
+    
     else
     {
-        // int l = nums1.Length;
-        int successMerge = 0;
-        // int temp=0;
-        for (int i = n-1; i >=0; i--)
+        if (nums2[0]>=nums1[m-1])
         {
-            if (nums2[i] > nums1[m-1-successMerge])
+            for (int i = 0; i < n; i++)
             {
-                nums1[m+i] = nums2[i];                
-                successMerge++;                
+                nums1[m+i]=nums2[i];
             }
-            else if (nums2[i] < nums1[m-1-successMerge])
+            return;
+        }        
+        else if (nums2[n-1]<=nums1[0])
+        {
+            for (int i = m+n-1; i >=0; i--)
             {
-                // temp = successMerge;
-                nums1[m+i-successMerge] = nums1[m-1-successMerge];                                       
-                // nums1[m-1-successMerge] = 0;   
-                i++;                                     
-                // Console.WriteLine($"{i}:{m-1-successMerge}:{successMerge}");
-                successMerge++;                                                                        
-            }                
-            // successMerge++;
+                nums1[i] = nums1[i-n];
+            }
+            for (int i = 0; i < n; i++)
+            {
+                nums1[i] = nums2[i];
+            }
+            return;
         }
+                
     }
 }    
 int []nums1 = new int []{4,5,6,0,0,0};
