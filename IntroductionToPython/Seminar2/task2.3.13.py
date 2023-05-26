@@ -25,3 +25,15 @@
     
 #     -1 2 3 4 -1 -2
 #     -> Максимальная длительность 3дн
+daysNumber = int(input('Введите количество рассматриваемых дней: '))
+daysAboveZero = 0
+maxConsecutiveDaysAboveZero = 0
+for dayTemperature in range (daysNumber):
+    dayTemperature = int(input('Введите температуру дня: '))
+    if dayTemperature > 0:
+        daysAboveZero+=1        
+    else:
+        if maxConsecutiveDaysAboveZero < daysAboveZero:
+            maxConsecutiveDaysAboveZero = daysAboveZero
+        daysAboveZero = 0
+print(f"Максимальная оттепель составила {maxConsecutiveDaysAboveZero} дней")

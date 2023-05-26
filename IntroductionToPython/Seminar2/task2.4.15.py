@@ -13,4 +13,14 @@
 #     ...
 #     8 12 7 6 15 17
 #     Массы арбузов: min=6, max=17
+watermelonwsNumber = int(input('Введите количество арбузов: '))
+maxWeight = 0
+minWeight = 9999
+for watermelonsWeight in range (watermelonwsNumber):
+    watermelonsWeight = int(input('Введите массу арбуза: '))
+    if watermelonsWeight > maxWeight:
+        maxWeight = watermelonsWeight
+    if watermelonsWeight < minWeight:
+        minWeight = watermelonsWeight
+print(f"Масса арзбуза для себя: {maxWeight}, масса арбуза для тещи: {minWeight}")
 
