@@ -28,6 +28,6 @@ if d == 0:
 elif d < 0:
     print("Задача не имеет решения")
 else:
-    x1 = int((s + d**0.5)/2) # x1 = int((s + d**0.5)/2)
+    x1 = int((s + math.sqrt(d))/2) # x1 = int((s + d**0.5)/2)
     x2 = int((s - math.sqrt(d))/2)
     print(f"Решение: {x1}, {x2}")

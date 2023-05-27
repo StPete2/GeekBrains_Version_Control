@@ -17,12 +17,13 @@
 power = 0
 number = int(input("Введите целое число: "))
 powerOf2 = 2
+l = '1,'
 if number <= 0:
     print("Любая степень двойки больше нуля")
-elif number == 1:
-    print(1)
-else:
-    print(1)
+elif number == 1:    
+    print(l)
+else:    
     while powerOf2 <= number:
-        print(powerOf2)
-        powerOf2= powerOf2*2
+        l = l + str(powerOf2) + ','        
+        powerOf2 = powerOf2 * 2
+    print(l)
