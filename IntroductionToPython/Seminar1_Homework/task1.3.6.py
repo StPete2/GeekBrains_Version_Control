@@ -30,3 +30,7 @@ if sumFirst3Digits == sumLast3Digits:
     print('Вам достался счастливый билет')
 else:
     print('У Вас обычный билет')
+# ticketNumber = input("Введите номер билета: ")
+# print(type(ticketNumber))
+# print("Yes!" if int(ticketNumber[0])+int(ticketNumber[1])+int(ticketNumber[2]) == int(ticketNumber[3])+int(ticketNumber[4])+int(ticketNumber[5]) else "No")
+
