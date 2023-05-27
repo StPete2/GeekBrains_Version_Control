@@ -13,7 +13,11 @@ n = int(input('Введите длину маршрута расчетную в 
 m = int(input('Введите длину фактически пройденного маршрута в км: '))
 res = -(-m//n)
 res2 = m//n
-print(res2)
-if m%n > 1:
+print(f"Маршрут в {m} киломентров машина проедет за {res} дней")
+if m%n > 0:
     res2 +=1
 print(res2)
+res3 = (m+n-1)//n
+print(res3)
+remainder = 0 if m%n == 0 else 1
+print(m//n + remainder)
