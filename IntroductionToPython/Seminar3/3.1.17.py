@@ -13,4 +13,7 @@ print(len(emptyList))
 
 list2 = [1,2,3,3,2,1,-4,5]
 resultList = set(list2)
-print(resultList)
+# print(resultList)
+# print(len(resultList))
+# update
+print(len(set(list2)))
