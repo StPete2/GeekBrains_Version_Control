@@ -19,10 +19,4 @@ count = 0
 for i in list1:
     if i == x:
         count+=1
-if count == 0:
-    print(-1)
-else:
-    print(count)
-
-# или можно решить так: 
-# print(count if list1.__contains__(x) else -1)
+print(count if count>0 else -1)
