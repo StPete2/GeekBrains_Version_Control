@@ -17,3 +17,8 @@
 #     Output: 31
 
 # [*]  Усложнение. Выведите кол-во слов с учетом регистра и без учета регистра
+string_input = "She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure. So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells"
+list_input2 = string_input.split()
+list_input3 = string_input.upper().split() 
+print(len(set(list_input2)))
+print(len(set(list_input3)))
