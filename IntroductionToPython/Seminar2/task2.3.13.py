@@ -31,7 +31,7 @@ maxConsecutiveDaysAboveZero = 0
 for dayTemperature in range (daysNumber):
     # dayTemperature = int(input('Введите температуру дня: '))
     dayTemperature = input("Введите дневную температуру: ")
-    if dayTemperature == '':
+    if dayTemperature == ' ':
         print("Ввод данных остановлен")
         break
     dayTemperature = int(dayTemperature)

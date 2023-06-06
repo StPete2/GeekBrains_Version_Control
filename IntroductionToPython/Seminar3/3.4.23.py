@@ -22,4 +22,4 @@ list4 = []
 #     if list3[i]<list3[i+1]:
 #         list4.append(list3[i+1])
 # print(list4)
-print([list4.append(list3[i+1]) for i in range(len(list3)-1) if list3[i]< list3[i+1]])
+print([list3[i+1] for i in range(len(list3)-1) if list3[i]< list3[i+1]])
