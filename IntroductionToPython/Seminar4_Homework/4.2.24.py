@@ -14,3 +14,18 @@
 
 # Input1: 11, 92, 1, 42, 15, 12, 11, 81
 # Output1: Макс. кол-во ягод 184, собрано для куста 1
+blueberry_bushes = [11, 92, 1, 42, 15, 12, 11, 81]
+max_number_of_berries = 0
+current_number_of_berries = 0
+index_of_max_number_of_berries = 0
+blueberry_bushes.insert(0, blueberry_bushes[len(blueberry_bushes)-1])
+blueberry_bushes.insert(len(blueberry_bushes), blueberry_bushes[1])
+# print(blueberry_bushes)
+for i in range(1,len(blueberry_bushes)-1):
+    current_number_of_berries = blueberry_bushes[i] + blueberry_bushes[i-1] + blueberry_bushes[i+1]
+    if current_number_of_berries > max_number_of_berries:
+        max_number_of_berries = current_number_of_berries
+        index_of_max_number_of_berries = i    
+    current_number_of_berries = 0
+print(f"Максимальное количество ягод {max_number_of_berries}, собрано для куста {index_of_max_number_of_berries}")
+
