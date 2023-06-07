@@ -19,6 +19,7 @@
         }
         arr[arr.Length-2] = arr[arr.Length - 1];
         arr[arr.Length-1] = -1;        
+        int temp;
         for (int i = arr.Length-3; i >=0; i--)
         {
             if (arr[i] < rightMax)
@@ -27,8 +28,9 @@
             }
             else if (arr[i] > rightMax)
             {
+                temp = arr[i];                
                 arr[i] = rightMax;
-                rightMax = arr[i];
+                rightMax = temp;
             }            
         }
     return arr;
