@@ -15,27 +15,40 @@
     
     else
     {
-        if (nums2[0]>=nums1[m-1])
+        for (int i = nums1.Length-1; i >= 0; i--)
         {
-            for (int i = 0; i < n; i++)
+            if (nums1[m-1] > nums2[n-1])
             {
-                nums1[m+i]=nums2[i];
+                nums1[i] = nums1[m-1];
+                m--;
+                // Console.WriteLine(String.Join(" ", nums1));
+                if (m == 0)
+                {
+                    i--;
+                    for (int j = n; j >=0; j--)
+                    {
+                        nums1[i] = nums2[n-1];
+                        i--;
+                        n--;
+                        Console.WriteLine(String.Join(" ", nums1));
+                        if (n == 0)
+                        {
+                            return;
+                        }                        
+                    }
+                }
             }
-            return;
-        }        
-        else if (nums2[n-1]<=nums1[0])
-        {
-            for (int i = m+n-1; i >=0; i--)
+            else
             {
-                nums1[i] = nums1[i-n];
+                nums1[i] = nums2[n-1];
+                n--;
+                if (n == 0)
+                {
+                    return;
+                }
             }
-            for (int i = 0; i < n; i++)
-            {
-                nums1[i] = nums2[i];
-            }
-            return;
         }
-                
+        return;
     }
 }    
 int []nums1 = new int []{4,5,6,0,0,0};
