@@ -14,3 +14,9 @@ print(list1)
 # 3.4.23.py
 
 # обучалка, легкие программы
+
+d = [j for i in b for j in i] # прошу объяснить. Голова кругом.
+
+# print(1+ sum_rec(a,b-1))
+# print(summa2(a-1,b+1))
+
