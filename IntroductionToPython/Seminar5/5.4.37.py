@@ -8,10 +8,10 @@
 # Примечание. В программе запрещается объявлять массивы и использовать циклы 
 # (даже для ввода и вывода).
 
-# def sequence(n: int) -> str:
-#     digit = input()
-#     if n == 1:
-#        return digit + ' '
-#     return sequence(n-1) + digit + ' '
+def sequence(n: int) -> str:
+    digit = input()
+    if n == 1:
+       return digit + ' '
+    return sequence(n-1) + digit + ' '
 
-# print(sequence(5))
+print(sequence(5))
