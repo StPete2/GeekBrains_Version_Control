@@ -30,3 +30,4 @@ int val = 3;
 int result = RemoveElement(nums, val);
 Console.WriteLine(result);
 Console.WriteLine(String.Join(", ", nums));
+

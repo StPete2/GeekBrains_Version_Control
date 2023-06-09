@@ -25,7 +25,7 @@
                 if (m == 0)
                 {
                     i--;
-                    for (int j = n; j >=0; j--)
+                    for (int j = n-1; j >=0; j--)
                     {
                         nums1[i] = nums2[n-1];
                         i--;
