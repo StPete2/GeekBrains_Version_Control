@@ -30,7 +30,12 @@ def difference_list2(list1: list, list2: list) -> list:
     return new_list
 print(difference_list2([3, 4, 1, 5, 1, 3, 10, 4, 9, 5], [9, 6, 6, 5, 10, 1, 10, 9, 1, 5]))
 
-from time import perf_counter
-t1 = perf_counter()
-t2 = perf_counter()
-t3 = t2 - t1
+# from time import perf_counter
+# t1 = perf_counter()
+# t2 = perf_counter()
+# t3 = t2 - t1
+
+from random import randint
+n = 100
+list1 = [randint(0,n) for i in range(n)]
+print(list1)
