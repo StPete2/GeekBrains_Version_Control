@@ -26,6 +26,7 @@ print(neighbours([7, 5, 1, 6, 8]))
 
 
 # элемент слева lst[idx - 1], элемент справа lst[idx - len(lst) + 1
+# list1[1] > list1[0] and list1[1]>list1[1-5+1]
 
 def neibours (list1: list) -> list:
     result_list = list()
