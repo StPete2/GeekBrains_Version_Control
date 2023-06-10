@@ -36,4 +36,3 @@ def bigger_than_2neighbours2 (list1: list) -> list:
 
 print(bigger_than_2neighbours2([1, 3, 3, 3, 5]))
 print(bigger_than_2neighbours2([8, 1, 5, 4, 5]))
-
