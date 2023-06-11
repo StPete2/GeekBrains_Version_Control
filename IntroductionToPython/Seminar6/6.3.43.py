@@ -26,3 +26,4 @@ def count_pairs2(list1:list):
     return result
 print(count_pairs2([1, 2, 3, 2, 3, 3, 2, 4]))
 # вложенный цикл сделать и сравнивать 1,2; 1,3; 1,4... 2,3; 2,4...3,5; 3,6..
+# result +=list1[idx+1:].count(list1[idx])
