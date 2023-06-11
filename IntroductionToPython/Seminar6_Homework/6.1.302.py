@@ -18,9 +18,8 @@
 # или map
 
 def ArithmeticProgression(beginningNumber: int, step: int, numberOfElements: int) -> list:
-    result_list = list()
-    for i in range(1, numberOfElements+1):
-        result_list.append((beginningNumber) + (i-1)*step)
+    result_list = list()    
+    result_list = [beginningNumber + (i-1)*step for i in range(1, numberOfElements+1)]
     return result_list
 beginningNumber = int(input("Введите начальное значение: "))
 step = int(input("Введите шаг прогрессии: "))
