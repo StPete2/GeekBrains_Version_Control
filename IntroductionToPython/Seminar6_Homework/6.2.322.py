@@ -20,9 +20,7 @@
 
 def ElementsIndices (list1:list, min: int, max: int) -> list:
     result_list = list()
-    for i in range(len(list1)):
-        if list1[i]>=min and list1[i]<=max:
-            result_list.append(i)
+    result_list = [i for i in range(len(list1)) if list1[i]>=min and list1[i]<=max]            
     print(result_list)
 list1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 ElementsIndices(list1, 2,10)
