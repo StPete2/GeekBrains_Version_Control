@@ -44,11 +44,11 @@ with open("data1.txt", mode = "r", encoding="utf-8") as file:
         str1 = f"{last_name} {first_lit[0]}.{parent_lit[0]}."
         print(str1)
 
-file_name2 = path1.join(MAIN_DIR, "Results", "Names.txt")
-with open(file_name2, mode="wt", encoding="utf-8") as result_file:
-    for last_name, first_lit, parent_lit in result_list:
-        str1 = f"{last_name} {first_lit[0]}.{parent_lit[0]}.\n"
-        result_file.write(str1)
+# file_name2 = path1.join(MAIN_DIR, "Results", "Names.txt")
+# with open(file_name2, mode="wt", encoding="utf-8") as result_file:
+#     for last_name, first_lit, parent_lit in result_list:
+#         str1 = f"{last_name} {first_lit[0]}.{parent_lit[0]}.\n"
+#         result_file.write(str1)
         
 
 

@@ -29,6 +29,10 @@ def same_by(func,objects):
         if func(objects[idx]) != func(objects[idx-1]): return False
     return True
 
-def func1(obj):
-    return len(obj)
+print(same_by(lambda x: x % 2, [1, 2, 10, 12]))
+print(same_by(lambda x: x % 2, [0,2,10,12]))
+print(same_by(len, ["qw", "er", "ty", "ui", "op", "as", "df", "gh"]))
+print(same_by(len, ["qw", "er1", "ty", "ui", "op", "as", "df", "gh"]))
+# def func1(obj):
+#     return len(obj)
 
