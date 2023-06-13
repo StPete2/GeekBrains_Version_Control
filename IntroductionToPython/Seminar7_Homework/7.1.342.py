@@ -33,7 +33,8 @@
 #     <function_name>("Трам-пара-папам-парам-па-пам-пам-па Пум-пурум-пу-пурум-трам-пам-па") -> (False, [{'а': 11}, {'у': 6, 'а': 3}])
 #     <function_name>("Пам-парам-пурум Пум-пурум-карам") -> (True, [{'а': 3, 'у': 2}, {'у': 3, 'а': 2}])
 
-def Rythm(input_song_string: str)-> bool:    
+def Rythm(input_song_string: str, need_to_transcribe: bool)-> bool:
+    rythm_status = False
     list_str1 = list()
     list_str1 = input_song_string.split()
     set_number_of_vowels = set()    
@@ -41,18 +42,29 @@ def Rythm(input_song_string: str)-> bool:
         number_of_vowels = val.count('а') + val.count('о') + val.count('у') + val.count('е')        
         set_number_of_vowels.add(number_of_vowels)        
     if len(set_number_of_vowels)==1:
-        return True
-    else:
-        return False
+        rythm_status = True
+        if need_to_transcribe == True:
+            
+            return
+        else:
+            return rythm_status
+    else:        
+        if need_to_transcribe == True:
+
+            return
+        else:
+            return rythm_status
+
 
 str1 = "пара-ра-рам рам-пам-папам па-ра-па-дам"
-str2 = "пара-ра-рам рам-пум-пупам па-ре-по-дам"
-str3 = "пара-ра-рам рам-пуум-пупам па-ре-по-дам"
-str4 = "Трам-пара-папам-парам-па-пам-пам-па Пум-пурум-пу-пурум-трам-пам-па"
-str5 = "Пам-парам-пурум Пум-пурум-карам"
-print(Rythm(str1))
-print(Rythm(str2))
-print(Rythm(str3))
-print(Rythm(str4))
-print(Rythm(str5))
-
+print(Rythm(str1,False)) # True
+str2 = "пара-ра-рам рам-пам-папам па-ра-па-дам"
+print(Rythm(str2, True)) # (True, [{'а': 4}, {'а': 4}, {'а': 4}])
+str3 = "пара-ра-рам рам-пум-пупам па-ре-по-дам"
+print(Rythm(str3, True)) # (True, [{'а': 4}, {'а': 2, 'у': 2}, {'а': 2, 'е': 1, 'о': 1}])
+str4 = "пара-ра-рам рам-пуум-пупам па-ре-по-дам"
+print(Rythm(str4, True)) # (False, [{'а': 4}, {'а': 2, 'у': 3}])
+str5 = "Трам-пара-папам-парам-па-пам-пам-па Пум-пурум-пу-пурум-трам-пам-па"
+print(Rythm(str5, True)) # (False, [{'а': 11}, {'у': 6, 'а': 3}])
+str6 = "Пам-парам-пурум Пум-пурум-карам"
+print(Rythm(str6, True)) # (True, [{'а': 3, 'у': 2}, {'у': 3, 'а': 2}])
