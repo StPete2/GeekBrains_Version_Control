@@ -44,17 +44,31 @@ def Rythm(input_song_string: str, need_to_transcribe: bool)-> bool:
     if len(set_number_of_vowels)==1:
         rythm_status = True
         if need_to_transcribe == True:
-            
-            return
+            list_a=Transcribe_Vowels(input_song_string)
+            return (rythm_status, list_a)
         else:
             return rythm_status
     else:        
         if need_to_transcribe == True:
-
-            return
+            list_a=Transcribe_Vowels(input_song_string)
+            return (rythm_status, list_a)            
         else:
             return rythm_status
 
+def Transcribe_Vowels(input_song_string: str) ->list:
+    list_str = input_song_string.split()
+    vowels_set = {'а', 'е', 'у', 'о'}
+    vowels_dictionary = dict()
+    list_of_dictionaries = list()
+    for idx in range(len(list_str)):    
+        for item in list_str[idx]:        
+            if item in vowels_set and item not in vowels_dictionary:
+                vowels_dictionary[item] = 1
+            elif item in vowels_set and item in vowels_dictionary:
+                vowels_dictionary[item]+=1    
+        list_of_dictionaries.append(vowels_dictionary)        
+        vowels_dictionary = dict()
+    return list_of_dictionaries
 
 str1 = "пара-ра-рам рам-пам-папам па-ра-па-дам"
 print(Rythm(str1,False)) # True
