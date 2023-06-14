@@ -37,3 +37,15 @@
 # 4 |    4   8  12  16  20  24
 # 5 |    5  10  15  20  25  30
 # 6 |    6  12  18  24  30  36
+
+def print_operation_table(operation, num_rows: int, num_columns: int) -> list:
+    result_table = ''    
+    for i in range(1, num_rows+1):
+        for j in range(1, num_columns+1):
+            # result_table += f"{str(operation(i,j)):>5}"
+            result_table += str(operation(i,j)).rjust(3) + '\t'
+        result_table += "\n"
+    print(result_table)
+
+print_operation_table(lambda x,y: x*y, 6, 6)
+print_operation_table(lambda x,y: x**y,4,4)
