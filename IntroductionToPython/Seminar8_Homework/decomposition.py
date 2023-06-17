@@ -1,3 +1,5 @@
+# Файл для отладки частей кода.
+
 import os.path as path1
 from os import getcwd
 from os.path import abspath
@@ -18,3 +20,14 @@ with open(file_name2, mode='rt', encoding='utf-8') as file:
         idc+=1
 
 print(phone_dir)
+
+dict1 = {1: ['Иванов','Иван','+7(xxx)xxx-xx-xx','desription_Иванов'], 
+2: ['Петров','Петр','+7(---)xxx-xx-xx','desription_Петров'],
+3: ['Соколов','Илья','+7(---)---------','desription_Соколов'],
+4: ['Павельев','Андрей','+7(***)***-**-**','desription_Павельев'],
+5: ['Пешехов','Антон','+7++++++++++','desription_Пешехов'],
+6: ['Сааков','Илья','+7(+++)+++-++-++','desription_Сааков'],
+7: ['Абырвалгов','Гиви','+7(328)123-56-56','discription1']}
+
+
+

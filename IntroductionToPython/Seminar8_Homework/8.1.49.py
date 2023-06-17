@@ -39,21 +39,34 @@ def Menu():
     print()    
     key_count = 0
     phone_dir = dict()
-    while True:
-        num = int(input("Введите Ваш выбор: "))
+    while True:        
+        num = input("Введите Ваш выбор: ")
+        print()
+        if not num.isdigit():
+            print("Вы ввели некорректное значение")
+            break
+        num = int(num)
         if num == 0:
             break
-        if num == 1:
+        elif num == 1:
             user = Input_User()
             phone_dir, key_count = Create_User(phone_dir,key_count,user)        
-        
-        if num == 5:
-            print(phone_dir)
-        if num == 6:
-            Export_Data(str(phone_dir))
-        if num == 7:
+        elif num == 2:
+            key_count = Seach_User(phone_dir)            
+        elif num == 3:
+            phone_dir = Update_User(phone_dir)
+        elif num == 4:
+            Delete_User(phone_dir)
+        elif num == 5:
+            Print_Phone_Dir(phone_dir)
+        elif num == 6:
+            Export_Data(phone_dir)
+        elif num == 7:
             phone_dir, key_count = Import_Data(phone_dir,key_count)
-
+        else:
+            print("Вы ввели некорректное значение") 
+            print()
+            break             
 
 #1
 def Input_User()-> list:
@@ -69,9 +82,58 @@ def Create_User(phone_dir_local: dict, key_count: int, user:list)->dict:
     key_count +=1
     phone_dir_local [key_count] = user
     return phone_dir_local, key_count
+#2
+def Seach_User(phone_dir_local: dict)->int:
+    input_data = str(input("Введите фамилию пользователя полностью или первые буквы фамилии: ")).lower().capitalize()
+    for key_count, user in phone_dir_local.items():
+        if user[0].startswith(input_data):
+            print_confirmation = str(input("Распечатать найденный результат? Y/N: ")).capitalize()
+            if print_confirmation == 'Y':
+                print(phone_dir_local[key_count])
+                return key_count
+            else:
+                return key_count
+    else:
+        print("Такого пользователя не существует. Вы будете перенаправлены в главное меню")
+        return
+#3
+def Update_User(phone_dir_local:dict)->dict:
+    key_count = Seach_User(phone_dir_local)
+    if key_count not in phone_dir_local.keys():
+        return
+    new_family_name = str(input("Введите новую фамилию пользователя: "))
+    new_user_name = str(input("Введите новое имя пользователя: "))
+    new_phone_number = str(input("Введите новый телефон пользователя: "))
+    new_discription = str(input("Введите новое описание пользователя: "))
+    update_confirmation = str(input("Подтвердите внесение изменений для пользователя, нажав 'Y'. Нажмите 'N' для возврата в главное меню: ")).capitalize()
+    if update_confirmation == 'Y':
+        user = []
+        user.append(new_family_name)
+        user.append(new_user_name)
+        user.append(new_phone_number)
+        user.append(new_discription)
+        phone_dir_local[key_count] = user  
+        return phone_dir_local
+    else: 
+        return phone_dir_local
+
+#4
+def Delete_User(phone_dir_local: dict):
+    key_count = Seach_User(phone_dir_local)
+    del_confirmation = str(input("Подтвердите удаление пользователя, нажав 'Y'. Нажмите 'N' для возврата в главное меню: ")).capitalize()
+    if del_confirmation == 'Y':
+        del phone_dir_local[key_count]
+    else:
+        return
 
 #5
-# печатается из меню
+def Print_Phone_Dir(phone_dir_local: dict):
+    if not phone_dir_local:
+        print("Телефонный справочник пуст")
+        return
+    for key_count, user in phone_dir_local.items():
+        print(f"{key_count}: {user[0]} {user[1]} {user[2]} {user[3]}")
+    print()
 
 #6
 def Export_Data(phone_dir_local: dict):
@@ -80,7 +142,8 @@ def Export_Data(phone_dir_local: dict):
     MAIN_DIR = path1.abspath(path1.dirname(__file__))   
     file_name = path1.join(MAIN_DIR, "export.csv")
     with open(file_name, mode='w', encoding='utf-8') as file:
-        file.write(phone_dir_local)
+        for key_count, user in phone_dir_local.items():
+            file.write(f"{key_count},{user[0]},{user[1]},{user[2]},{user[3]}\n")
 
 #7
 def Import_Data(phone_dir_local: dict, key_count: int)-> dict:
