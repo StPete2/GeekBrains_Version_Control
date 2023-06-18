@@ -29,5 +29,5 @@ dict1 = {1: ['Иванов','Иван','+7(xxx)xxx-xx-xx','desription_Ивано
 6: ['Сааков','Илья','+7(+++)+++-++-++','desription_Сааков'],
 7: ['Абырвалгов','Гиви','+7(328)123-56-56','discription1']}
 
-
+# del phone_dir_local[key_count]
 
