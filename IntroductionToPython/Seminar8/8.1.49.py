@@ -58,8 +58,8 @@ def menu ():
         if num == 0:
             break
         if num ==1:
-           user = Input_Users()
-           phone_dir, key_count = create(phone_dir,key_count,user)
+            user = Input_Users()
+            phone_dir, key_count = create(phone_dir,key_count,user)
         if num == 2:
             print (phone_dir)
 menu ()

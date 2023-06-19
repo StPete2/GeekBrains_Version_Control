@@ -85,24 +85,23 @@ def Create_User(phone_dir_local: dict, key_count: int, user:list)->dict:
     return phone_dir_local, key_count
 #2
 def Seach_User(phone_dir_local: dict)->int:
-    import sys
     input_data = str(input("Введите фамилию пользователя полностью или первые буквы фамилии: ")).lower().capitalize()
-    for key_count_found, user in phone_dir_local.items():
+    for key_count, user in phone_dir_local.items():
         if user[0].startswith(input_data):
             print_confirmation = str(input("Распечатать найденный результат? Y/N: ")).capitalize()
             if print_confirmation == 'Y':
-                print(phone_dir_local[key_count_found])
-                return key_count_found
+                print(phone_dir_local[key_count])
+                return key_count
             else:
-                return key_count_found
+                return key_count
     else:
-        print("Такого пользователя не существует. Выполнение программы будет приостановлено")
-        print()        
-        sys.exit()
+        
+        print("Такого пользователя не существует. Вы будете перенаправлены в главное меню")
+        return
 #3
 def Update_User(phone_dir_local:dict)->dict:
-    key_count_local = Seach_User(phone_dir_local)    
-    if key_count_local not in phone_dir_local.keys():
+    key_count = Seach_User(phone_dir_local)
+    if key_count not in phone_dir_local.keys():
         return
     new_family_name = str(input("Введите новую фамилию пользователя: "))
     new_user_name = str(input("Введите новое имя пользователя: "))
@@ -115,17 +114,17 @@ def Update_User(phone_dir_local:dict)->dict:
         user.append(new_user_name)
         user.append(new_phone_number)
         user.append(new_discription)
-        phone_dir_local[key_count_local] = user  
+        phone_dir_local[key_count] = user  
         return phone_dir_local
     else: 
         return phone_dir_local
 
 #4
 def Delete_User(phone_dir_local: dict):
-    key_count_local = Seach_User(phone_dir_local)
+    key_count = Seach_User(phone_dir_local)
     del_confirmation = str(input("Подтвердите удаление пользователя, нажав 'Y'. Нажмите 'N' для возврата в главное меню: ")).capitalize()
     if del_confirmation == 'Y':        
-        phone_dir_local.pop(key_count_local)
+        phone_dir_local.pop(key_count)
     else:
         return
 
