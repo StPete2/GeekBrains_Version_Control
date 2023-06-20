@@ -21,15 +21,6 @@ IList<int> FindDisappearedNumbers(int[] nums)
     Console.WriteLine(String.Join(" ", nums));
     List<int> resultList = new List<int>();
     int k = 1;
-    // if (nums[0] != k)
-    // {
-    //     for (int n = 1; n < nums[0]; n++)
-    //     {
-    //         resultList.Add(k);                      
-    //         k++;
-    //     }
-    // }    
-    // k++;
     for (int i = 0; i < nums.Length; i++)
     {
         if (nums[i] != k)
