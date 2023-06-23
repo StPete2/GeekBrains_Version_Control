@@ -1,4 +1,4 @@
-package javaProjects;
+package Lection1;
 
 public class functions {
     public static void main(String[] args) {

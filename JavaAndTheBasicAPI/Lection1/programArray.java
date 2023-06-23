@@ -1,4 +1,4 @@
-package javaProjects;
+package Lection1;
 
 public class programArray {
     public static void main(String[]arg) {

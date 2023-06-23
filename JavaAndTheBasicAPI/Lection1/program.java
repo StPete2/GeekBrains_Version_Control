@@ -1,4 +1,4 @@
-package javaProjects;
+package Lection1;
 
 /**
  * Innerprogram
