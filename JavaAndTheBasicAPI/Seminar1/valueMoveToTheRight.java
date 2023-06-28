@@ -30,6 +30,7 @@ public class valueMoveToTheRight {
                 }
             }            
         }
+        System.out.println(valCounter);
     }
 }
 

@@ -2,7 +2,7 @@ package Seminar1;
 
 import java.util.Scanner;
 
-public class input {
+public class InputStringAndInt {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in, "Cp866");
         System.out.print("Введите Ваше имя: ");

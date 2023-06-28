@@ -20,3 +20,4 @@ public class valueMoveToTheRight3 {
 System.out.println(Arrays.toString(nums));
     }
 }
+

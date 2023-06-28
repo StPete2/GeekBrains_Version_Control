@@ -1,18 +1,22 @@
 package Seminar1;
 
-    public class valueMoveToTheRight2 {
+import java.util.Arrays;
+
+public class valueMoveToTheRight2 {
     public static void main(String[] args) {
         valueMoveToTheRight2 task = new valueMoveToTheRight2();
         task.go();
     }
 
     private void go() {
-        int [] array = new int[] {3,2,2,5, 3, 4, 3};
+        int [] array = new int[] {3,2,2,5, 3, 4, 3,0,3};
+        System.out.println(Arrays.toString(array));
         int val = 3;
         int lastItem = array.length - 1;
         for (int i = lastItem; i >= 0; i--) {
             if (array[i] == val) {
                 swap(array, i, lastItem--);
+                System.out.println(Arrays.toString(array));
             }
         }
 
