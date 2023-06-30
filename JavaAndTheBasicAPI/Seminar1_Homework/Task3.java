@@ -30,7 +30,7 @@ public class Task3 {
         Scanner iScanner = new Scanner(System.in);
         System.out.print("Введите первое число: ");
         int number = iScanner.nextInt();
-        // iScanner.close();
+        //iScanner.close();
         return number;
     }
 
@@ -38,7 +38,7 @@ public class Task3 {
         Scanner iScanner = new Scanner(System.in);
         System.out.print("Введите второе число: ");
         int number = iScanner.nextInt();
-        // iScanner.close();
+        //iScanner.close();
         return number;
     }
 
