@@ -3,6 +3,7 @@
 // состоит из чередующихся символов c1 и c2, начиная с c1.
 
 package Seminar2;
+import java.lang.System;
 public class Task1 {
     public static void main(String[] args) {
         long s = System.currentTimeMillis();
@@ -11,7 +12,10 @@ public class Task1 {
         char c2 = 'B';
         String result = alternatingChars(n, c1, c2);
         System.out.println(result);
-        System.out.println(System.currentTimeMillis()-s);
+        long s2 = System.currentTimeMillis(); 
+        long s3 = System.nanoTime();       
+        System.out.println(s2-s);
+        System.out.println(s3);
     }
     public static String alternatingChars(int n, char c1, char c2) {
         StringBuilder sb = new StringBuilder();
