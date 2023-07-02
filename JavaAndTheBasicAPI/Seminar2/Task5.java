@@ -14,8 +14,10 @@ public class Task5 {
     public static void main(String[] args) {
         try{
             FileHandler fileHandler = new FileHandler("log.txt");
+            logger.addHandler(fileHandler);
             SimpleFormatter sFormatter = new SimpleFormatter();
             fileHandler.setFormatter(sFormatter);
+            logger.log(Level.INFO, "log.txt");
         }
         catch(Exception e){
             logger.log(Level.WARNING, e.getMessage());

@@ -1,0 +1,266 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Concatination",
+            "request": "launch",
+            "mainClass": "Lection1.Concatination",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "doWhile",
+            "request": "launch",
+            "mainClass": "Lection1.doWhile",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "functions",
+            "request": "launch",
+            "mainClass": "Lection1.functions",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "program",
+            "request": "launch",
+            "mainClass": "Lection1.program",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "programArray",
+            "request": "launch",
+            "mainClass": "Lection1.programArray",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "programInput",
+            "request": "launch",
+            "mainClass": "Lection1.programInput",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex001_stringsDemo",
+            "request": "launch",
+            "mainClass": "Lection2.Ex001_stringsDemo",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex002_fileSystemDemo",
+            "request": "launch",
+            "mainClass": "Lection2.Ex002_fileSystemDemo",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex003_tryDemo",
+            "request": "launch",
+            "mainClass": "Lection2.Ex003_tryDemo",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex004_bFile",
+            "request": "launch",
+            "mainClass": "Lection2.Ex004_bFile",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex005_Logger",
+            "request": "launch",
+            "mainClass": "Lection2.Ex005_Logger",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex01_Object",
+            "request": "launch",
+            "mainClass": "Lection3.Ex01_Object",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "HelloTimeOfTheDay",
+            "request": "launch",
+            "mainClass": "Seminar1.HelloTimeOfTheDay",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "InputStringAndInt",
+            "request": "launch",
+            "mainClass": "Seminar1.InputStringAndInt",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "SystemDate",
+            "request": "launch",
+            "mainClass": "Seminar1.SystemDate",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "massiveMaxInARow",
+            "request": "launch",
+            "mainClass": "Seminar1.massiveMaxInARow",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "massiveMaxInARow2",
+            "request": "launch",
+            "mainClass": "Seminar1.massiveMaxInARow2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "maxCommonPrefix",
+            "request": "launch",
+            "mainClass": "Seminar1.maxCommonPrefix",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "valueMoveToTheRight",
+            "request": "launch",
+            "mainClass": "Seminar1.valueMoveToTheRight",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "valueMoveToTheRight2",
+            "request": "launch",
+            "mainClass": "Seminar1.valueMoveToTheRight2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "valueMoveToTheRight3",
+            "request": "launch",
+            "mainClass": "Seminar1.valueMoveToTheRight3",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "Seminar1_Homework.Task1",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "Seminar1_Homework.Task2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task3",
+            "request": "launch",
+            "mainClass": "Seminar1_Homework.Task3",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task1(1)",
+            "request": "launch",
+            "mainClass": "Seminar2.Task1",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task2(1)",
+            "request": "launch",
+            "mainClass": "Seminar2.Task2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task3(1)",
+            "request": "launch",
+            "mainClass": "Seminar2.Task3",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task4",
+            "request": "launch",
+            "mainClass": "Seminar2.Task4",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task5",
+            "request": "launch",
+            "mainClass": "Seminar2.Task5",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task5_2",
+            "request": "launch",
+            "mainClass": "Seminar2.Task5_2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task1(2)",
+            "request": "launch",
+            "mainClass": "Seminar2_Homework.Task1",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task0",
+            "request": "launch",
+            "mainClass": "Seminar3.Task0",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task1(3)",
+            "request": "launch",
+            "mainClass": "Seminar3.Task1",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task2(2)",
+            "request": "launch",
+            "mainClass": "Seminar3.Task2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task3(2)",
+            "request": "launch",
+            "mainClass": "Seminar3.Task3",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task4(1)",
+            "request": "launch",
+            "mainClass": "Seminar3.Task4",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        }
+    ]
+}
