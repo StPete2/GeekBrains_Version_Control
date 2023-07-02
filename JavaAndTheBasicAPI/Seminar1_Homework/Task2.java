@@ -13,7 +13,7 @@ public class Task2 {
     }
     private static List<Integer> findSimpleNumbers(int maxNumber){
         List <Integer> result = new ArrayList<>();
-        for (int i = 1; i <= maxNumber; i++) {
+        for (int i = 2; i <= maxNumber; i++) {
             boolean simpleNumber = true;
             for (int j = 2; j <= i/2; j++) {
                 if (i % j ==0) {
