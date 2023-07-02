@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-07-02T12:33:18.038946200Z</date>
+  <millis>1688301198038</millis>
+  <nanos>946200</nanos>
+  <sequence>0</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[1, 9, 0, 7, 3, 4, 2, 5, 6, 8]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.075159100Z</date>
+  <millis>1688301198075</millis>
+  <nanos>159100</nanos>
+  <sequence>1</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[1, 0, 9, 7, 3, 4, 2, 5, 6, 8]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.077773500Z</date>
+  <millis>1688301198077</millis>
+  <nanos>773500</nanos>
+  <sequence>2</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[1, 0, 7, 9, 3, 4, 2, 5, 6, 8]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.080765500Z</date>
+  <millis>1688301198080</millis>
+  <nanos>765500</nanos>
+  <sequence>3</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[1, 0, 7, 3, 9, 4, 2, 5, 6, 8]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.081763300Z</date>
+  <millis>1688301198081</millis>
+  <nanos>763300</nanos>
+  <sequence>4</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[1, 0, 7, 3, 4, 9, 2, 5, 6, 8]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.082761200Z</date>
+  <millis>1688301198082</millis>
+  <nanos>761200</nanos>
+  <sequence>5</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[1, 0, 7, 3, 4, 2, 9, 5, 6, 8]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.084754400Z</date>
+  <millis>1688301198084</millis>
+  <nanos>754400</nanos>
+  <sequence>6</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[1, 0, 7, 3, 4, 2, 5, 9, 6, 8]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.085753600Z</date>
+  <millis>1688301198085</millis>
+  <nanos>753600</nanos>
+  <sequence>7</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[1, 0, 7, 3, 4, 2, 5, 6, 9, 8]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.087746Z</date>
+  <millis>1688301198087</millis>
+  <nanos>746000</nanos>
+  <sequence>8</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[1, 0, 7, 3, 4, 2, 5, 6, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.088743500Z</date>
+  <millis>1688301198088</millis>
+  <nanos>743500</nanos>
+  <sequence>9</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 7, 3, 4, 2, 5, 6, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.089740800Z</date>
+  <millis>1688301198089</millis>
+  <nanos>740800</nanos>
+  <sequence>10</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 7, 3, 4, 2, 5, 6, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.090738900Z</date>
+  <millis>1688301198090</millis>
+  <nanos>738900</nanos>
+  <sequence>11</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 7, 4, 2, 5, 6, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.092734100Z</date>
+  <millis>1688301198092</millis>
+  <nanos>734100</nanos>
+  <sequence>12</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 4, 7, 2, 5, 6, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.094728300Z</date>
+  <millis>1688301198094</millis>
+  <nanos>728300</nanos>
+  <sequence>13</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 4, 2, 7, 5, 6, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.095724900Z</date>
+  <millis>1688301198095</millis>
+  <nanos>724900</nanos>
+  <sequence>14</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 4, 2, 5, 7, 6, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.097719900Z</date>
+  <millis>1688301198097</millis>
+  <nanos>719900</nanos>
+  <sequence>15</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 4, 2, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.098717Z</date>
+  <millis>1688301198098</millis>
+  <nanos>717000</nanos>
+  <sequence>16</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 4, 2, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.101710500Z</date>
+  <millis>1688301198101</millis>
+  <nanos>710500</nanos>
+  <sequence>17</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 4, 2, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.104703500Z</date>
+  <millis>1688301198104</millis>
+  <nanos>703500</nanos>
+  <sequence>18</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 4, 2, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.106695700Z</date>
+  <millis>1688301198106</millis>
+  <nanos>695700</nanos>
+  <sequence>19</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 4, 2, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.107695Z</date>
+  <millis>1688301198107</millis>
+  <nanos>695000</nanos>
+  <sequence>20</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 4, 2, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.109688800Z</date>
+  <millis>1688301198109</millis>
+  <nanos>688800</nanos>
+  <sequence>21</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 2, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.111696700Z</date>
+  <millis>1688301198111</millis>
+  <nanos>696700</nanos>
+  <sequence>22</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 2, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.113677700Z</date>
+  <millis>1688301198113</millis>
+  <nanos>677700</nanos>
+  <sequence>23</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 2, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.115671700Z</date>
+  <millis>1688301198115</millis>
+  <nanos>671700</nanos>
+  <sequence>24</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 2, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.117668Z</date>
+  <millis>1688301198117</millis>
+  <nanos>668000</nanos>
+  <sequence>25</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 2, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.120667900Z</date>
+  <millis>1688301198120</millis>
+  <nanos>667900</nanos>
+  <sequence>26</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 2, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.122652900Z</date>
+  <millis>1688301198122</millis>
+  <nanos>652900</nanos>
+  <sequence>27</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 2, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.123650900Z</date>
+  <millis>1688301198123</millis>
+  <nanos>650900</nanos>
+  <sequence>28</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 3, 2, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.125645Z</date>
+  <millis>1688301198125</millis>
+  <nanos>645000</nanos>
+  <sequence>29</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.127639500Z</date>
+  <millis>1688301198127</millis>
+  <nanos>639500</nanos>
+  <sequence>30</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.128638100Z</date>
+  <millis>1688301198128</millis>
+  <nanos>638100</nanos>
+  <sequence>31</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.130631300Z</date>
+  <millis>1688301198130</millis>
+  <nanos>631300</nanos>
+  <sequence>32</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.131629100Z</date>
+  <millis>1688301198131</millis>
+  <nanos>629100</nanos>
+  <sequence>33</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.132629300Z</date>
+  <millis>1688301198132</millis>
+  <nanos>629300</nanos>
+  <sequence>34</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.134621Z</date>
+  <millis>1688301198134</millis>
+  <nanos>621000</nanos>
+  <sequence>35</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.136617400Z</date>
+  <millis>1688301198136</millis>
+  <nanos>617400</nanos>
+  <sequence>36</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.143608600Z</date>
+  <millis>1688301198143</millis>
+  <nanos>608600</nanos>
+  <sequence>37</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.144594400Z</date>
+  <millis>1688301198144</millis>
+  <nanos>594400</nanos>
+  <sequence>38</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.146589300Z</date>
+  <millis>1688301198146</millis>
+  <nanos>589300</nanos>
+  <sequence>39</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.148584400Z</date>
+  <millis>1688301198148</millis>
+  <nanos>584400</nanos>
+  <sequence>40</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.150578Z</date>
+  <millis>1688301198150</millis>
+  <nanos>578000</nanos>
+  <sequence>41</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.153572200Z</date>
+  <millis>1688301198153</millis>
+  <nanos>572200</nanos>
+  <sequence>42</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.155566100Z</date>
+  <millis>1688301198155</millis>
+  <nanos>566100</nanos>
+  <sequence>43</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+<record>
+  <date>2023-07-02T12:33:18.157561500Z</date>
+  <millis>1688301198157</millis>
+  <nanos>561500</nanos>
+  <sequence>44</sequence>
+  <logger>Seminar2_Homework.Task2</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task2</class>
+  <method>bubbleSort</method>
+  <thread>1</thread>
+  <message>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</message>
+</record>
+</log>

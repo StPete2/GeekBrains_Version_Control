@@ -23,7 +23,8 @@ public class Task4 {
     public static String getValue(String str){
         Scanner iScanner = new Scanner(System.in);
         System.out.print(str);        
-        String value = iScanner.nextLine();        
+        String value = iScanner.nextLine(); 
+        // iScanner.close();       
         return value;
     }
     
