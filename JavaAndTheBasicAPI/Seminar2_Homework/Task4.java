@@ -10,9 +10,9 @@ import java.io.IOException;
 public class Task4 {
     public static void main(String[] args) throws IOException {
         Scanner iScanner = new Scanner(System.in);
-        double x = Double.parseDouble(getValue("Введите первое число: "));
-        double y = Double.parseDouble(getValue("Введите второе число: "));
-        String sign = getValue("Введите символ операции +, -, * или / :");
+        double x = Double.parseDouble(getValue("Введите первое число: ", iScanner));
+        double y = Double.parseDouble(getValue("Введите второе число: ", iScanner));
+        String sign = getValue("Введите символ операции +, -, * или / :", iScanner);
         try {
             calculator(x, y, sign);            
         } catch (Exception e) {
@@ -20,11 +20,9 @@ public class Task4 {
         }
         iScanner.close();
     }
-    public static String getValue(String str){
-        Scanner iScanner = new Scanner(System.in);
+    public static String getValue(String str, Scanner iScanner){        
         System.out.print(str);        
-        String value = iScanner.nextLine(); 
-        // iScanner.close();       
+        String value = iScanner.nextLine();         
         return value;
     }
     
