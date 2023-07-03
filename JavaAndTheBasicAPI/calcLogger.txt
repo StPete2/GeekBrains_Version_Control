@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-07-03T13:20:34.169221900Z</date>
+  <millis>1688390434169</millis>
+  <nanos>221900</nanos>
+  <sequence>0</sequence>
+  <logger>Seminar2_Homework.Task4</logger>
+  <level>INFO</level>
+  <class>Seminar2_Homework.Task4</class>
+  <method>calculator</method>
+  <thread>1</thread>
+  <message>5,000000 / 5,000000 = 1,000000</message>
+</record>
+</log>

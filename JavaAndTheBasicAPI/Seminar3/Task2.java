@@ -22,7 +22,7 @@ public class Task2 {
         planets.add(5, "Юпитер");
         Collections.sort(planets);
         int count =1;
-        String planet = planets.get(0);
+        String planet = planets.get(0);                
         for (int i = 1; i < planets.size(); i++) {
             String currentPlanet = planets.get(i);
             if (planet.equals(currentPlanet)) {

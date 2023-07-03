@@ -13,7 +13,9 @@ public class Task3 {
         ArrayList<String> list1 = new ArrayList<>();
         list1.add(0, "Asdf");
         list1.add(1, "4");            
-        list1.add(2, "1");            
+        list1.add(2, "1"); 
+        list1.add("etwas");
+        list1.add("nochEinMal");
         System.out.println(list1);
 
         removeDigits(list1);
@@ -24,7 +26,9 @@ public class Task3 {
             if (parsString(list1.get(i))) {
                 list1.remove(i);
                 i--;
+                System.out.println("i = " + i);
             }
+            System.out.println("i2 = " + i);
         }        
     }
     

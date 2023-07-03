@@ -25,6 +25,6 @@ public class Task1 {
             number = random.nextInt(100);
             list2.add(i, number);
         }
-        System.out.println(list2);
+        System.out.println(list2);        
     }
 }

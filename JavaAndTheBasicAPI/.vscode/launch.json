@@ -6,6 +6,90 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Task3",
+            "request": "launch",
+            "mainClass": "Seminar3_Homework.Task3",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "Seminar3_Homework.Task2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex007",
+            "request": "launch",
+            "mainClass": "Lection3.Ex007",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex006",
+            "request": "launch",
+            "mainClass": "Lection3.Ex006",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex005",
+            "request": "launch",
+            "mainClass": "Lection3.Ex005",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex004",
+            "request": "launch",
+            "mainClass": "Lection3.Ex004",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex003",
+            "request": "launch",
+            "mainClass": "Lection3.Ex003",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex002",
+            "request": "launch",
+            "mainClass": "Lection3.Ex002",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex001",
+            "request": "launch",
+            "mainClass": "Lection3.Ex001",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task4",
+            "request": "launch",
+            "mainClass": "Seminar2_Homework.Task4",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "temp0",
+            "request": "launch",
+            "mainClass": "Temp.temp0",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "Seminar2_Homework.Task2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
