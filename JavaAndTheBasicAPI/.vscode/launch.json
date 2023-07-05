@@ -6,6 +6,104 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Queue",
+            "request": "launch",
+            "mainClass": "Seminar4_Homework.Queue",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task2$Queue",
+            "request": "launch",
+            "mainClass": "Seminar4_Homework.Task2$Queue",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Stack",
+            "request": "launch",
+            "mainClass": "Seminar4.Stack",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "Seminar4_Homework.Task1",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task3",
+            "request": "launch",
+            "mainClass": "Seminar4.Task3",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "Seminar4.Task2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "Seminar4.Task1",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex005",
+            "request": "launch",
+            "mainClass": "Lection4.Ex005",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex004",
+            "request": "launch",
+            "mainClass": "Lection4.Ex004",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex003",
+            "request": "launch",
+            "mainClass": "Lection4.Ex003",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex002",
+            "request": "launch",
+            "mainClass": "Lection4.Ex002",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex001",
+            "request": "launch",
+            "mainClass": "Lection4.Ex001",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex000",
+            "request": "launch",
+            "mainClass": "Lection4.Ex000",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "task1temp",
+            "request": "launch",
+            "mainClass": "Seminar4.task1temp",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
             "name": "Task1",
             "request": "launch",
             "mainClass": "Seminar3_Homework.Task1",

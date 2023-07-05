@@ -9,6 +9,7 @@ public class Ex001 {
         ll.add(1);
         ll.add(2);
         ll.add(3);
+        
         System.out.println(ll);
         System.out.println(ll.poll());
         System.out.println(ll);
