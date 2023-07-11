@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "Seminar4_Homework.Task2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "task2",
+            "request": "launch",
+            "mainClass": "Seminar5.task2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "temp4",
+            "request": "launch",
+            "mainClass": "Temp.temp4",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex004_TreeMap",
+            "request": "launch",
+            "mainClass": "Lection5.Ex004_TreeMap",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex006_HashTable",
+            "request": "launch",
+            "mainClass": "Lection5.Ex006_HashTable",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex005_LinkedHashMap",
+            "request": "launch",
+            "mainClass": "Lection5.Ex005_LinkedHashMap",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex001_HashMap",
+            "request": "launch",
+            "mainClass": "Lection5.Ex001_HashMap",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
             "name": "Queue",
             "request": "launch",
             "mainClass": "Seminar4_Homework.Queue",

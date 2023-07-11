@@ -14,6 +14,7 @@ public class Task2 {
         System.out.println("Введите строки для запоминания или введите esc: ");
         String str = sc.nextLine();
         returnStack(str, sc);
+        sc.close();
 
     }
     public static java.util.Stack <String> returnStack(String str, Scanner sc){
