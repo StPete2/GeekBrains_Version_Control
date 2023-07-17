@@ -6,6 +6,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "Seminar6_Homework.Task1",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "OOP_Seminar1.Main",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex005_Program",
+            "request": "launch",
+            "mainClass": "Lection6.Ex005_Program",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex004_LinkedHashSet",
+            "request": "launch",
+            "mainClass": "Lection6.Ex004_LinkedHashSet",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex003_TreeSet",
+            "request": "launch",
+            "mainClass": "Lection6.Ex003_TreeSet",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex002_MathSet",
+            "request": "launch",
+            "mainClass": "Lection6.Ex002_MathSet",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Ex001_HashSet",
+            "request": "launch",
+            "mainClass": "Lection6.Ex001_HashSet",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "task0",
+            "request": "launch",
+            "mainClass": "Seminar6.task0",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "temp5",
+            "request": "launch",
+            "mainClass": "Temp.temp5",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "task1",
+            "request": "launch",
+            "mainClass": "Seminar5_Homework.task1",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
             "name": "Task2",
             "request": "launch",
             "mainClass": "Seminar4_Homework.Task2",
