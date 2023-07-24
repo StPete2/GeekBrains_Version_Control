@@ -32,11 +32,11 @@ public class Main2Seminar_Homework {
         
         System.out.println();        
 
-        SteppeEagle eagle = new SteppeEagle("Eagle");
+        SteppeEagle eagle = new SteppeEagle("Eagle", 195);
         Cat barsik = new Cat();
         SwordFish swordy = new SwordFish();
-        Animal lizzi = new Lizard(); 
-        // Lizard lizzi = new Lizard();
+        // Animal lizzi = new Lizard(); 
+        Lizard lizzi = new Lizard();
         VetClinicAnimals vca = new VetClinicAnimals();
 
         vca.addNewAnimal(eagle).addNewAnimal(barsik).addNewAnimal(swordy);
@@ -56,8 +56,14 @@ public class Main2Seminar_Homework {
         System.out.println("Swimmable: " + swimmable);
         
         System.out.println();
-        System.out.println("Miscellaneous: ");
+        System.out.println("Part no. 4. Running, Flying and Swimming speed: ");
         eagle.toFly();
+        System.out.println("Eagle Flying Speed: " + eagle.getFlyingSpeed() + "km/h");
+        lizzi.setSpeed(3);
+        System.out.println("Lizard running speed is: " + lizzi.getRunningSpeed() + "km/h");
+        lizzi.toRun();        
+        swordy.setSwimmingSpeed(15);
+        System.out.println("Swordy swimming speed is: " + swordy.getSwimmingSpeed() + "km/h");
         swordy.toSwim();
     }
 }

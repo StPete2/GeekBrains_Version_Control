@@ -29,13 +29,13 @@ public class Main {
         // universalAnimal.toFly();
         // universalAnimal.toSwim();
         
-        SteppeEagle lesha = new SteppeEagle("Lesha");
+        SteppeEagle lesha = new SteppeEagle("Lesha", 195);
         lesha.toFly();
         lesha.toRun();
         lesha.toSwim();
         System.out.println();        
         
-        SwordFish swordy = new SwordFish("SwordySecond", "DeepSea", "WaterLoving", false, 100, false);
+        SwordFish swordy = new SwordFish("SwordySecond", "DeepSea", "WaterLoving", false, 100, false, 15);
         swordy.toRun();
         swordy.toFly();
         swordy.toSwim();

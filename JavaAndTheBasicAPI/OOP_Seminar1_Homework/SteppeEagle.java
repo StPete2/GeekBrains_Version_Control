@@ -1,11 +1,15 @@
 package OOP_Seminar1_Homework;
 public class SteppeEagle extends Animal implements Flyable{
+    private int speed;
 
-    public SteppeEagle(){
-        super();
+    public SteppeEagle(String namePet, String ownerName, String diagnosis, boolean isVaccinated, int speed){
+        super(namePet, ownerName, diagnosis, isVaccinated);
+        this.speed = speed;
     }
-    public SteppeEagle(String name){
+
+    public SteppeEagle(String name, int speed){
         this.namePet = name;
+        this.speed = speed;
     }
 
     @Override
@@ -19,5 +23,9 @@ public class SteppeEagle extends Animal implements Flyable{
     @Override
     public void toFly() {
         super.toFly();
+    }
+    @Override
+    public int getFlyingSpeed() {
+        return this.speed;     
     }    
 }
