@@ -36,13 +36,13 @@ public class Animal {
         return arg + TYPE;
     }
 
-    protected void toGo(){
-        System.out.printf("My name is %s. I am %s. I implement toGo method. I like walking\n", namePet,TYPE);
+    protected void toRun(){
+        System.out.printf("My name is %s. I am %s. I implement super() toRun method. I like walking\n", namePet,TYPE);
     }
     protected void toFly(){
-        System.out.printf("My name is %s. I am %s. I implement toFly method. I am flying\n", namePet,TYPE);
+        System.out.printf("My name is %s. I am %s. I implement super() toFly method. I am flying\n", namePet,TYPE);
     }
     protected void toSwim(){
-        System.out.printf("My name is %s. I am %s. I implement toSwim method. I swim very well\n", namePet, TYPE);
+        System.out.printf("My name is %s. I am %s. I implement super() toSwim method. I swim very well\n", namePet, TYPE);
     }
 }

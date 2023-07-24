@@ -18,7 +18,7 @@ public class Main {
 
         // complexCat.describeCatsDay();
         Lizard lizi = new Lizard();
-        lizi.toGo();
+        lizi.toRun();
         lizi.toFly();
         lizi.toSwim();
         System.out.println();
@@ -29,14 +29,14 @@ public class Main {
         // universalAnimal.toFly();
         // universalAnimal.toSwim();
         
-        SteppeEagle lesha = new SteppeEagle();
+        SteppeEagle lesha = new SteppeEagle("Lesha");
         lesha.toFly();
-        lesha.toGo();
+        lesha.toRun();
         lesha.toSwim();
         System.out.println();        
         
         SwordFish swordy = new SwordFish("SwordySecond", "DeepSea", "WaterLoving", false, 100, false);
-        swordy.toGo();
+        swordy.toRun();
         swordy.toFly();
         swordy.toSwim();
         System.out.println();
@@ -53,7 +53,7 @@ public class Main {
             System.out.println("I am a SUPER SwordFish. I can FLY!");
         } else {
             swordy.toSwim();
-            swordy.toGo(); // этот метод переопределен, поэтому выдает корректно все. 
+            swordy.toRun(); // этот метод переопределен, поэтому выдает корректно все. 
             // иначе пришлось бы вводить вторую логическую переменную toGo.
         }
     }

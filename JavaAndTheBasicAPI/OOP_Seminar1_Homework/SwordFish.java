@@ -1,6 +1,6 @@
 package OOP_Seminar1_Homework;
 
-public class SwordFish extends Animal{
+public class SwordFish extends Animal implements Swimmable{
     int lengthOfFish;
     boolean canFly;
 
@@ -13,12 +13,16 @@ public class SwordFish extends Animal{
         super("Swordy", "Ocean", "Fish", false);
     }
     @Override
-    public void toGo(){
+    public void toRun(){
         System.out.println("I am a fish. I can't go, as I can breath air only in water");
     }
     @Override
     public void toFly(){
         System.out.println("I am a fish. I can't fly. Only in my dreams))");
+    }
+    @Override
+    public void toSwim() {
+        System.out.println("This is an overriden method to swim. I swim");
     }
 
 }

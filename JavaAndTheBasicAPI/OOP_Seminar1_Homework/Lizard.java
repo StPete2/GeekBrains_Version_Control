@@ -1,6 +1,6 @@
 package OOP_Seminar1_Homework;
 
-public class Lizard extends Animal{
+public class Lizard extends Animal implements Runnable{
     
     private int tailLengthInSM;
     
@@ -21,5 +21,9 @@ public class Lizard extends Animal{
     }
     public int getTailLength(){
         return tailLengthInSM;
+    }
+    @Override
+    public void toRun() {
+        System.out.println("This is an overriden method to run. I run");
     }
 }
