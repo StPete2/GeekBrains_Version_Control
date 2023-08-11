@@ -33,6 +33,11 @@ a {
     color: #F25822;
 }
 
+.top_menu_icon {
+    width: 6px;
+    height: 3px;
+}
+
 .top_content {
     margin-right: 39px;
     margin-bottom: 162px;
