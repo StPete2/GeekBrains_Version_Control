@@ -12,6 +12,11 @@ a {
     text-decoration: none;
 }
 
+.center {
+    padding-left: calc(50% - 573px);
+    padding-right: calc(50% - 573px);
+}
+
 .header {
     padding-top: 39px;
     padding-bottom: 39px;
