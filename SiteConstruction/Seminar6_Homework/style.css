@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    margin-left: calc(50% - 800px);
+    margin-right: calc(50% - 800px);
+}
+
+body {
+    font-family: 'Lato';
+}
+
+/* header */
+
+.header {
+    background: #222;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 859px;
+}
+
+.left_header_icons {
+    display: flex;
+    flex-direction: row;
+    gap: 41px;
+}
+
+.right_header_icons {
+    color: #E8E8E8;
+}
+
+/* 2nd section */
+
+.top_item_with_image_and_logo {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: lightgray 50% / cover no-repeat;
+}
+
+.left_top_picture {
+    display: flex;
+    justify-content: center;
+}
+
+.right-hand-side-relative {
+    position: relative;
+}
+
+.right_hand_side_absolute {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+    position: absolute;
+    inset: 290px 0px 0px 63px;
+}
+
+.the_brand {
+    color: #222;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.of_luxerious {
+    color: #222;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fashion {
+    color: #F16D7F;
+    /* font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; */
+}
+
+
+/* 3rd section */
+
+.top_examples {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    gap: 30px;
+    margin-top: 65px;
+    margin-bottom: 96px;
+    justify-content: center;
+}
+
+.item {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    /* background: rgba(33, 22, 22);
+    opacity: 0.7; */
+}
+
+.big_item {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-column: span 3;
+    justify-items: center;
+}
+
+.text_inside {
+    position: absolute;
+    z-index: 1;    
+}
+
+.first_line {
+    color: #FFF;
+    text-align: center;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.second_line {
+    color: #F16D7F;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.background_examples {
+    position: absolute;
+    /* background: rgba(33, 22, 22); */
+    opacity: 0.7;
+}
+/* 4th main section */
+
+.main_info_section {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.info_and_heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.six_standard_items {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    justify-content: center;
+    gap: 30px;
+}
+
+.standard_item {
+    background: #F8F8F8;
+}
+
+.standard_item_second {
+    display: grid;    
+    grid-template-rows: 420px 161px;
+    background: #F8F8F8;
+}
+
+.second_item {
+    padding-top: 9px;
+    padding-bottom: 11px;
+    display: grid;    
+    background: #F7E4E2;
+    justify-items: center;
+}
+
+.h3_heading {
+    color: #222;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.paragraph_main_info {
+    padding-top: 6px;
+    padding-bottom: 48px;
+    color: #9F9F9F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.info_item {
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-left: 16px;
+    padding-bottom: 24px;
+    background: #F8F8F8;
+}
+
+.h6_heading {
+    color: #000;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.paragraph_item_main {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #5D5D5D;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    max-width: 315px;
+}
+
+.invitation {
+    margin-top: 48px;
+    border: 1px solid #FF6A6A;
+    width: 212px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation_text {
+    color: #F26376;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
