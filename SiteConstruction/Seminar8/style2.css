@@ -1,0 +1,19 @@
+.custom-checkbox {
+    display: none;
+}
+
+.custom-checkbox:checked+.custom-checkbox-label {
+    background-image: url(./img/.custom-checkbox);
+}
+
+.custom-checkbox+.custom-checkbox-label {
+    padding-left: 40px;
+    line-height: 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(./img/.custom-checkbox-label);
+    background-size: contain;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
