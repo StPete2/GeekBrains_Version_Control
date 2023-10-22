@@ -1,0 +1,897 @@
+Занятие №1. Подключение Линукс
+
+1. sudo apt update = обновить список пакетов
+4. sudo apt install mc = установить пакет mc
+5. sudo apt install openssh-server = установить ssh-сервер
+
+ctrl + l = clear = очистить консоль
+
+mc = запуск midnight commander
+
+ctrl + O = скрыть панели mc
+
+sudo apt install openssh-server
+
+если знаем только начало: нажимаем tab и получаем все, что есть.
+можем часто нажимать tab
+
+6. ip a = список интерфейсов
+ip -c a = список ip адресов раскрашенный
+systemctl status ssh = команда для проверки статусов сервисов
+
+подключиться по openssh через powershell:
+7. ssh db@10.13.4.190 = ip4 адрес виртуальной машины, хостовая система
+
+exit = выход из powershell
+ssh -p 8022 db@localhost = подключаемся как бы сами к себе
+
+Установка гостевых пакетов
+sudo apt update
+2. sudo apt install gcc make perl = компилятор языка с
+3. sudo ./VBoxLinuxAdditions.run
+
+sudo reboot = перезагрузка
+sudo usermod -aG vboxsf db = добавляем нас в группу пользователей shared папки для того, чтобы входить без пароля. Можно задать папку Shared там, где это необходимо!! не обязательно в downloads.
+
+ctrl+shift+c
+ctrl+shift+v
+
+ctrl+c = завершение текущего процесса
+
+9. sudo usermod -aG vboxsf aleksey_gb
+
+*** Лекция №2.Работа с файлами ***
+
+sudo su = переключение на суперпользователя
+/home/aleksey_gb - домашняя папка для пользователя
+переход в домашний каталог: cd или cd ~
+cd / = переход в корень
+ls -al = просмотреть все файлы в каталоге с полной детализацией
+ls = просто просмотреть все файлы в каталоге
+. = точка - скрытые файлы 
+ls -l = все, кто не начинаются на точку.
+/dev = устройства (блочные или символьные)
+/proc = о процессах системы (только специальные виды файлов)
+/sys = информация о системе
+/run = временные файлы состояния
+cat cpuinfo = распечатка файла cpuinfo
+
+Команды работы с файлами:
+ls = список файлов (list)
+pwd = текущая директория (print working directory)
+mkdir = создание каталога (make directory)
+cp = копирование (copy)
+rm = удаление (remove)
+mv = переименование, или перенос (move)
+touch = создание пустого файла или изменение его свойств
+cat = вывод файла, склейка, создание
+
+длинные параметры начинаются с двух дефисов
+короткие параметры начинаютс с одного дефиса и их можно объединять
+мета данные - данные об элементе
+команда --help = справка по команде!
+man ls = документация по команде ls!
+
+q, или quit = выход из man
+
+mkdir -p 1/2/3/4/5 = создание всех вложенных каталогов до 5
+ll = псевдоним команды ls с определенными параметрами (ls -al).
+
+cd ~/test = переход в домашний каталог (директорию) и папку test
+
+cat > testfile = создаем testfile и после набираем текст, который будет записан в файл. CTRL+D = закрыть файл и сохранить все изменения
+
+cp testfile (источник) test2 (куда) = копирование файла testfile в test2 (создается при копировании).
+
+cp -r test test2 = копирование каталога test в test2 рекурсивно (включая все вложенные файлы). Без ключа -r копировать не будет!
+
+mv = remove = перенос или копирование с удалением. Если в рамках одного дискового пространства, то просто переименование (старое меняем на новое). Если в рамках разных пространств, то нужно будет копирование и удаление.
+
+mv = всегда рекурсивно, не требует ключа -r
+
+rm = удаление файлов. -f = удаление без вопросов, force. -r = рекурсивно
+rm test2 = удаление файлов или директорий
+
+рекомендуется указывать полный путь к удаляемому файлу или каталогу!
+
+touch testt = создание файла пустой длины testt
+
+cat testfile test2 > test_all = склейка двух файлов в новый
+
+cat test_all = распечатка в консоль файла test_all
+
+cd /home/db = 
+
+cd ../.. = уйти на два уровня вверх
+
+ln test2 test_ln = создаем жесткую ссылку и файл test_ln 
+
+ls -ali = показать номера inode для каждого файла или папки
+ls -aliFh = показать со слешем и размер файла
+
+cat >> test_ln = дозаписать что-то в test_ln
+
+inode = ссылка на пространство жесткого диска, метаданные,
+
+для директориев делать жесткие ссылки пользователи не могут. Но они есть - на уровень вверх и уровень вниз.
+
+ln -s test2 test_lns
+
+ln -s /home/db/test3/test2 test_lns_abs
+
+vim <имя файла> = открытие файла в vim
+
+vimtutor = обучение работы с vim
+
+Nano:
+ctrl+g = справка
+ctrl+o = сохранение
+ctrl+x = выход
+alt+n = включение номеров строк
+ctrl+w = поиск
+
+MCedit
+f2 = сохранить
+f10 = выход
+alt+n = включить номера строк
+f7 = поиск
+f3 = выделение блока
+f9 = меню
+
+head -n 3 .bashrc = первые три строчки файла bashrc
+
+tail -f /var/log/auth.log = отслеживание изменений в файле в реальном времени
+ctrl + c = остановка выполнения команды
+
+apt = менеджер пакетов, это круто
+
+*** Семинар 2 ***
+
+sudo apt install terminator = установка терминала terminator
+ctrl + alt + t = запуск последнего терминала
+
+sudo apt install screenfetch = установка программы
+screenfetch = запуск программы screenfetch - вся информация о  системе
+
+sudo su = перейти в режим суперпользователя
+ctrl+d = возврат в роль обычного пользователя
+
+sudo apt install cmatrix = установка программы
+cmatrix = запуск программы
+
+cd - = вернуться назад на предыдущую директорию.
+
+echo $OLDPWD = посмотреть, что хранится в переменной OLDPWD
+
+ctrl + d = закрыть терминал, отправить end of file
+ctrl + l = скрыть все ранее введенное
+clear = удаление
+
+source .bashrc = перезапуск bashrc, но не простой.
+tree -L 5 = глубина вложенных папок
+mkdir -p = создание всех вложенных каталогов, если они не существуют
+
+rm -r = удаление каталога со вложенными файлами
+одинарный уголок перезаписывает!
+двойной уголок дописывает!
+
+cat file1 file2 > file4
+ln file link = жесткая ссылка
+ln -s file slink = символьная ссылка
+
+watch tail file222 = будет показывать каждые две секунды изменения в файле
+watch -n 0.5 tail file222 = каждые 0,5 секунд показывать логи (любая команда вместо tail и имя файла
+
+nano config = открыть файл config в nano
+
+*** Лекция3 ***
+cat /etc/passwd = просмотр всех пользователей, которые есть в системе
+cat /etc/group = просмотр всех групп
+cat /etc/shadow = просмотр всех паролей
+
+useradd
+adduser 
+usermod
+userdel
+passwd
+chage = изменение свойств пароля
+groupadd
+groupdel
+
+sudo useradd -s /bin/bash -m -d /home/testuser testuser
+	     задаем оболчку 
+			  задаем домашний каталог и прописываем путь к нему 
+				                задаем логин пользователю
+
+tail /etc/passwd
+
+sudo adduser testuser2 = потребуется ввод пароля
+passwd = смена пароля для текущего пользователя
+sudo passwd testuser = пароль для пользователя
+sudo ls -al /home/testuser = просмотр каталогов пользователя
+
+ls -al /etc/skel = скелетон для новых пользователей. Можем менять состав в этой папке, как захотим
+
+sudo usermod -aG adm testuser = добавление пользователя в группу testuser
+[append G = список дополнительных групп]
+
+id = список групп
+sudo id testuser = список групп пользователя
+
+sudo usermod -g www-data testuser = смена основной группы
+sudo userdel testuser2 = удаление пользователя, файлы сохраняются
+
+sudo chage testuser = управление паролем пользователя, которые есть в системе
+
+sudo groupadd testgroup = создание группы
+sudo groupdel testgroup = удаление группы
+
+su = substitute user = переключение пользователя
+sudo su = переключение на суперпользователя
+/etc/sudoers = конфигурация sudo
+visudo = редактирование 
+
+su testuser = запросит пароль от testuser
+exit = завершает сеанс работы подмененного нового пользователя
+
+**sudo visudo = открывается временный файл /etc/sudoers.tmp
+
+chown -R = изменение владельца или группы владельца файлов или групп рекурсивно
+chown testuser:testgroup = определение сразу и владельца, и группы
+
+Менять владельцев файлов или групп - опасно, всегда пишем абсолютный путь!
+
+sudo chown testuser:www-data testt
+sudo chown -R testuser:www-data /home/db/test3 - пример опасной команды
+sudo chgrp -R adm /home/db/test3
+sudo chgrp -R www-data /home/db/test3
+
+chmod -R testdir/ 
+chmod u=rwx, g=rx, o=r testfile
+chmod 751 testfile
+chmod a+x
+chmod 4755
+
+sudo chmod u=rwx, g=rw, o=rx test2 = user, group, others
+sudo chmod 664 test2 = стандартные права доступа 4=чтение, 2=запись, 7=исполнение
+
+ctrl+x и c = вызов команды chmod в MC
+
+sudo chmod -r test3 = удаляем возможность чтения
+sudo chmod +r test3 = добавляем возможность чтения директории
+sudo chmod u+rwx, g=rw, o-rx test2 = добавляем, оставляем, убираем
+
+sudo chmod g+s = sgid бит
+sudo chmod u+s = suid бит
+sudo chmod a+w /home/db/test3 = дали права на запись
+
+создаем файл от имени владельца группы... интересно
+t = sticky bit
+
+значение umask = 022 = понижение прав доступа, права по умолчанию
+umask 
+umask 022 = 
+
+*** Семинар 3. ***
+useradd -m -d /home/second_user_dir -s /bin/bash -G sudo second_user
+
+ctrl+a = курсор в самое начало
+ctrl+e = курсор в самый конец
+sudo !! = подстановка предыдущей команды
+
+sudo passwd second_user
+sudo cat /etc/shadow = посмотреть файлик с паролями
+
+su = switch/swap user 
+su second_user = войти под другим пользователем. Потребуется ввод пароля
+ll /etc/skel/ = 
+ls -aliF /etc/skel/ = посмотреть файлы, которые по умолчанию
+
+nano .nanorc = создать файл .nanorc
+sudo cp .nanorc /etc/skel/
+sudo cp .nanorc /root/
+
+sudo adduser new_user
+
+su new_user = войти под другим пользователем
+sudo usermod = если не добавили в папку sudo, то выполнение действий от имени этого пользователя не будет возможно
+
+sudo groups new_user = просмотр всех групп пользователя
+sudo usermod --help
+
+cat /etc/group = посмотреть список всех групп и кто в них входит
+
+***sudo usermod -aG sudo new_user = добавление новому юзеру группы sudo
+groups new_user = все группы для нового юзера
+
+sudo groupadd new_group
+
+sudo gpasswd = управление группами, устаревшая команда немного
+sudo gpasswd -d new_user sudo = удалить пользователя new_user из группы sudo
+
+sudo passwd root = назначить пароль для root
+new_user ALL=(ALL:ALL) /usr/bin/ls = в файле /etc/sudoers
+sudo visudo = открываем файл sudoers.tmp
+
+rm * = удаление сразу всех файлов
+sudo chown new_user file = назначить владельца файла другому
+sudo chown second_user:new_user file = меняем и владельца, и группу файлу
+sudo chgrp <имя группы> file = меняем группу для файла
+
+chgrp --help = зайти, посмотреть справку, если хочешь.
+chmod a=r file = дать всем право только на чтение, установили символом равно!
+chmod u+w file = пользователю дать право дополнительно на запись, добавили!
+chmod g+x file = дать группе возможность и запускать
+chmod o-r file = отнять чтение у остальных
+
+rwx rw- r--
+111 110 100
+
+chmod 764 file = установить права как указано выше
+1 шестьнадцатеричная цифра соответствует 4 двоичным цифрам
+первый регистр - это 4, второй регистр - это 2, третий регистр - это 1
+
+umask = 0002 = забиваем эту команду в строку и выводит такую маску
+у директории 777 минус наша маска
+у файлов 666 минус эта маска
+
+777 - 002 = 775 = 111 111 101 = rwx rwx r-x
+666 - 002 = 664 = 110 110 100 = rw- rw- r--
+
+umask 003 = задать  маску 003
+umask = проверить маску
+
+umask сбрасывается при перезапуске
+chmod g+x file = назначить бит SGID
+chmod u+s file = начначить бит SUID 
+S - х выключен
+s - x включен
+
+sudo chmod g+s dirname = включить бит SGID
+sudo chmod +t dir1 = добавить sticky bit
+
+*** Лекция 4 ***
+все команды выполняются через sudo
+sudo su = переход в пользователя root более безопасно через sudo
+sudo apt update = проверка информации о доступных обновлениях
+
+apt search nginx 
+apt list nginx	
+apt install nginx
+apt install -y nginx
+cd /etc/nginx = проверяем, как установилось
+apt remove nginx = удаление
+apt autoremove = удаление созависимых пакетов, без указания имени пакета
+apt purge nginx = удаление всех созависимых пакетов, лучше ее не использовать, наверно.
+apt purge <указание имени созависимых пакетов>
+
+apt show mc = подробности о пакете
+
+dpkg -l = просмотр списка пакетов
+dpkg -i package_name = установить локальный пакет только, вначале надо скачать
+dpkg -r package_name = удалить
+
+*как посмотреть версию дистрибутива?
+
+wget <ссылка>
+dpkg -i <название файла>
+apt -f install = исправление всех не до конца установленных пакетов
+вначале ставятся созависимости, а потом устанавливается сам пакет
+
+dpkg надо будет использовать постоянно. apt upgrage не сработает
+
+snap search package_name
+snap install package_name
+snap refresh package_name = обновление
+snap remove package_name = удаление
+snap list = просмотр установленных пакетов
+может работать везде, где есть архитектура дистрибутива
+
+планировщик cron
+nano chrontab
+apt --help = знакомимся с любой командой с помощью --help
+sudo apt moo
+sudo apt install cowsay -y
+cowsay Hello from Gb радость ))
+sudo apt update = получаем список пакетов, доступных для обновления
+sudo apt upgrade = обновить все пакеты.
+sudo apt list = показать все пакеты, которые есть в apt
+sudo apt list php* = показать все пакеты, начинающиеся с php
+sudo apt list *php* = все пакеты
+sudo apt autoremove = удаление всех ненужных пакетов, которые без зависимостей, но были установлены как зависимые
+Sudo apt reinstall = переустановить с нуля
+full-upgrade = 
+dist-upgrade = в списке репозиториев указать имя новой системы и обновится
+репозитории указать в файле sources.list
+
+ps afx | grep [c]ron = в папке /etc/cron.d = поиск выполняющихся процессов
+
+crontab -l = вывести содержимое текущего файла расписания
+crontab -r = удалить файл расписания
+crontab -e = редактировать файл расписания
+sudo crontab -u username и дальше параметр = работа с файлом расписания другого пользователя 
+/etc/cron.d 
+crontab -e = редактировать файл для расписания
+
+sudo nano sources.list
+/etc/apt/sources.list
+
+https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/#apt-repo-setup
+http://nginx.org/ru/linux_packages.html
+https://www.virtualbox.org/wiki/Linux_Downloads
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+launchpad.net
+sudo add-apt-repository ppa:ondrej/php
+
+https://www.google.com/chrome/?platform=linux
+sudo apt install ./google-chrome-stable_current_amd64.deb -y
+находясь в этой директории
+
+sudo apt install ~/Загрузки/google-chrome-stable_current_amd64.deb -y
+sudo snap --help = посмотреть основные команды
+account в snap и далее разрабатывать проекты и т.д.
+
+sudo snap find telegram
+sudo snap install telegram-desktop = установка телеграм в Линукс
+sudo snap remove telegram-desktop = удаление
+
+crontab -e = предлагает записать в новый файл какой-то скрипт, задание
+* * * * * echo "Hello" >> /home/ubuntu/tmp/file = записать hello в файл каждую минуту
+
+https://crontab.guru/
+*/5 = каждую пятую минуту
+5, 12, 44 * * * * = перечисление
+5-12,4 = range и 4 минута
+* = все значения
+5,17 13,18 * * * = каждую 5 и 17 минуту 13 и 18 часов
+* * 5 10 2 = каждую минуту 5 числа октября и по вторникам
+5 * * 10 2 = только вторники октября
+@reboot = после перезагрузки
+
+#!/usr/bin/env python3 = приложение для открытия
+
+chmod a+x main.py = сделать файл выполняемым для всех
+
+sudo apt remove google-chrome-stable
+sudo snap remove telegram-desktop
+watch -n 0.5 tail file 
+
+*** Лекция 5.
+ip a = показать все интерфейсы
+ip -s a = показ статистики
+ip -c -s a = включение подсветки
+ip a show enp0s3 = все данные по одному интерфейсу
+ip link show enp0s3 = данные по уровню link
+ip r = информация о маршрутах
+
+lo = loopback = внутренний интерфейс
+
+ss = socket stat
+Сокет сочетание ip адреса и порта для конкретного протокола
+tcp/udp
+ss -ntlp = все в цифрах, tcp, listen sockets, program
+ss -ntulp = все, что выше и udp (порядок не важен)
+ss -tulpan = вообще все сокеты
+
+22 tcp порт - сервис ssh
+любой ipv4 адрес будем реагировать
+квадратные скобки - ipv6
+53 socket - dns, для loopback
+
+/etc/netplan/*.yaml = конфигурационные файлы
+netplan try = тестирование
+netplan apply = применение конфигурации
+
+ping 8.8.8.8 = доступность адреса в принципе ICMP
+ping ya.ru = проверка dns и доступности
+host -t a yandex.ru
+host -t a yandex.ru 8.8.8.8 
+dig @8.8.8.8 google.com
+tracepath ya.ru 
+traceroute ya.ru
+mtr ya.ru
+
+iptables -L -nv = list, показать список правил, большая детализация
+iptables -L -nv -t nat = указываем таблицу nat. Выше была для таблицы фильтр
+
+iptables -P INPUT DROP = политика по умолчанию DROP
+
+iptables -A INPUT -p tcp --dport=80 -j ACCEPT 
+destination port / source port 80
+в конец списка 
+1. iptables -I INPUT -p tcp --dport=22 -j ACCEPT
+вставляет на первое место в списке
+2. iptables -A INPUT -p tcp -m multiport --dport 80,443 -j ACCEPT
+
+iptables -A INPUT -p tcp -s 192.168.0.100 --dport 80 -j DROP
+
+iptables -D INPUT 3 = удалить третье правило
+3 iptables -D INPUT -p tcp --dport 80 -j ACCEPT = удалить правило по описанию
+
+iptables -F = сброс правил, очень аккуратно
+
+4. iptables -A INPUT -i lo -j ACCEPT = разрешить весь трафик на loopback
+5. iptables -I INPUT -m state --state ESTABLISHED, RELATED -j ACCEPT = те, что отвечают на наши запросы
+
+6. iptables -A INPUT -p icmp -j ACCEPT = разрешили все пакеты для icmp
+7. iptables -P INPUT DROP = политика по умолчанию
+
+iptables-save > iptables.rules
+iptables-restore < iptables.rules
+
+apt install iptables-persistent netfilter-persistent
+netfilter-persistent save
+
+ip -c a = интерфейсы с подсветкой
+полиморфизм = перенаправляет себе же.
+ip -c r = маршруты, которые проходят наши отправки
+ss -utalnp = 
+
+nat = сеть внутри роутера!
+
+/etc/netplan/01-network-manager-all.yaml
+
+
+***.nanorc
+в домашней директории nano .nanorc
+sudo cp .nanorc /root/
+
+sudo netplan try = вначале это.
+sudo netplan apply
+
+проверка работоспособности сети
+ping gb.ru = проверка работы
+host gb.ru = получить ip адрес сайта
+tracepath gb.ru = узнать все промежуточные узлы до сайта gb.ru
+sudo apt install traceroute -y
+
+ssh aleksey_gb@  -p 2245 
+
+sudo iptables -P INPUT DROP
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -t nat -A PREROUTING -p tcp --dport 3356 -j REDIRECT --to-port 2245
+
+sudo iptables-save > my_rules = записать
+sudo iptables-restore <my_rules = восстановить
+sudo apt install netfilter-persistent iptables-persistent
+netfilter-persistent --help
+sudo netfilter-persistent save =
+
+*** Лекция 6. 
+curl -L https://ya/ru = -L переход по редиректам
+wget https://yastatic.net/jquery/2.1.4/jquery.min.js
+
+sudo nginx -t = тестирование конфигурации!
+sudo systemctl reload nginx = применение
+/etc/nginx/* = конфигурация
+/etc/nginx/nginx.conf = основной файл
+server {}
+server_namesite.ru;
+$uri
+http://nginx.org/ru/docs
+
+ss -ntlp = список подключений, кто слушает
+ps afx = посмотреть таблицу процессов
+curl localhost = 
+
+APACHE
+sudo apt install apache
+sudo apachectl -t = тестирование
+sudo systemctl reload apache2 = применить
+/etc/apache2/ = конфигурация
+/etc/apache2/apache2.conf = 
+sudo systemctl start apache2
+sudo systemctl status apache2
+sudo nano ports.conf = 
+sudo curl localhost:8080 = тест страницы 
+cd var/www/html
+
+проброс портов:
+1:19:00
+
+apt install mysql-server-8.0
+sudo  mysql = запустить mysql
+user mysql;
+SELECT * FROM user\G
+CREATE DATABASE gb;
+CREATE TABLE test(i INT);
+INSERT INTO test (i) VALUES (1),(2),(3),(4);
+SELECT * FROM test;
+CREATE TABLE users (id INT, name TEXT, age INT);
+INSERT INTO users (id, name, age) VALUES (1, "Aleksey", 12), (3, "MAX", 14), (4, "Tommy", 27);
+
+inside mysql:
+show databases;
+use mysql; = создание, использование базы данных
+show tables; = показать таблицы
+SELECT * FROM user\G;
+
+ports.conf = 
+sites-enabled/000-default.conf
+
+DocumentRoot = папка, в которой сервер ищет html странички
+ServerAdmin =
+
+sudo service nginx stop = 
+sudo service apache2 start = 
+
+если в /var/www/html создать страницу tmp.html и указать в браузере 127.0.0.1/tmp.html, то он откроет ту страницу, которую мы создали!!
+можно создавать разные папки внутри /var/www/html
+
+sudo service apache2 status
+sudo nginx -t = проверить конфигурацию
+sudo service nginx restart
+
+location / {
+proxy_pass http://localhost:8080;
+proxy_set_header Host $host;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header X-Real-IP $remote_addr;
+}
+
+location ~* ^.+.(jpg|jpeg|gif|png|ico|css|zip|pdf|txt|tar|js)$ {
+root /var/www/html;
+}
+
+sudo apt install python3-pip
+python3 -m pip install flask
+python3 server.py
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+return "<h1>Hello, GB!</h1>"
+app.run("0.0.0.0", 5678)
+
+Сергей, добрый день!
+У меня произошла небольшая "путаница")
+
+1. Правильно ли я понимаю, что заглавную страницу nginx мне хост 127.0.0.1 выдает только в том случае, если у меня отсутствует переадресация динамики на порт 4567?
+
+2. Потому что, когда эта переадресация стоит в конфиге nginx, то по адресу 127.0.0.1 он выдает дефолтную страницу apache2, но при исследовании элемента показывает, что работает сервер nginx. Это правильно?
+
+3. Когда я указываю в адресной строке 127.0.0.1:4567, то выдается тоже стартовая страница apache2, но её выдает уже сервер apache2, а не nginx. Верно?
+
+Если все так и должно быть, то, вроде бы, настроено все корректно.
+Я переволновался, так как система перестала выдавать приветственную страницу nginx с работающей переадресацией... :-)
+
+4. К сожалению, настроить работу Nginx совместно с PHP-FPM у меня не получилось, потому что у меня самая новая версия Nginx 1.24, а в лекции и у Вас была более старая.
+
+В лекции указана строчка include snippets/fastcgi-php.conf; у меня такого файла нет. Я поискал конфиги fastcgi-php, но не нашел.
+
+***Лекция 7***
+sudo apt install docker.io = установка докера
+sudo docker = справка по режимам использования
+sudo docker run hello-world = создает и запускает контейнер, 2в1 (не указали тег)
+sudo docker start = запускает контейнер
+
+docker ps = список активных контейнеров
+docker ps -a = список всех контейнеров
+docker images = образы, которые есть на компьютере сейчас
+docker search nginx = поиск по всем контейнерам
+docker pull nginx = скачать образ через поиск раньше, без запуска.
+docker start|restart|stop nginx = 
+docker rm = контейнер
+docker rmi = имиджи
+docker logs nginx1 =
+docker history nginx = 
+docker run -d --restart always --name nginx1 \ -p 80:80 -v /var/www/html:/usr/share/nginx/html nginx 
+в режиме detached, перезагрузка всегда, имя, проброс портов, подключение локальной директории. Слева - хост, справа - гостевая, контейнера
+
+iptables -L -nv
+docker exec -ti nginx1 bash = terminal, interactive
+ls -al /etc/
+cat /etc/os-release = просмотр файла
+ls -al /etc/nginx
+ls -al /usr/share/nginx/html
+docker logs nginx1 = 
+sudo docker run hello-world
+
+docker run -it ubuntu bash
+-d = detached режим
+-i = STDIN - открытый режим
+-t = speudo-TTY - псевдо ssh
+
+sudo docker exec -it <container_name> bash = подключение к контейнеру по ssh
+sudo docker run nginx = скачать, запустить (если свободен 80 порт), на него надо перенаправить запросы
+sudo docker search nginx
+sudo docker pull nginx
+sudo docker run --help = 
+sudo docker run -p 80:80 -d -v /var/www/html:/usr/share/nginx/html --name my_nginx nginx
+= портал в основную операционную систему
+
+docker-compose.yml
+version: '3'
+services:
+  wordpress:
+    depends_on:
+      - db
+    image:
+    container_name:
+    environment:
+      - WORDPRESS_DB_HOST=db:3306
+    volumes:
+      - wordpress:/var/www/html
+    networks:
+      - app-network
+
+apt install docker-compose = 
+apt install yamllint = 
+docker-compose up -d = ищет файл в текущей директории
+ps = 
+down = остановить и удалить контейнеры
+stop = остановить
+start = запустить контейнеры
+rm = удалить остановленные контейнеры
+
+***Лекция 8***
+bash = язык-интерпретатор
+переменные, условия, циклы, функции, однострочные скрипты
+? = специальная переменная
+$ = обращение к переменной
+echo $? = 
+код завершения
+
+program > file 2>&1 = ошибки и стандартный поток вывода в один файл
+program < file = ввод из файла file
+program > file
+program >> file
+program 2> file
+program 2>> file = ошибки в файл, запись продолжается, в режиме дополнения файла
+
+ls > ls_txt = запись с начала
+ls >> ls_txt = дозапись
+
+cat /etc/lsb-release /etc/shadow 2>err.txt
+cat /etc/lsb-release /etc/shadow  >all.txt 2>&1
+
+ls -al | grep file
+ls -al | grep -P '\.[cs]+' = используем регулярные выражения
+ищем файл, который содержит символы c или s и другие символы
+
+cat /var/log/syslog | grep 'mysql' | grep -v 'file' | wc -l
+wc = workcount
+
+ps afx | grep ssh = найти все, что содержит ssh
+ps afx | grep ssh | grep -v pts = убираем строчки pts
+ps afx | grep [s]sh | grep -v pts =
+
+cat syslog | grep error | grep -v kernel | grep -i 'sqlite'
+ls -a | sort = 
+df -h | grep ''
+
+printenv = 
+var1=test
+echo $var1 = вывод переменной
+
+var_ls=$(ls -al) = запись в переменную
+echo $var_ls = вывод переменной
+var_ls=`ls -al` = 
+
+cat >testscript
+#!/bin/bash
+
+directory=$1
+hidden_count=$(ls -A $directory | grep '^\.' | wc -l)
+
+echo "Hidden files in $directory found: $hidden_count"
+
+sudo ./testscript
+sudo /home/db/test/testscript
+($PATH) testscript
+bash testscript
+
+echo $PATH = команды выполняются без указания пути
+
+chmod +x testsc = задать файлу бит на исполнение
+./testsc /etc = посчитать скрытые файлы в директории
+
+if [ -e file_name ];
+    then
+	echo "true"
+    else
+	echo "false"
+fi
+
+-z = строка пуста
+-n = не пуста
+-e = true, если файл существует
+-d = true, если каталог сущевствует
+-eq = true, если числа равны
+-ne = true, если not equal
+
+for h in {01..24}
+do 
+    echo $h
+done
+
+for (( c=1; c<=5; c++))
+do 
+    echo "Попытка номер $c"
+done
+
+c = 10
+while [ $c -ge 0 ]
+do
+    echo "Test"
+    let "c = c - 1"
+done
+
+for h in file{01..20}
+for h in file{a..e}
+for h in file{a,e}
+do 
+
+done
+
+type -a ls = классно, справка
+which ls = путь к команде
+
+.bash_aliases
+
+***Семинар 8***
+bash my_script >> my.log = пример записи скрипта в файл
+ls ~/sdf 2>>new_file = перенаправление ошибок
+
+python3 main.py 2>>new_err
+from sys import stderr
+name = input()
+print(f"Пользователь ввёл имя: {name}, file=stderr)
+print(f"Hello, {name}")
+print("Программа вывела приветствие", file=stderr)
+
+python3 first.py | python3 main.py
+
+first.py:
+print("Sergey")
+
+htop = подсветка красивая фоновых процессов
+sudo apt list = вывод всех пакетов, которые существуют в базе apt
+sudo apt list | grep установлен]
+
+#!/usr/bin/env python3 = 
+
+#!/usr/bin/bash
+
+echo $# = количество аргументов
+echo $1 $2 $3 $4 = первые 4 аргумента
+echo $@ = все аргументы, которые были переданы
+
+#!/usr/bin/bash
+
+if (( $# !=3 )); then
+    echo "Вы ввели некорректное число аргументов"
+    exit 55
+fi
+
+mkdir $1
+echo $3>$1/$2
+
+./myscript aaa
+echo $?
+
+while read -r line; do
+    echo "$line"
+done <file.txt
+
+#!/usr/bin/bash
+
+echo $(pwd)
+
+stat -c "%U" myscript = 
+
+#!/usr/bin/bash
+
+username=$(stat -c "%U" $1)
+
+mkdir $username
+
+mv $1 $username
+
+for i in /etc/rc.*; do
+    echo "$i"
+done
+
