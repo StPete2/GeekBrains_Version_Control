@@ -1,0 +1,175 @@
+Семинар 1
+mkdir gb
+mkdir gb/bin
+cp /bin/bash gb/bin
+ldd /bin/bash = список зависимостей, которые необходимо скопировать
+mkdir gb/lib/
+mkdir gb/lib64
+cp /lib/x86_64-linux-gnu/libtinfo.so.6 gb/lib
+cp /lib/x86_64-linux-gnu/libc.so.6 gb/lib
+cp /lib64/ld-linux-x86-64.so.2 gb/lib64
+chroot gb
+
+cat /proc/sys/kernel/pid_max = узнать количество максимального значения PID
+top = 
+htop = красивая расцветка
+
+mkdir newroot
+mkdir newroot/bin
+cp /bin/bash newroot/bin
+
+ldd /bin/bash
+mkdir newroot/lib
+mkdir newroot/lib64
+sudo chroot newroot /bin/bash = запуск нового рута в папке
+
+sudo ip netns add testns123 = создаем сетевой namespace
+sudo ip netns exec testns123 bash = положить bash в коробку с сетевым интерфейсом
+
+sudo ip link add veth0 type veth peer name veth1 = добавить сетевой интерфейс veth0 типа виртуальный к нему создатся пир veth1 = второй слинкованный интерфейс
+в наш компьютер воткнем два сетевых интерфейса
+один из интерфейсов выткнем из хостовой системы и закинем внутрь нашего сетевого контейнера 
+sudo ip link set veth1 netns testns123
+
+в основной системе
+ip a
+ip netns add testns123
+ip netns list
+ip netns exec testns123 bash
+в контейнере
+ip a
+в основной системе
+sudo ip link add veth0 type veth peer name veth1
+ip a
+sudo ip link set veth1 netns testns123 = закинули внутрь контейнера veth1
+sudo ip addr add 10.0.0.1/24 dev veth0 = присвоить ip адрес хостовой системе
+ip link set dev veth0 up
+ip a
+в контейнере
+ip a
+ip addr add 10.0.0.2/24 dev veth1
+ip link set dev veth1 up
+ip a
+в основной системе
+ping 10.0.0.2
+в контейнере
+ping 10.0.0.1
+
+***Лекция 2 
+новая тема
+cd /proc/$$/ns = зайти в папку proc текущего терминала
+echo $$ = PID текущего процесса
+это наши процессы, namespaces
+
+sudo unshare --net /bin/bash
+
+sudo unshare --pid --fork --mount-proc --net /bin/bash
+sudo unshare --pid --fork --mount-proc --net --user /bin/bash
+man unshare = 
+
+putty = программа вместо powershell
+либо подключить ssh-ключ = 
+ssh-ключ для git =
+поставить linux debian = 
+ubuntu = для того, чтобы заменить windows
+поставить debian testing или debian stable (суперстабильная, 100%)
+testing = используют везде, кроме как в банках. там используют stable
+
+mkdir /sys/fs/cgroup/testgroup1
+/proc/$$/status | grep 'allowed'= PID процесса, который выполняется нашей текущей оболочкой
+lxc-create -n test123 -t ubuntu -f /usr/share/doc/lxc/examples/lxc-veth.conf
+lxc-start -d -n test123
+lxc-attach -n test123 = войти в контейнер
+ll /sys/fs/cgroup
+cat /var/lib/lxc/test123/config
+lxc-attach -n test123
+lxc-ls -f = список всех контейнеров
+lxc.start.auto = 1 = автозапуск при перезагрузке
+lxc-stop -n test123
+lxc-destroy -n test123
+
+***Семинар 2
+cd /dev
+ls -l = 
+символическая ссылка 
+какая-то запись существует, но это не файл
+блочное устройство и символьное устройство = это тоже не файл
+супервизор умеет перезапускать приложение
+
+sudo apt install cgroup-tools = 
+sudo apt install lxc debootstrap bridge-utils lxc-templates
+sudo lxc-create -n testgb-1 -t ubuntu
+sudo lxc-start -n testgb-1
+sudo lxc-attach -n testgb-1 = подсоединиться
+cd /
+ls -aliF = 
+top = смотрим процессы
+free -m
+free -m = внутри контейнера и внутри хоста
+namespaces детей наследуют ограничения родителя
+exit
+attach
+sudo lxc-cgroup -n testgb-1 memory.max 256M
+sudo lxc-attach -n testgb-1
+free -m
+256 = видим
+он понимает буквы и байты
+вопросы:
+devices allow
+
+*** Лекция 3
+docs.docker.com/engine/install/
+sudo apt remove docker docker-engine docker.io containerd runc
+docker --help = 
+docker run --help = 
+docker --version =
+docker info = вся информация по системе, оперативной памяти, ОС и т.д.
+
+docker pull ubuntu = установка, скачивание последней убунту
+docker pull ubuntu:18.04 = 
+docker images = список образов, которые есть
+
+docker rmi ubuntu:18.04 = 
+docker rmi $(docker images -aq) = 
+
+docker images -aq = вывод по image id 
+--force = удаление принудительное
+
+docker ps -a = 
+docker run -it ubuntu bash = запуск в интерактивном режиме (и попасть в bash)
+exit
+docker run -it ubuntu date = вывод даты только 
+docker run --publish 8080:80 nginx = (снаружи:внутри)
+docker run -d --publish 8080:80 nginx = в режиме d
+curl 127.0.0.1:8080 = проверка порта 8080
+
+docker ps -a = 
+docker start <container_name> = 
+docker rm <container_name> = 
+docker rm $(docker ps -a -q) = 
+docker ps -a -q = 
+docker ps -q = только контейнер id запущенных контейнеров
+docker stop <container_id или container_name> = 
+docker run -d ubuntu = запуск в режиме d
+
+docker system prune -af = принудительное удаление всех контейров (наверно, кроме работающих)
+
+docker run ubuntu sleep 1200 = консоль занята 1200 секунд
+docker run -d ubuntu sleep 15 = 
+
+*** Семинар 3
+в контейнере: 
+apt update
+apt install iproute2
+sudo docker exec -it 239a9ec3c51d bash = подсоединение к контейнеру (ssh)
+sudo docker start <id>
+sudo docker stop <id>
+sudo docker container rm <id>
+sudo docker run -it -h gb ubuntu bash = поменять хост при старте контейнера
+что значит образ базы данных = ОС и программа
+sudo docker run -d --name mariadb-gb-1 -v /var/www/gb/docker/3/mydb:/var/lib/mysql -e MARIADB_ROOT_PASSWORD=test123 mariadb:10.10.2 (первая папка - хостовая, -e = переменная окружения)
+делаем общую папку с базы данных на хост
+sudo docker exec -it <id> bash
+mysql 
+mysql -u root -p = попадаем в базу
+phpmyadmin = графическая оболочка для управления через браузер
