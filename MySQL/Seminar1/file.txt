@@ -1,0 +1,26 @@
+*** Семинар 1
+
+CREATE SCHEMA 'seminar1';
+CREATE TABLE `seminar1`.`student` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `phone_number` VARCHAR(11) NULL,
+  `date_of_birth` DATE NOT NULL,
+  `email` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `idStudent_UNIQUE` (`id` ASC) VISIBLE);
+
+INSERT INTO `seminar1`.`student` (`id`, `name`, `phone_number`, `date_of_birth`, `email`) VALUES ('1', 'Tom', '1111', '2023-11-12', 'ee@mail.ru');
+
+select * from student; = получить данные обо всех студентах
+select * from student where name = "Max";
+select name, telephone FROM student;
+select * from student where name like "A%"; = _ - 1 symbol, % - unlimited number of symbols
+OR/AND
+where name like "A%" OR where name like "a%";
+
+select * from table_name where salary>6000;
+select * from table_name where dept = 'IT';
+select * from table_name where dept != 'IT';
+select * from table_name where NOT dept = 'IT';
+

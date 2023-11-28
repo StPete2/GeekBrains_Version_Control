@@ -1,0 +1,124 @@
+CREATE DATABASE MySampleDB;
+show databases; = список всех баз данных, или схем
+use MySampleDB;
+
+CREATE TABLE table_name
+(
+	column_name_1 column_type_1,
+	column_name_2 column_type_2,
+	column_name_n column_type_n
+);
+
+INT = 4 bytes;
+DECIMAL(5,2) = число с заданной точностью, в данном случае, всего 5 цифр и 2 после запятой, от -999.99 до 999.99
+BOOL = 0/1, true and false
+VARCHAR(N) = тип данных строчка
+TEXT = множество VARCHAR
+DATE = 1000-01-01 до 9999-12-31
+TIME = hh:mm:ss = 3 bytes
+DATETIME = 8 bytes
+
+TIMESTAMP = с 1970 года
+BLOB = 65Kб бинарных данных
+LARGEBLOB = 4Гб
+
+CREATE TABLE Customers
+(
+	Id INT PRIMARY KEY AUTO_INCREMENT,
+	Age INT,
+	FirstName VARCHAR(20) NOT NULL,
+	LastName VARCHAR(20) NOT NULL,
+	Phone VARCHAR(20) NOT NULL UNIQUE
+);
+CREATE TABLE Orders
+(
+	Id INT PRIMARY KEY AUTO_INCREMENT,
+	CustomerId INT,
+	CreatedAt Date,
+	FOREIGN KEY (CustomerId) REFERENCES Customers (Id)
+);
+
+--
+/*
+*/
+# 
+комментарии
+
+CREATE TABLE Products
+(
+	Id INT AUTO_INCREMENT PRIMARY KEY,
+	ProductName VARCHAR(30) NOT NULL,
+	Manufacturer VARCHAR(30) NOT NULL,
+	ProductCount INT DEFAULT 0,
+	Price DECIMAL
+);
+
+## Where
+
+USE productsdb;
+
+SELECT * FROM Products
+WHERE Manufacturer = 'Samsung' AND Price > 50000;
+
+WHERE Manufacturer = 'Samsung' OR Price > 50000; = попадает или Самсунг, или по цене
+
+WHERE NOT Manufacturer = 'Samsung';
+WHERE Manufacturer = 'Samsung' OR NOT Price > 30000 AND ProductCount > 2;
+
+NOT выполняется первым, затем AND, после уже другие
+
+## Case
+SELECT ProductName, ProductCount,
+CASE
+	WHEN условие_1 THEN результат_1
+	WHEN условие_2 THEN результат_2
+	WHEN условие_n THEN результат_n
+	[ELSE альтернатива]
+END
+FROM Products;
+
+END AS Category
+
+## условие IF 
+IF (условие, значение_true, значение_false)
+
+USE Productsdb;
+
+SELECT ProductName, Manufacturer, 
+	IF (ProductCount > 3, 'Много товара', 'Мало товара')
+FROM Products;
+
+INSERT INTO таблица (перечень_полей) VALUES (перечень_значений)
+UPDATE 
+DELETE
+
+INSERT INTO таблица (перечень_полей) SELECT перечень_значений FROM = значения строк формируются из значений запроса
+
+## update
+UPDATE имя_таблицы
+SET столбец1 = значение1, столбец2 = значение2
+[WHERE условие_обновления]
+
+UPDATE Products
+SET Price = Price + 3000
+WHERE Manufacturer = 'Apple'
+
+## delete
+DELETE FROM имя_таблицы
+[WHERE условие]
+
+DELETE FROM Products
+WHERE Manufacturer = 'Huawei';
+
+USE productsdb;
+DELETE FROM Products
+WHERE Manufacturer = 'Huawei';
+
+SELECT * FROM Products;
+
+SET Price = Price + 3000;
+SELECT * FROM Products;
+
+SELECT * FROM Products
+WHERE Manufacturer IN ("Apple", "Samsung");
+WHERE Manufacturer NOT IN ("Apple", "Samsung");

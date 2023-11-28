@@ -1,0 +1,73 @@
+CREATE SCHEMA `seminar2` ;
+USE seminar2; = используем схему семинар_2. Если это не указать, то таблица добавится к выделенной схеме.
+CREATE TABLE new_table (id INTEGER, value VARCHAR(50));
+DROP TABLE IF EXISTS table_name; 
+DROP TABLE table_name; = если таблицы нет, то выдаст ошибку и будет exception
+
+CREATE TABLE IF NOT EXISTS table_name ();
+
+CREATE TABLE new_table (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    value1 VARCHAR(50) NOT NULL DEFAULT "empty",
+    value2 VARCHAR(50) NOT NULL,  
+    
+);
+
+INSERT INTO new_table (field1, field2, etc) VALUES (value, value, value);
+
+USE db;
+RENAME TABLE old_name TO new_name;
+
+ALTER TABLE table-name ADD Language VARCHAR(45) NULL; = добавление нового столбца
+
+ALTER TABLE table-name DROP COLUMN Language;
+
+O(N*k) = N - количество записей, k - количество полей
+умножить или в степень?
+
+DROP TABLE name;
+
+ALTER TABLE name ADD FOREIGN KEY (producer_id) REFERENCES producer(Id); = добавление внешнего ключа = producer - название таблицы, Id - это колонка, на которую ссылаемся
+
+TRUNCATE TABLE cinema; = очистить таблицу, не удаляя (при этом увеличение id будет с последнего), так как мета данные сохранятся.
+
+SELECT *, 11 AS Res FROM grades; = добавление стобца Res и заполнение всех значений 11.
+
+SELECT *, 
+    CASE grade 
+	WHEN "A++" THEN "DISTINCTION"
+	WHEN "A+" THEN "FIRST CLASS"
+	WHEN "A" THEN "SECOND CLASS"
+	WHEN "B+" THEN "SECOND CLASS"
+	WHEN "C+" THEN "THIRD CLASS"
+ 	ELSE "FAIL"
+    END AS CLASS
+FROM Grades;
+
+SELECT *, 
+    CASE
+	WHEN grade = "A++" THEN "DISTINCTION"
+	WHEN grade = "A+" THEN "FIRST CLASS"
+	WHEN grade = "A" OR grade = "B+" THEN "SECOND CLASS"
+	WHEN grade = "C+" THEN "THIRD CLASS"
+	ELSE "FAIL"
+    END AS class
+FROM Grades;
+
+IF (условие, действие если истина, действие если ложь);
+
+SELECT *, 
+    IF (grade = "A++", "DISTINCTION", "FAIL") AS class    
+FROM Grades;
+
+SELECT *, 
+    IF (grade = "A++", "DISTINCTION", IF (grade = "A+", "FIRST CLASS", IF (..))) AS class    
+FROM Grades;
+
+SELECT *,
+    IF (grade = "A++", "DISTINCTION", 
+	IF (grade = "A+", "FIRST CLASS", 
+	    IF (grade = "A" OR grade = "B+", "SECOND CLASS", 
+		IF (grade = "C+", "THIRD CLASS", "FAIL")))) 
+    AS class
+FROM Grades;

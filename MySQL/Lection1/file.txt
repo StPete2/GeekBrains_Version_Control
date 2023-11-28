@@ -1,0 +1,5 @@
+SELECT поле1, поле2 from имя_таблицы
+	WHERE
+	GROUP BY
+	HAVING условие_where
+    ORDER BY {имя_столбца} {ASC | DESC}, LIMIT

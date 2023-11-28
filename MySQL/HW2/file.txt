@@ -1,0 +1,58 @@
+***Домашняя работа:
+CREATE SCHEMA IF NOT EXISTS itresume8821085;
+CREATE TABLE IF NOT EXISTS itresume8821085.sales (
+  id INT NOT NULL,
+  order_date DATE, 
+  count_product INT
+);
+
+INSERT INTO itresume8821085.sales (id, order_date, count_product) VALUES 
+  (1, '2022-01-01', 156),
+  (2, '2022-01-02', 180),
+  (3, '2022-01-03', 21),
+  (4, '2022-01-04', 124),
+  (5, '2022-01-05', 341);
+
+Задание №2
+SELECT 
+  id AS "Номер заказа",
+  count_product AS "Количество продукта",
+  CASE 
+    WHEN count_product < 100 THEN 'Маленький заказ'
+    WHEN count_product BETWEEN 100 AND 300 THEN 'Средний заказ'
+    WHEN count_product > 300 THEN 'Большой заказ'
+    ELSE 'Не определено'
+  END AS "Тип"
+FROM sales;
+
+Задание №3
+CREATE SCHEMA IF NOT EXISTS itresume8821085;
+CREATE TABLE IF NOT EXISTS itresume8821085.orders (
+  employee_id VARCHAR(20),
+  amount DOUBLE PRECISION,
+  order_status VARCHAR(20)
+);
+
+INSERT INTO itresume8821085.orders (employee_id, amount, order_status) VALUES
+  ('e03', 15.00, 'OPEN'),
+  ('e01', 25.50, 'OPEN'),
+  ('e05', 100.70, 'CLOSED'),
+  ('e02', 22.18, 'OPEN'),
+  ('e04', 9.50, 'CANCELLED');
+
+Задание №4
+
+USE itresume8821085.orders;
+
+SELECT 
+    id,
+    employee_id,
+    amount,
+    order_status,
+    CASE order_status 
+        WHEN 'OPEN' THEN 'Order is in open state'
+        WHEN 'CLOSED' THEN 'Order is closed'
+        WHEN 'CANCELLED' THEN 'Order is cancelled'
+        ELSE 'Not mentioned'
+    END AS full_order_status 
+FROM orders;
