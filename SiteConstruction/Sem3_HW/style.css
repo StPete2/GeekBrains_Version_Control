@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+}
+
+.top {
+    padding-top: 40px;
+}
+
+.header {
+    margin-bottom: 84px;
+}
+
+/* .top__menu {
+    padding-top: 11px;
+    padding-bottom: 11px;
+} */
+
+.top__content {
+    margin-bottom: 162px;
+}
+
+.title {
+    margin-bottom: 17px;
+}
+
+.top__buttons {
+    margin-top: 37px;
+}
+
+.top__logos {
+    padding-top: 97px;
+    padding-bottom: 96px;
+}
