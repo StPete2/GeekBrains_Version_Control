@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+}
+
+.top {
+    padding-top: 40px;
+}
+
+.header {
+    margin-bottom: 84px;
+    display: flex;
+    align-items: center;
+    gap: 500px;
+}
+
+/* .top__menu {
+    padding-top: 11px;
+    padding-bottom: 11px;
+} */
+
+.top__logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.company_name {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.company_name_second_part {
+    color: #F25822;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top__menu {
+    width: 533px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.top__menu_text {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top__menu_home {
+    color: #F25822;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top__content {
+    margin-bottom: 162px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 41px;
+}
+
+.title {
+    margin-bottom: 17px;
+    color: #000;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 522px;
+}
+
+.text {
+    color: #888;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 466px;
+}
+
+.top__buttons {
+    margin-top: 37px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 72px;
+}
+
+.button__start_now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #F25822;
+    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
+    border: 0;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.button__watch_video {
+    color: #AAA;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top__image {
+    width: 544px;
+    height: 374px;
+}
+
+.top__logos {
+    padding-top: 97px;
+    padding-bottom: 96px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 48px
+}
+
+.top__logo {
+    width: 160px;
+    height: 50px;
+}

@@ -4,22 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seminar3_Homework</title>
+    <title>Seminar4_Homework</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="top center">
         <header class="header">
-            <img src="./img/Top__logo.svg" alt="Logo" class="top__logo">
+            <!-- <img src="./img/Top__logo.svg" alt="Logo" class="top__logo"> -->
+            <nav class="top__logo">
+                <a href="#"><img width="35" height="40" src="./img/Top__logo_new.svg" alt="top logo"></a>
+                <a href="">
+                    <p class="company_name">Grow<span class="company_name_second_part">Be</span></p>
+                </a>
+            </nav>
             <nav class="top__menu">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-                <a href="#">Features <img src="./img/menu__link__arrow.svg" alt="Arrow symbol"></a>
-                <a href="#">Team</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
+                <a class="top__menu_home" href="#">Home</a>
+                <a class="top__menu_text" href="#">About Us</a>
+                <a class="top__menu_text" href="#">Services</a>
+                <a class="top__menu_text" href="#">Features <img src="./img/menu__link__arrow.svg"
+                        alt="Arrow symbol"></a>
+                <a class="top__menu_text" href="#">Team</a>
+                <a class="top__menu_text" href="#">Blog</a>
+                <a class="top__menu_text" href="#">Contact</a>
             </nav>
         </header>
         <section class="top__content">
@@ -30,8 +37,12 @@
                 <p class="text">Provide all kind of seo services and help to improve
                     seo ranking. Globally incubate standards.</p>
                 <div class="top__buttons">
-                    <button class="button__start_now">Start Now</button>
-                    <button class="button__watch_video">Watch Video</button>
+                    <a href="#">
+                        <div class="button__start_now">Start Now</div>
+                    </a>
+                    <a href="#">
+                        <p class="button__watch_video">Watch Video</p>
+                    </a>
                 </div>
             </div>
             <img src="./img/Top__image.svg" alt="top image" class="top__image">
