@@ -35,6 +35,42 @@ body {
 .offer {
     margin-top: 65px;
     margin-bottom: 96px;
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    gap: 30px;
+}
+
+.offer__item_div {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.wide_img {
+    grid-column: span 3;
+}
+
+.offer__item_text {
+    position: absolute;
+    z-index: 1;
+}
+
+.offer__item_text_first_line {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.offer__item_text_second_line {
+    color: #F16D7F;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .products {
