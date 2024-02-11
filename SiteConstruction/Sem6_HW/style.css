@@ -25,11 +25,51 @@ body {
 .top {
     background-color: #F1E4E6;
     height: 764px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.top__image_div {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .top__image_img {
     width: 800px;
     height: 764px;
+}
+
+.top__brand {
+    display: flex;
+    gap: 16px;
+    padding-left: 64px;
+    padding-top: 290px;
+}
+
+.top__brand_bar {
+    width: 12px;
+    height: 92px;
+    background-color: #F16D7F;
+}
+
+.top__brand_first_line {
+    color: #222;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.top__brand_second_line {
+    color: #222;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.top__brand_color_text {
+    color: #F16D7F;
 }
 
 .offer {
