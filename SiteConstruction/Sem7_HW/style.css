@@ -41,6 +41,42 @@ body {
     align-items: flex-end;
 }
 
+.header__right_icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 6px;
+}
+
+.header__right_icons_middle {
+    margin-left: 25px;
+    margin-right: 42px;
+}
+
+.header__right_icons_cart_with_number {
+    position: relative;
+}
+
+.header__right_icons_number {
+    position: absolute;
+    z-index: 1;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: #F16D7F;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -5px;
+    right: -10px;
+}
+
 .top {
     background-color: #F1E4E6;
     height: 764px;
@@ -63,6 +99,7 @@ body {
     gap: 16px;
     padding-left: 64px;
     padding-top: 290px;
+    align-items: flex-start;
 }
 
 .top__brand_bar {
@@ -325,4 +362,9 @@ body {
         margin-top: 32.48px;
         margin-bottom: 70.52px;
     }
+}
+
+@media (max-width: 767px) and (min-width: 359px) {
+
+    /* сделать навигацию, ссылки */
 }
