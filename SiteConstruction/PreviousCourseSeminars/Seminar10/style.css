@@ -1,0 +1,15 @@
+.slider_image {
+    max-width: 100vh;
+}
+
+.carousel_navigation_side {
+    background-color: aquamarine;
+}
+
+.carousel_navigation_side_new {
+    color: greenyellow;
+}
+
+.carousel-control-prev-icon {
+    color: blue;
+}

@@ -292,6 +292,46 @@ body {
     line-height: normal;
 }
 
+.features {
+    background: #222224;
+    display: flex;
+    gap: 30px;
+    align-items: baseline;
+}
+
+.features__item {
+    padding-top: 104px;
+    padding-bottom: 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features__title {
+    color: #FBFBFB;
+    font-size: 19.96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 19px;
+    margin-bottom: 16px;
+}
+
+.features__text {
+    width: 360px;
+    color: #FBFBFB;
+    text-align: center;
+    font-size: 13.972px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.subscribe__background_image {
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 1023px) and (min-width: 768px) {
 
     .center {
