@@ -525,6 +525,43 @@ body {
         margin-top: 32.48px;
         margin-bottom: 70.52px;
     }
+
+    .features {
+        flex-direction: column;
+        gap: 48px;
+        align-items: center;
+        padding-top: 48px;
+        padding-bottom: 64px;
+    }
+
+    .features__item {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        height: 693px;
+        gap: 48px;
+        background: url(./img/subscribe__background_img_tablet.png);
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .subscribe__info {
+        margin-top: 64px;
+        height: 225px;
+    }
+
+    .subscribe__button_group {
+        margin-bottom: 140px;
+    }
+
+    .copyright {
+        padding-left: 32px;
+        padding-right: 34px;
+    }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
