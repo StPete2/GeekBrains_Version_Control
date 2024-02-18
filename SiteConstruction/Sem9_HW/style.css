@@ -223,6 +223,10 @@ body {
     position: relative;
 }
 
+.products__item_link {
+    display: contents;
+}
+
 .products__item_cart {
     position: absolute;
     z-index: 1;
@@ -273,6 +277,10 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.products__browse_link {
+    display: contents;
 }
 
 .products__browse {
@@ -331,7 +339,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: no-repeat center url(./img/subscribe__background_img.jpg);
+    position: relative;
+}
+
+.subscribe_special {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: calc(50% - 800px);
+    margin-right: calc(50% - 800px);
+}
+
+.subscribe__background_div {
+    position: absolute;
+    z-index: 1;
+    top: 0;
 }
 
 .subscribe__info {
@@ -340,6 +361,8 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 97px;
+    padding-left: 230px;
+    z-index: 2;
 }
 
 .subscribe__info_image {
@@ -367,6 +390,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-right: 230px;
+    z-index: 2;
 }
 
 .subscribe__button_group_title {
@@ -416,6 +441,9 @@ body {
     border-radius: 0 28px 28px 0;
     border: 0;
     background: #F16D7F;
+}
+
+.subscribe__button_link {
     color: #FFF;
     text-align: center;
     font-size: 14px;
@@ -425,11 +453,12 @@ body {
 }
 
 .copyright {
-    height: 79px;
     background-color: #222224;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 23px;
 }
 
 .copyright__text {
@@ -443,6 +472,10 @@ body {
 .copyright__social_links {
     display: flex;
     gap: 7.29px;
+}
+
+.copyright__social_links_link {
+    display: contents;
 }
 
 .copyright__social_links_item {
@@ -541,21 +574,31 @@ body {
 
     .subscribe {
         flex-direction: column;
-        height: 693px;
         gap: 48px;
-        background: url(./img/subscribe__background_img_tablet.png);
-        background-origin: border-box;
-        background-repeat: no-repeat;
-        background-size: cover;
+    }
+
+    .subscribe__background_img {
+        height: 624px;
+        object-fit: cover;
+        transform: translate(307px, 0px);
     }
 
     .subscribe__info {
         margin-top: 64px;
-        height: 225px;
+        padding-left: 0;
+    }
+
+    .subscribe__info_text {
+        margin-bottom: 0;
     }
 
     .subscribe__button_group {
         margin-bottom: 140px;
+        padding-right: 0;
+    }
+
+    .subscribe__button_group_text {
+        margin-bottom: 27px;
     }
 
     .copyright {
@@ -564,7 +607,7 @@ body {
     }
 }
 
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 767px) {
 
     .tab_head {
         padding-left: 16px;
@@ -643,6 +686,92 @@ body {
     .products__browse {
         margin-top: 32.5px;
         margin-bottom: 70.5px;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 47px;
+        align-items: center;
+        padding-top: 48px;
+        padding-bottom: 81px;
+    }
+
+    .features__item {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .features__text {
+        font-weight: 300;
+        width: 347px;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        gap: 59px;
+        height: 550px;
+    }
+
+    .subscribe__background_img {
+        height: 550px;
+        object-fit: cover;
+        transform: translate(367px, 0px);
+    }
+
+    .subscribe__info {
+        margin-top: 64px;
+        padding-left: 0;
+        gap: 29px;
+    }
+
+    .subscribe__info_combined_title_text {
+        height: 54px;
+    }
+
+    .subscribe__info_text {
+        font-size: 18px;
+        height: 73px;
+        margin-bottom: 0;
+    }
+
+    .subscribe__info_image {
+        width: 91px;
+    }
+
+    .subscribe__button_group {
+        margin-bottom: 110px;
+        padding-right: 0;
+    }
+
+    .subscribe__button_group_title {
+        line-height: 153.2%;
+    }
+
+    .subscribe__button_group_text {
+        font-size: 14px;
+        line-height: 153.2%;
+    }
+
+    .subscribe__button_group_text {
+        margin-bottom: 22px;
+    }
+
+    .subscribe__button_input {
+        width: 225px;
+        height: 47px;
+        padding-left: 21px;
+    }
+
+    .subscribe__button_button {
+        width: 96px;
+        height: 47px;
+    }
+
+    .copyright {
+        flex-direction: column-reverse;
+        padding-top: 43px;
+        padding-bottom: 9px;
+        gap: 40px;
     }
 
     /* сделать навигацию, ссылки */
