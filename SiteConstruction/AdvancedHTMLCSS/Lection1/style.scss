@@ -1,4 +1,58 @@
+@import 'var';
+
 .scss_test {
     color: red;
     text-align: center;
+}
+
+.love_is_text {
+    color: aquamarine;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container {
+    border: 1px solid black;
+    width: $siteWidth;
+    height: $siteWidth / 2;
+}
+
+.acquaintance_color_preprocessors {
+    color: $textColorSite;
+}
+
+// it's a comment here
+/* it's a second comment*/
+
+.nav {
+    display: flex;
+    gap: $gapLink;
+
+    &__link {
+        text-decoration: none;
+    }
+}
+
+@mixin displayFlex($positionX, $positionY) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $positionX;
+    align-items: $positionY;
+}
+
+%fillBackgroundBlue {
+    background-color: aquamarine;
+}
+
+.content {
+    @include displayFlex(space-between, center);
+    gap: $gapLink;
+
+    &__item {
+        width: $siteWidth / 5;
+        height: 200px;
+        border: $border;
+        @extend %fillBackgroundBlue;
+        border-color: aquamarine;
+    }
 }
