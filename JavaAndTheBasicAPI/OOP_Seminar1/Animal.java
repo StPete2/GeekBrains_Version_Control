@@ -39,5 +39,5 @@ public class Animal {
     }
     public String getType(String arg){
         return arg + TYPE;
-    }
+    }    
 }

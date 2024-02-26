@@ -3,7 +3,7 @@ package OOP_Seminar1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Main3 {
     public static void main(String[] args) {
         // Animal animal = new Animal();
         Animal barsik = new Animal("Barsik", "Olga", "Prostuda", false);
@@ -32,9 +32,14 @@ public class Main {
         // cat.findFood();
         // cat.eat();
         // cat.sleep();
-        cat.hunt();
+        // cat.hunt();
         // Механизм сокрытия внутренней логики внутри класса или метода и 
         // выдача наружу только того, что считаем необходимым.
-        cat.getPaws();
+        System.out.println(cat.getPaws());
+
+        VetClinic vc = new VetClinic();
+        vc.addNewAnimal(cat).addNewAnimal(pesik);
+        VetClinic.index = 0;
+        vc.index1 = 0;
     }
 }

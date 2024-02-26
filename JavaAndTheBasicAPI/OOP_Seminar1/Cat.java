@@ -29,4 +29,7 @@ public class Cat extends Animal {
         eat();
         sleep();
     }
+    public int getPaws(){
+        return countPaws;
+    }
 }

@@ -6,6 +6,139 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main3",
+            "request": "launch",
+            "mainClass": "notebook.Main3",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main2",
+            "request": "launch",
+            "mainClass": "notebook.Main2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main2",
+            "request": "launch",
+            "mainClass": "OOP_Seminar4_Homework.Main2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "OOP_Seminar4_Homework.Main",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "OOP_Seminar4.Main",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "notebook.Main",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main2",
+            "request": "launch",
+            "mainClass": "OOP_Seminar3.Main2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "OOP_Seminar3.Main",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
+            "mainClass": "OOP_Lection3.Ex006.Program",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
+            "mainClass": "OOP_Lection3.Ex007.Program",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
+            "mainClass": "OOP_Lection3.Ex005.Program",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
+            "mainClass": "OOP_Lection3.Ex004.Program",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
+            "mainClass": "OOP_Lection3.Ex002.Program",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
+            "mainClass": "OOP_Lection3.Ex001.Program",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main2Seminar_Homework",
+            "request": "launch",
+            "mainClass": "OOP_Seminar1_Homework.Main2Seminar_Homework",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main2",
+            "request": "launch",
+            "mainClass": "OOP_Seminar1_Homework.Main2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main3",
+            "request": "launch",
+            "mainClass": "OOP_Seminar1.Main3",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "OOP_Seminar1_Homework.Main",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
+            "name": "Main2",
+            "request": "launch",
+            "mainClass": "OOP_Seminar1.Main2",
+            "projectName": "JavaAndTheBasicAPI_67b2bce3"
+        },
+        {
+            "type": "java",
             "name": "Task1",
             "request": "launch",
             "mainClass": "Seminar6_Homework.Task1",
