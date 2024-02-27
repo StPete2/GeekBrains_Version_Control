@@ -274,17 +274,86 @@ body {
     line-height: normal;
 }
 
-.selected-product__image_and_back {
-    height: 777px;
-    background-color: #F7F7F7;
-    border: #EAEAEA solid 1px;
-    display: flex;
-    justify-content: center;
+.selected-product {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: calc(50% - $fullSiteWidth / 2);
+    margin-right: calc(50% - $fullSiteWidth / 2);
+    position: relative;
+    height: 1312px;
 
-    &_img {
-        padding-top: 11px;
+    &__image_and_back {
+        height: 777px;
+        background-color: #F7F7F7;
+        border-top: #EAEAEA solid 1px;
+        border-bottom: #EAEAEA solid 1px;
+        display: flex;
+        justify-content: center;
+
+        &_img {
+            padding-top: 11px;
+            padding-left: 12px;
+            height: 724px;
+        }
+
+    }
+
+    &__info {
+        border: #EAEAEA solid 1px;
+        width: $siteWidth - 2;
+        height: 600px;
+        margin-left: 230px;
+        position: absolute;
+        top: 712px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_collection_attribute {
+            color: $colorSitePink;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 65px;
+        }
+
+        &_devider {
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        &_product_name {
+            color: #4D4D4D;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &_text {
+            color: #5E5E5E;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 49px;
+            margin-bottom: 32px;
+        }
+
+        &_price {
+            color: #EF5B70;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
     }
 }
+
+
 
 .products {
     display: flex;
