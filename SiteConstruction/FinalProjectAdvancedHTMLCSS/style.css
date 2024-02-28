@@ -278,17 +278,22 @@ body {
   border-top: #EAEAEA solid 1px;
   border-bottom: #EAEAEA solid 1px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 .selected-product__image_and_back_img {
-  padding-top: 11px;
-  padding-left: 12px;
+  position: absolute;
+  top: 11px;
+  left: 513px;
   height: 724px;
 }
 .selected-product__image_and_back_arrow_div {
-  width: 31px;
-  height: 31px;
+  width: 47px;
+  height: 47px;
   background-color: rgba(42, 42, 42, 0.1490196078);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .selected-product__info {
   border: #EAEAEA solid 1px;

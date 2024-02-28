@@ -288,18 +288,23 @@ body {
         border-top: #EAEAEA solid 1px;
         border-bottom: #EAEAEA solid 1px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
 
         &_img {
-            padding-top: 11px;
-            padding-left: 12px;
+            position: absolute;
+            top: 11px;
+            left: 513px;
             height: 724px;
         }
 
         &_arrow_div {
-            width: 31px;
-            height: 31px;
+            width: 47px;
+            height: 47px;
             background-color: #2A2A2A26;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
     }
