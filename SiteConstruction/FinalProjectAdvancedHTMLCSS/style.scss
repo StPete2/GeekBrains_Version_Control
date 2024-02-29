@@ -13,6 +13,13 @@ body {
     font-family: "Lato";
 }
 
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
 
 .center {
     padding-left: calc(50% - 570px);
@@ -208,10 +215,53 @@ body {
         display: flex;
         align-items: baseline;
         gap: 11px;
+    }
 
-        &_svg {
-            color: black;
+    &__item {
+        margin-top: 16px;
+
+        &[open] .filter__item_heading {
+            color: $colorSitePink;
         }
+
+        &_heading {
+            color: #6F6E6E;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__item_head {
+        border-bottom: 1px #EBEBEB solid;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+        &_line {
+            width: 5px;
+            height: 37px;
+            background: $colorSitePink;
+        }
+    }
+
+    &__link-box {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &__link {
+        color: #6F6E6E;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 
 }
