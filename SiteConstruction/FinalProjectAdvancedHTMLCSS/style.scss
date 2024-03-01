@@ -21,6 +21,11 @@ summary::-webkit-details-marker {
     display: none;
 }
 
+body,
+html {
+    overflow-x: hidden;
+}
+
 .center {
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
@@ -49,9 +54,11 @@ summary::-webkit-details-marker {
     }
 }
 
-.header__right_icons_first:hover .header__right_icons_menu_drop_div {
-    display: block;
-}
+
+
+// .header__right_icons_first:hover .header__right_icons_menu_drop_div {
+//     display: block;
+// }
 
 .header__right_icons_menu_drop_div {
     width: 232px;
@@ -59,9 +66,12 @@ summary::-webkit-details-marker {
     background-color: #fff;
     position: absolute;
     z-index: 3;
-    left: 160px;
+    // left: 160px;
+    right: -1000px;
     top: 57px;
-    display: none;
+    // display: none;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    transition: right 0.3s;
 }
 
 .header__right_icons_menu_drop_ul {
@@ -143,6 +153,21 @@ summary::-webkit-details-marker {
     justify-content: center;
     top: -5px;
     right: -10px;
+}
+
+#burger {
+    position: absolute;
+    left: -99999px;
+    visibility: hidden;
+
+    &:checked~.header__right_icons_menu_drop_div {
+        right: -232px;
+        // display: block;
+    }
+}
+
+.box-content {
+    overflow: hidden;
 }
 
 .top-info {

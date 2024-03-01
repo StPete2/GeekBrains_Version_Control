@@ -19,4 +19,14 @@ details[open] summary::before {
 
 details[open] summary {
   gap: 18px;
+}
+
+.sortMenu__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+body,
+html {
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
