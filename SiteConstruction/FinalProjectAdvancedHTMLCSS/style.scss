@@ -181,17 +181,28 @@ summary::-webkit-details-marker {
 }
 
 .filter-sort {
-    position: relative;
+    // position: relative;
     height: 132px;
+    padding-top: 38px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 32px;
 }
 
 .filter {
     width: 360px;
-    position: absolute;
-    padding: 13px 16px 16px;
+    padding-top: 13px;
     box-sizing: border-box;
-    top: 39px;
+    // position: relative;
     z-index: 1;
+
+    &__content {
+        padding-top: 0;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        background-color: #fff;
+    }
 
     &[open] .filter__heading {
         color: $colorSitePink;
@@ -262,10 +273,58 @@ summary::-webkit-details-marker {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
+        &:hover {
+            color: $colorSitePink;
+        }
     }
 
 }
 
+.sort {
+    padding-top: 13px;
+    display: flex;
+    gap: 28px;
+    z-index: 1;
+
+    &__details {
+        position: relative;
+    }
+
+    &__heading {
+        color: #6F6E6E;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__box {
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        padding: 7px 30px 11px 9px;
+        position: absolute;
+        left: -9px;
+        top: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__check {
+        display: flex;
+        gap: 9px;
+        color: #6F6E6E;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
 
 .top {
     background-color: #F1E4E6;

@@ -1,0 +1,21 @@
+summary {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: "\2192";
+}
+
+details[open] summary::before {
+    content: "\2193";
+}
+
+details[open] summary {
+    gap: 18px;
+}
