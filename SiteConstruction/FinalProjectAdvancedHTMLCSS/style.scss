@@ -406,6 +406,88 @@ html {
     color: $colorSitePink;
 }
 
+.cart-items {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 72px;
+    }
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 262px 390px;
+    width: 652px;
+    box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.13));
+
+    &__info {
+        padding-top: 22px;
+        padding-left: 31px;
+
+        &_div_with_a_cross {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_cross {
+            padding-right: 22px;
+        }
+
+        &_attributes_div {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+    }
+
+    &__heading {
+        color: #222;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &_second_line {
+            margin-bottom: 42px;
+        }
+    }
+
+    &__attribute {
+        color: #575757;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &-meaning {
+            color: #6F6E6E;
+
+            &_color {
+                color: $colorSitePink;
+            }
+        }
+    }
+
+    &__quantity_div {
+        display: flex;
+        gap: 24px;
+    }
+}
+
+#cart-item__quantity,
+#cart-item__quantity2nd {
+    width: 44px;
+    border: 1px solid #EAEAEA;
+    text-align: center;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    appearance: none;
+}
+
 .offer {
     margin-top: 65px;
     margin-bottom: 96px;

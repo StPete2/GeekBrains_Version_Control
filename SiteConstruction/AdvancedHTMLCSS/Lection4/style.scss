@@ -1,0 +1,24 @@
+.logo {
+    color: white;
+    background-color: darkred;
+    padding: 8px;
+    display: block;
+    width: 70px;
+    text-align: center;
+}
+
+.breadcrumbs__ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.breadcrumbs__li:not(:last-child)::after {
+    content: '/';
+    padding-left: 8px;
+    padding-right: 8px;
+    color: aquamarine;
+}
+
+.breadcrumbs__li:last-child .breadcrumbs__link {
+    color: pink;
+}

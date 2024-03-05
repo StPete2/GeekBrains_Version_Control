@@ -63,6 +63,35 @@ body {
     //это надо видеть!!!
 }
 
+.content {
+    background-color: #ccc;
+    height: 700px;
+}
+
+// .content-header {
+//     height: 50px;
+//     background-color: #555;
+//     position: sticky;
+//     top: 350px;
+// }
+
+.menu {
+    position: sticky;
+    width: 14%;
+    top: 10%;
+    margin-left: 10%;
+    font-size: 15px;
+}
+
+.parallax {
+    min-height: 350px;
+    background-image: url(./img/quiet-sea-with-clear-sky.jpg);
+    background-attachment: fixed;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 // p {
 //     -webkit-text-stroke: 1px;
