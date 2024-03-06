@@ -559,7 +559,7 @@ input::-webkit-outer-spin-button {
 .shipping-address__placeholder {
   box-sizing: border-box;
   padding-left: 17px;
-  color: #B1B1B1;
+  padding-bottom: 1.5px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -571,6 +571,14 @@ input::-webkit-outer-spin-button {
 .shipping-address__placeholder_value {
   color: #222;
   background-color: white;
+}
+.shipping-address__placeholder::-moz-placeholder {
+  color: #B1B1B1;
+  opacity: 1;
+}
+.shipping-address__placeholder::placeholder {
+  color: #B1B1B1;
+  opacity: 1;
 }
 .shipping-address__button {
   margin-top: 3px;
@@ -588,6 +596,89 @@ input::-webkit-outer-spin-button {
   background-color: #F16D7F;
   color: white;
   border: 1px solid #F16D7F;
+}
+
+.registration-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 360px;
+}
+.registration-form__name {
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+  color: #222;
+}
+.registration-form__input {
+  box-sizing: border-box;
+  width: 359px;
+  height: 44px;
+  border: 1px solid #A4A4A4;
+  padding-left: 17px;
+  padding-bottom: 1.5px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 13px;
+}
+.registration-form__input::-moz-placeholder {
+  color: #B1B1B1;
+  opacity: 1;
+}
+.registration-form__input::placeholder {
+  color: #B1B1B1;
+  opacity: 1;
+}
+.registration-form__radio-div {
+  display: flex;
+  gap: 10px;
+  margin-top: 11px;
+  margin-bottom: 13px;
+}
+.registration-form__radio-div_margin {
+  margin-right: 10px;
+}
+.registration-form__radio-div_text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 13px;
+  color: black;
+}
+.registration-form__text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 13px;
+  color: #B1B1B1;
+  width: 359px;
+  margin-top: -5px;
+}
+.registration-form__submit {
+  width: 167px;
+  height: 50px;
+  color: #F16D7F;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 13px;
+  border: 1px solid #F16D7F;
+  background-color: white;
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.3s;
+}
+.registration-form__submit:hover {
+  color: white;
+  background-color: #F16D7F;
+}
+.registration-form__submit:hover path {
+  fill: white;
 }
 
 .offer {
