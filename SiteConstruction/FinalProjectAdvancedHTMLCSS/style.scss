@@ -406,12 +406,131 @@ html {
     color: $colorSitePink;
 }
 
+.cart-content {
+    display: flex;
+    gap: 128px;
+    margin-top: 96px;
+    margin-bottom: 128px;
+
+    &__address_and_proceed_div {
+        display: flex;
+        flex-direction: column;
+        gap: 57px;
+        margin-top: 17px;
+    }
+
+    &__proceed {
+        width: 360px;
+        height: 214px;
+        background-color: #F5F3F3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        &_subtotal {
+            padding-top: 39px;
+            padding-right: 34px;
+            color: #4A4A4A;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &_grandtotal {
+            padding-top: 12px;
+            padding-right: 37px;
+            color: #222;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            &_color {
+                color: $colorSitePink;
+            }
+        }
+
+        &_line {
+            width: 275px;
+            height: 1px;
+            background-color: #E2E2E2;
+            margin-top: 21px;
+            margin-bottom: 17px;
+            margin-right: 42px;
+        }
+
+        &_button {
+            width: 273px;
+            height: 50px;
+            border: 1px solid $colorSitePink;
+            color: $colorSitePink;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            background-color: #fff;
+            margin-right: 42px;
+            transition: all 0.3s;
+        }
+
+        &_button:hover {
+            background-color: $colorSitePink;
+            color: white;
+        }
+    }
+}
+
 .cart-items {
     &__box {
         display: flex;
         flex-direction: column;
         gap: 40px;
         margin-bottom: 72px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 192px;
+
+        &_clear {
+            width: 235px;
+            height: 50px;
+            border: 1px solid #A4A4A4;
+            background-color: #FFF;
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: all 0.3s;
+        }
+
+        &_clear:hover {
+            color: white;
+            background-color: $colorSitePink;
+            border: 1px solid $colorSitePink;
+        }
+
+        &_continue {
+            width: 225px;
+            height: 50px;
+            border: 1px solid #A4A4A4;
+            background-color: #FFF;
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: all 0.3s;
+        }
+
+        &_continue:hover {
+            color: white;
+            background-color: $colorSitePink;
+            border: 1px solid $colorSitePink;
+        }
     }
 }
 
@@ -487,6 +606,59 @@ input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
     appearance: none;
 }
+
+.shipping-address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__heading {
+        color: #222;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__placeholder {
+        box-sizing: border-box;
+        padding-left: 17px;
+        color: #B1B1B1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 359px;
+        height: 45px;
+        border: 1px solid #A4A4A4;
+
+        &_value {
+            color: #222;
+            background-color: white;
+        }
+    }
+
+    &__button {
+        margin-top: 3px;
+        color: #4A4A4A;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 102px;
+        height: 35px;
+        border: 1px solid #A4A4A4;
+        transition: all 0.3s;
+    }
+
+    &__button:hover {
+        background-color: $colorSitePink;
+        color: white;
+        border: 1px solid $colorSitePink;
+    }
+}
+
+
 
 .offer {
     margin-top: 65px;
