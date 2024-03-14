@@ -494,9 +494,16 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 22px;
 }
-.cart-item__info_cross {
-  padding-right: 22px;
+.cart-item__info_div_with_a_cross_button {
+  border: none;
+  background: white;
+  display: flex;
+}
+.cart-item__info_div_with_a_cross_button:hover {
+  background: lightgray;
+  border: 1px solid lightgray;
 }
 .cart-item__info_attributes_div {
   display: flex;
@@ -1323,6 +1330,7 @@ input::-webkit-outer-spin-button {
   }
   .registration {
     gap: 22px;
+    margin-top: 40px;
   }
   .loyality__heading {
     font-size: 16px;
@@ -1333,6 +1341,30 @@ input::-webkit-outer-spin-button {
   }
   .loyality__li {
     font-size: 16px;
+  }
+  .cart-content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 59px;
+    gap: 64px;
+  }
+  .cart-content__address_and_proceed_div {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .cart-content__proceed {
+    margin-top: 39px;
+  }
+  .cart-items__box {
+    margin-bottom: 62px;
+  }
+  .cart-items__buttons {
+    justify-content: center;
+    gap: 48px;
+  }
+  .cart-item {
+    grid-template-columns: 262px 472px;
+    width: 734px;
   }
   .offer {
     margin-bottom: 109.92px;

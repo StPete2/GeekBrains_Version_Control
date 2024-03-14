@@ -549,10 +549,18 @@ html {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
+            margin-right: 22px;
 
-        &_cross {
-            padding-right: 22px;
+            &_button {
+                border: none;
+                background: white;
+                display: flex;
+            }
+
+            &_button:hover {
+                background: lightgray;
+                border: 1px solid lightgray;
+            }
         }
 
         &_attributes_div {
@@ -1418,7 +1426,7 @@ input::-webkit-outer-spin-button {
 
     .registration {
         gap: 22px;
-
+        margin-top: 40px;
         // &-form__radio-div_hidden {
         //     display: block;
         // }
@@ -1437,6 +1445,38 @@ input::-webkit-outer-spin-button {
         &__li {
             font-size: 16px;
         }
+    }
+
+    .cart-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 59px;
+        gap: 64px;
+
+        &__address_and_proceed_div {
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        &__proceed {
+            margin-top: 39px;
+        }
+    }
+
+    .cart-items {
+        &__box {
+            margin-bottom: 62px;
+        }
+
+        &__buttons {
+            justify-content: center;
+            gap: 48px;
+        }
+    }
+
+    .cart-item {
+        grid-template-columns: 262px 472px;
+        width: 734px;
     }
 
     .offer {
