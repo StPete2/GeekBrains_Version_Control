@@ -653,6 +653,9 @@ input::-webkit-outer-spin-button {
   font-size: 13px;
   color: black;
 }
+.registration-form__radio-div_hidden {
+  display: none;
+}
 .registration-form__text {
   font-style: normal;
   font-weight: 400;
@@ -688,17 +691,23 @@ input::-webkit-outer-spin-button {
 }
 
 .loyality {
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  font-size: 24px;
   color: black;
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
+.loyality__heading {
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 24px;
+}
 .loyality__text {
   width: 652px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 24px;
 }
 .loyality__ul {
   display: flex;
@@ -709,6 +718,12 @@ input::-webkit-outer-spin-button {
 .loyality__li::before {
   content: url('data:image/svg+xml,        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">  <path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" fill="black"/></svg>');
   padding-right: 23px;
+}
+.loyality__li {
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 24px;
 }
 
 .offer {
@@ -1305,6 +1320,19 @@ input::-webkit-outer-spin-button {
   }
   .top__brand_second_line {
     font-size: 24px;
+  }
+  .registration {
+    gap: 22px;
+  }
+  .loyality__heading {
+    font-size: 16px;
+  }
+  .loyality__text {
+    width: 357px;
+    font-size: 16px;
+  }
+  .loyality__li {
+    font-size: 16px;
   }
   .offer {
     margin-bottom: 109.92px;

@@ -111,11 +111,11 @@
             </div>
         </div>
     </header>
-    <section class="top-info center">
+    <section class="top-info center tab16">
         <p class="top-info__new_arrivals">REGISTRATION</p>
     </section>
 
-    <section class="registration center">
+    <section class="registration center tab16">
         <div class="registration-form">
             <form class="registration-form__form" action="#">
                 <label for="registration-form__name" class="registration-form__name">Your Name</label>
@@ -127,7 +127,11 @@
                     <label class="registration-form__radio-div_margin registration-form__radio-div_text"
                         for="male">Male</label>
                     <input type="radio" name="gender" id="female">
-                    <label for="female" class="registration-form__radio-div_text">Female</label>
+                    <label for="female"
+                        class="registration-form__radio-div_text registration-form__radio-div_margin">Female</label>
+                    <input type="radio" name="gender" id="other" class="registration-form__radio-div_hidden">
+                    <label for="other"
+                        class="registration-form__radio-div_text registration-form__radio-div_hidden">Other</label>
                 </div>
                 <label for="email" class="registration-form__name">Login details</label>
                 <input class="registration-form__input" type="email" id="email" placeholder="Email">
