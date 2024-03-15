@@ -55,6 +55,9 @@
   grid-template-columns: repeat(auto-fit, 200px);
   justify-content: center;
   gap: 16px;
+  padding-left: calc(50% - 500px);
+  padding-right: calc(50% - 500px);
+  grid-auto-flow: dense;
 }
 
 .item3 {

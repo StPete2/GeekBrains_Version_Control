@@ -54,8 +54,14 @@
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(auto, max-content));
     justify-content: center;
     gap: 16px;
+    //блок центр ещё нужен
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+    grid-auto-flow: dense;
 }
 
 .item3 {
