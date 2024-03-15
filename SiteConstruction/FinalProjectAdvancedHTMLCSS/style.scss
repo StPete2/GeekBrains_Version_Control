@@ -1617,6 +1617,11 @@ input::-webkit-outer-spin-button {
         padding-right: 16px;
     }
 
+    .tab16 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
     .header__right_icons_middle {
         display: none;
     }
@@ -1653,6 +1658,31 @@ input::-webkit-outer-spin-button {
 
     .top__brand_second_line {
         font-size: 20px;
+    }
+
+    .top-info {
+        justify-content: center;
+    }
+
+    .registration {
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .loyality {
+        &__heading {
+            font-size: 16px;
+        }
+
+        &__text {
+            font-size: 16px;
+            width: 358px;
+        }
+
+        &__li {
+            font-size: 16px;
+        }
     }
 
     .offer {
