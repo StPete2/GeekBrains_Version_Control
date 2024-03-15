@@ -68,7 +68,7 @@ html {
     position: absolute;
     z-index: 3;
     // left: 160px;
-    right: -1000px;
+    right: -10000px;
     top: 57px;
     // display: none;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
@@ -865,6 +865,10 @@ input::-webkit-outer-spin-button {
             height: 724px;
         }
 
+        &_img_tab {
+            display: none;
+        }
+
         &_arrow_div {
             width: 47px;
             height: 47px;
@@ -874,6 +878,9 @@ input::-webkit-outer-spin-button {
             justify-content: center;
         }
 
+        &_buttons {
+            border: none;
+        }
     }
 
     &__info {
@@ -977,8 +984,6 @@ input::-webkit-outer-spin-button {
         }
     }
 }
-
-
 
 .products {
     display: flex;
@@ -1484,6 +1489,44 @@ input::-webkit-outer-spin-button {
         margin-bottom: 11px;
         justify-content: space-between;
     }
+
+    .products__tab_special {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .selected-product {
+        height: 1225px;
+        padding-left: calc(50% - 384px);
+        padding-right: calc(50% - 384px);
+
+        &__image_and_back {
+            height: 624px;
+
+            &_img {
+                height: 565px;
+                top: 30px;
+                left: 151px;
+                // display: none;
+
+                // &_tab {
+                //     position: absolute;
+                //     display: block;
+                //     top: 30px;
+                //     left: 151px;
+                // }
+            }
+        }
+
+        &__info {
+            width: 767px;
+            margin-left: 0;
+            top: 624px;
+        }
+    }
+
 
     .offer {
         margin-bottom: 109.92px;
