@@ -1662,6 +1662,48 @@ input::-webkit-outer-spin-button {
 
     .top-info {
         justify-content: center;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .filter-sort {
+        margin-top: 11px;
+        margin-bottom: 13px;
+        height: 57px;
+        gap: 20px;
+    }
+
+    .filter {
+        width: 81px;
+
+        &[open] {
+            flex-shrink: 0;
+            width: 360px;
+        }
+
+        &__heading {
+            display: none;
+        }
+
+        &__summary_svg {
+            width: 37.5px;
+            height: 25px;
+        }
+    }
+
+    .sort {
+        gap: 24px;
+
+        &__heading {
+            font-size: 12px;
+            gap: 9px;
+
+            &_svg {
+                width: 10px;
+                height: 5px;
+                flex-shrink: 0;
+            }
+        }
     }
 
     .registration {
@@ -1798,6 +1840,11 @@ input::-webkit-outer-spin-button {
     .products__browse {
         margin-top: 32.5px;
         margin-bottom: 70.5px;
+    }
+
+    .products__pagination {
+        margin-top: 40px;
+        margin-bottom: 64px;
     }
 
     .features {
