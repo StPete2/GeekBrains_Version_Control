@@ -1524,6 +1524,66 @@ input::-webkit-outer-spin-button {
   .loyality__li {
     font-size: 16px;
   }
+  .cart-content {
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 40px;
+    margin-bottom: 96px;
+  }
+  .cart-content__address_and_proceed_div {
+    gap: 48px;
+    margin-top: 0;
+  }
+  .cart-items__box {
+    gap: 32px;
+    margin-bottom: 30px;
+  }
+  .cart-items__buttons {
+    gap: 9px;
+  }
+  .cart-items__buttons_clear {
+    width: 175px;
+    height: 33px;
+    font-size: 12px;
+  }
+  .cart-items__buttons_continue {
+    width: 175px;
+    height: 33px;
+    font-size: 12px;
+  }
+  .cart-item {
+    grid-template-columns: 144px 214px;
+    width: 358px;
+  }
+  .cart-item__img {
+    width: 144px;
+  }
+  .cart-item__info {
+    padding-top: 13.52px;
+    padding-left: 17px;
+  }
+  .cart-item__info_attributes_div {
+    gap: 4px;
+  }
+  .cart-item__info_cross_svg {
+    width: 10px;
+    height: 11px;
+  }
+  .cart-item__heading {
+    font-size: 16px;
+  }
+  .cart-item__heading_second_line {
+    margin-bottom: 26px;
+  }
+  .cart-item__attribute {
+    font-size: 14px;
+  }
+  .cart-item__attribute-meaning {
+    font-size: 10px;
+  }
+  #cart-item__quantity {
+    width: 24px;
+  }
   .offer {
     margin-top: 64px;
     margin-bottom: 64px;
