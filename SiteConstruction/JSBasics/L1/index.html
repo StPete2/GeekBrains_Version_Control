@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        if (3 > 1) {
+            let a = 5;
+            console.log(a);
+        }
+        let a = 2;
+        console.log(a);
+        let b;
+        console.log(typeof b);
+        console.log(typeof "2");
+        console.log(typeof 2);
+
+        let string = "Result";
+        string = 'result';
+        let result = 8;
+        let literal = `Result: ${result}`;
+        console.log(literal);
+        literal = `result: ${result + 2}`;
+        console.log(literal);
+
+        let student = {
+            firstName: "Ivan",
+            lastName: "Petrov",
+            age: 33,
+            faculty: "IT"
+        };
+
+        console.log(`${student.firstName} ${student.lastName} is ${student.age} years old`);
+    </script>
+</body>
+
+</html>
