@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./1.js"></script>
+</head>
+<body>
+    <section>
+        <h1 class="title">Lorem ipsum dolor sit.</h1>
+        <h2 id="heading">Lorem ipsum dolor sit amet.</h2>
+        <ul class="ul">
+            <li class="list">text 1</li>
+            <li class="list">text 2</li>
+            <li class="list">text 3</li>
+            <li class="list">text 4</li>
+        </ul>
+        <p class="text">Lorem ipsum dolor sit amet 1.</p>
+        <p class="text">Lorem ipsum dolor sit amet 2.</p>
+        <p class="text">Lorem ipsum dolor sit amet 3.</p>
+    </section>
+
+    <script>
+        const heading = document.querySelector('.title');
+        // console.log(heading);
+        const heading_id = document.getElementById('heading');
+        const heading_idHash = document.querySelector('#heading');
+        // console.log(heading_id);
+        // console.log(heading_idHash);
+        const listEls = document.getElementsByClassName('list');
+        console.log(listEls);
+        const listElsQS = document.querySelectorAll('.list');
+        console.log(listElsQS);
+        const paragraphs = document.getElementsByTagName('p');
+        console.log(paragraphs);
+
+        const text = document.querySelectorAll('.text');
+        // text.forEach(element => {
+        //     console.log(element);
+        // });
+        
+        const paragraphElement = document.createElement('p');
+        paragraphElement.textContent = 'Новый текст параграфа.';
+        console.log(paragraphElement); 
+        const titleEl = document.querySelector('.title');
+        titleEl.textContent = 'Заголовок из JS';
+
+        const sectionElement = document.querySelector('section');
+        sectionElement.appendChild(paragraphElement);
+
+        const paragraphElementText = document.createTextNode('Содержимое текстовой ноды');
+        paragraphElement.appendChild(paragraphElementText);
+
+        heading_id.remove();
+    </script>
+</body>
+</html>
