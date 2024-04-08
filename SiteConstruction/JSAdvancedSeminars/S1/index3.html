@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <link rel="stylesheet" href="style.css">     
+</head>
+<body>
+    <!-- Дан тег <div class="content"></div> 
+    Создайте новый элемент p
+    Добавьте в него текст “Новый текстовый элемент”
+    Добавьте созданный элемент внутри <div class="content"></div>
+    Удалите добавленный узел  -->
+    <div class="content">
+        
+    </div>
+
+    <!-- Создать элемент button, добавить в блок <div class="content"></div>
+    При клике на который в консоль выводится сколько раз пользователь нажал на данную кнопку -->
+    
+    <!-- Дан тег <div class="content"></div> 
+    Создайте с помощью javascript новый элемент button
+    Добавьте текст для кнопки “Отправить”
+    При клике на данную кнопку необходимо чтобы текст поменялся на “Текст отправлен” -->
+        
+    <script>
+        const divEl = document.querySelector('div.content');
+        const pEl = document.createElement('p');
+        pEl.innerHTML = 'Новый текстовый элемент';
+        divEl.appendChild(pEl);
+        pEl.remove();
+
+        const btn = document.createElement('button');
+        divEl.appendChild(btn);
+        btn.innerHTML = 'Text inside button';
+        let count = 0;
+        btn.onclick = function (e) {
+            count++;
+            console.log(count);
+        };
+
+        const button = document.createElement('button');
+        button.classList.add('button_class');
+        button.innerHTML = 'Отправить';
+        button.style.color = 'green';
+        divEl.appendChild(button);
+        button.onclick = function (e) {
+            // button.innerHTML = 'Текст отправлен';
+            console.log(e);
+            console.log(e.target.innerHTML = 'Текст отправлен Target');
+        }
+    </script>
+</body>
+</html>

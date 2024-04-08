@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./1.js" defer></script>
+</head>
+<body>
+    <div id="block">
+        <p class="www">text 1</p>
+        <p class="www">text 2</p>
+    </div>
+    <!-- Получите ссылку на первый абзац из дива с id, равным block, выведите его в консоль
+    Получите ссылку на первый абзац с классом www. и вывести его в консоль -->
+    
+    <script>
+        const divblockEl = document.getElementById('block');
+        const divblockEl2 = document.querySelector('div#block');
+        console.log(divblockEl);
+        console.log(divblockEl2);
+
+        const wwwEl = document.querySelector('.www');
+        console.log(wwwEl);
+
+        console.log(document.querySelectorAll('div#block p.www')[0]);
+        console.log(document.querySelectorAll('div#block p.www')[0].innerHTML);
+
+        console.log(divblockEl2.querySelectorAll('p.www')[0].innerHTML);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a class="link" href="#">link text html</a>
+    <img class="photo" src="#" alt="photo"> 
+
+    <script>
+    // Дан тег. Вам необходимо поменять текст внутри ссылки на “link text js”
+    // Заменить href, на значение https://developer.mozilla.org/ru/ 
+    // Дан тег. Вам необходимо с помощью js поменять значение src на любое изображение из интернета
+        const linkEl = document.querySelector('a.link');
+        console.log(linkEl);
+        linkEl.innerHTML = 'link text js';
+        console.log(linkEl);
+        linkEl.href = 'https://developer.mozilla.org/ru/';
+
+        const imgEl = document.querySelector('img.photo');
+        imgEl.src = 'https://images.squarespace-cdn.com/content/v1/545edeace4b04efe627d8659/1570789738883-GSPA9TOGHK9DVVLNCU31/MichelBourez_Tahiti_photoOrd20.jpg';
+    </script>
+</body>
+</html>
