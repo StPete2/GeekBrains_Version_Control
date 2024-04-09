@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .paragraph {
+            color: blue;
+        }
+
+        .heading {
+            color: white;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+
+    </div>
+
+    <script>
+        const content = document.querySelector('.content');
+        
+        const h1El = document.createElement('h1');
+        h1El.textContent = 'h1 element';
+        h1El.style.backgroundColor = '#ccc';
+        h1El.style.textAlign = 'center';
+        h1El.setAttribute('class', 'heading');
+
+        const imgEl = document.createElement('img');
+        imgEl.src = 'https://gas-kvas.com/uploads/posts/2023-02/1675245424_gas-kvas-com-p-art-latte-risunki-13.jpg';
+        imgEl.setAttribute('alt', 'Крутое фото');
+
+        content.appendChild(h1El);
+        content.appendChild(imgEl);
+    </script>
+</body>
+</html>
