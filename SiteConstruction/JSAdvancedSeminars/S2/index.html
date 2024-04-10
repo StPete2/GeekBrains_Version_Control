@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            color: blue;
+            border: solid 1px black;
+            background-color: #f8f8f8;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="block">
+
+    </div>
+    <!-- Дан блок, внутри него необходимо создать элемент div с классом item, разместить текст “Элемент внутри” и задать стили
+    Цвет текста синий
+    Рамка сплошная черная
+    Цвет фона #f8f8f8
+    Внутренний отступ 16px
+    Добавить данному блоку класс item_1 (использовать setAttribute) -->
+    <script>
+        const divBlockEl = document.querySelector('div.block');
+        const divItemEl = document.createElement('div');
+        divItemEl.classList.add('item');
+        divItemEl.classList.remove('class_number');
+        divBlockEl.appendChild(divItemEl);
+        divItemEl.innerHTML = 'Элемент внутри';
+        // divItemEl.setAttribute('class', 'item_1');
+        divItemEl.setAttribute('class', divItemEl.getAttribute('class') + ' item_1');
+    </script>
+</body>
+</html>

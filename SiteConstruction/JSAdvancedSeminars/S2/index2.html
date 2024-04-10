@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Дан код -->
+    <div class="elem">
+        <img src="https://i.ytimg.com/vi/Ed87WSF6OQo/hqdefault.jpg" alt="photo">
+        <div class="content">
+            <h2 class="heading">Lorem, ipsum dolor.</h2>
+            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, ea!</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="elem">
+            <div class="info">
+                <h2 class="subtitle">Lorem, ipsum dolor.</h2>
+            </div>
+        </div>
+    </div>
+    <!-- С помощью querySelector найти элемент h2  и вывести в консоль всех его родителей -->
+    <script>
+        const h2El = document.querySelector('div.item div.elem div.info h2.subtitle');
+        // console.log(h2El);
+        let currentEl = h2El;
+        // do {
+        //     currentEl = currentEl.parentElement;
+        //     console.log(currentEl);
+        // } while (currentEl.tagName !== 'HTML');
+        function findParents(element) {
+            console.log(element.parentElement);
+            if (element.parentElement.tagName !== 'HTML') {
+                findParents(element.parentElement);
+            }
+        }        
+        findParents(h2El);
+    </script>
+
+    <!-- Необходимо с помощью querySelector найти параграф с классом text
+    Вывести в консоль соседний элемент h2
+    Вывести в консоль родительский элемент content
+    Вывести в консоль картинку
+    Вывести в консоль родительский элемент elem -->
+
+    <!-- <script>
+        const pEl = document.querySelector('div.elem div.content p.text');
+        console.log(pEl.innerHTML);
+        console.log(pEl.parentElement.firstElementChild.innerHTML);
+        console.log(pEl.previousElementSibling);
+        console.log(pEl.parentElement);
+        console.log(pEl.parentElement.previousElementSibling);
+        console.log(pEl.parentElement.nextElementSibling);
+        console.log(pEl.parentElement.parentElement);
+    </script> -->
+</body>
+
+</html>
