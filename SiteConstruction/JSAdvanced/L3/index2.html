@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <div class="error"></div>
+    <button class="submit">GO</button>
+
+    <button class="button">Купить 1</button>
+    <button class="button">Купить 2</button>
+    <button class="button">Купить 3</button>
+    <ul class="menu">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>    
+    <script>
+        const buttonEl = document.querySelector('.button');
+        // buttonEl.addEventListener('click', function (e) {
+        //     console.log(e);
+        // });
+
+        const buttonEls = document.querySelectorAll('.button');
+        buttonEls.forEach(element => {
+            element.addEventListener('click', function (e) {
+                console.log(e.target);
+            });
+        });
+
+        const menuEl = document.querySelector('.menu');
+        const nameFunction = (e) => {
+            console.log(e.target, e.currentTarget);
+        };
+
+        menuEl.addEventListener('click', nameFunction);
+
+        document.addEventListener('DOMContentLoaded', function (e) {
+            console.log('loaded');
+        });
+
+        window.addEventListener('load', function (e) {
+            console.log('all loaded, window');
+        });
+
+        buttonEls.forEach(element => {
+            element.addEventListener('mouseover', function (e) {
+                console.log('Можно навести, а можно нажать... :-)');
+            });
+        });
+
+        // window.addEventListener('keydown', function (e) {
+        //     console.log(e.key); /*keyup, keypress*/
+        // });
+        /*e.preventDefault()
+        some action here*/
+        /*
+        document.addEventListener('copy', function (e) {
+         const copyText = document.getSelection().toString();
+         console.log(copyText);
+         можно добавить, что скопировано с сайта такого-то...
+        }); 
+        */
+        const inputEl = document.querySelector('input');
+        inputEl.addEventListener('input', (e) => {
+            console.log(event.target.value);
+        });
+        
+        // const formRun = 
+    </script>
+</body>
+</html>

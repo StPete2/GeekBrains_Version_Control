@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="console.log('Hello onclick html');" class="button">Купить</button>
+    <div onclick="console.log('Hello onclick html-2');" class="div-button">Купить-2</div>
+
+    <script>
+        const buttonEl = document.querySelector('button');
+        let count = 0;
+        
+        buttonEl.onclick = function () {
+            count++;
+            console.log('Click js button');
+        }
+        
+        buttonEl.addEventListener('click', function (e) {
+            console.log('click from EL');
+        });
+        
+        const click = function () {
+            console.log('click from function');
+        }
+
+        const click2 = function () {
+            console.log('click from function and EL');
+        }
+        buttonEl.onclick = click;
+        buttonEl.addEventListener('click', click2);
+        
+
+    </script>
+</body>
+</html>
