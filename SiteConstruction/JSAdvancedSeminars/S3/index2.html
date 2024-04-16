@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="containerForth">
+        <ul class="menu">
+            <li class="menu__link">MenuEl1</li>
+            <li class="menu__link">MenuEl2</li>
+            <li class="menu__link">MenuEl3</li>
+        </ul>
+    </div>
+    <script>
+        const divForth = document.querySelector('div.containerForth');
+        const menuEl = divForth.querySelector('ul.menu');
+        const buttonEl = document.createElement('button');
+        buttonEl.innerHTML = 'New li element';
+        divForth.appendChild(buttonEl);
+        let count = 3;
+        buttonEl.addEventListener('click', function (event) {
+            count++;
+            const liEl = document.createElement('li');
+            liEl.innerHTML = 'Новый элемент списка' + count;
+            menuEl.appendChild(liEl);
+        });
+
+        const buttonDelEl = document.createElement('button');
+        buttonDelEl.innerHTML = 'Delete li element';
+        divForth.appendChild(buttonDelEl);
+        buttonDelEl.addEventListener('click', function (event) {
+            const liElArray = menuEl.querySelectorAll('li');
+            if (liElArray.length > 0) {
+                liElArray[0].remove();
+            }
+        });
+
+        const buttonAddNewClass = document.createElement('button');
+        buttonAddNewClass.innerHTML = 'Add new class';
+        divForth.appendChild(buttonAddNewClass);
+        
+        buttonAddNewClass.addEventListener('click', function (event) {
+            event.target.classList.add('click');
+        });
+    </script>
+    <!-- Создать в html список состоящий из 3-х произвольных элементов li
+    Нужно создать кнопку которая будет добавлять элементы списка с текстом “новый элемент списка”
+    Создать кнопку, которая будет удалять первый элемент из созданного списка
+    Создать кнопку, при клике на которую ей добавляется класс “click” -->
+</body>
+</html>

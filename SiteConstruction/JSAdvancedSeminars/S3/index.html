@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">Купить</button>
+    <script>
+        window.addEventListener("load", (e) => {
+            console.log("Page is loaded");
+        });
+        const butEl = document.querySelector("button.btn");
+        butEl.onclick = function () {
+            console.log("Событие onclick");
+        };
+        butEl.addEventListener("click", (e) => {
+            console.log("Событие AddEventListener");
+        });
+        window.onload = (event) => {
+            console.log("window loaded 2");
+        };
+    </script>
+    <!-- В html создать кнопку button
+    После загрузки страницы вывести в консоль текст “страница загрузилась”
+    Добавить событие onclick которое выводит в консоль текст “событие onclick”
+    Добавить событие addEventListener которое выводит в консоль текст “событие addEventListener” -->
+    <div class="container"></div>
+    <script>
+        const divEl = document.querySelector("div.container");
+
+        const butEl1 = document.createElement("button");
+        butEl1.innerHTML = "Button 1";
+        const butEl2 = document.createElement("button");
+        butEl2.innerHTML = "Button 2";
+        const butEl3 = document.createElement("button");
+        butEl3.innerHTML = "Button 3";
+
+        divEl.appendChild(butEl1);
+        divEl.appendChild(butEl2);
+        divEl.appendChild(butEl3);
+
+        const clickButton = function (e) {
+            console.log(e.target.innerHTML);
+        };
+        butEl1.addEventListener("click", clickButton);
+        butEl2.addEventListener("click", clickButton);
+        butEl3.addEventListener("click", clickButton);
+
+        buttonEls = [butEl1, butEl2, butEl3];
+        buttonEls.forEach((element) => {
+            element.addEventListener("click", clickButton);
+        });
+        buttonEls.forEach((element) => {
+            element.addEventListener('click', (event) => {
+                console.log(event.target.innerHTML);
+            })
+        })
+
+        const butEl4 = document.createElement('button');
+        butEl4.innerHTML = 'Button 4';
+        divEl.appendChild(butEl4);
+
+        const butEl5 = document.createElement('button');
+        butEl5.innerHTML = 'Button 5';
+        divEl.appendChild(butEl5);
+        let count = 0;
+        butEl4.addEventListener('click', function (e) {
+            count++;
+            console.log(`На ${e.target.innerHTML} нажали ${count} раз`);
+        });
+
+        butEl5.addEventListener('click', function (e) {
+            e.target.innerHTML = 'Вы нажали на эту кнопку';
+        });
+    </script>
+    <!-- Создать в html три кнопки button с нумерацией (1, 2, 3 соответственно)
+    Добавить клик на кнопку , чтобы в консоль выводилась именно та кнопка на которую мы нажали
+    Добавить кнопку button с текстом 4, которая считает сколько раз на нее нажали и количество нажатий на эту кнопку выводит в консоль
+    Создать кнопку button с текстом 5, При клике на которую, меняется текст данной кнопки на “Вы нажали на эту кнопку” -->
+    <div class="containerSecond"></div>
+    <script>
+        const divElSecond = document.querySelector('div.containerSecond');
+        const butCont = document.createElement('button');
+        divElSecond.appendChild(butCont);
+        butCont.innerHTML = 'Добавить h1';
+        const h1El = document.createElement('h1');
+        h1El.innerHTML = 'Новый заголовок';
+        butCont.addEventListener('click', function (e) {
+            divElSecond.appendChild(h1El);
+        });
+
+        const butContDel = document.createElement('button');
+        butContDel.innerHTML = 'Удалить h1';
+        divElSecond.appendChild(butContDel);
+        butContDel.addEventListener('click', function (event) {
+            h1El.remove();
+        });
+
+        const butHover = document.createElement('button');
+        butHover.innerHTML = 'Hover Button';
+        divElSecond.appendChild(butHover);
+        butHover.addEventListener('mouseover', function (event) {
+            console.log('Вы навели на данную кнопку');
+        });
+        butHover.addEventListener('mouseout', function (event) {
+            console.log('Наведения на кнопку больше нет');
+        })
+    </script>
+    
+    <!-- Создать кнопку, которая добавляет заголовок h1 с текстом, "Новый заголовок", данный элемент нужно расположить после кнопки
+    Создать вторую кнопку, которая будет удалять созданный заголовок h1
+    Создать третью кнопку, при наведении на которую в консоль будет выводиться текст “вы навели на данную кнопку” , как только вы убираем курсор мыши с кнопки, в консоли должен появиться текст “Наведения на кнопку больше нет” -->
+
+</body>
+
+</html>
