@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" class="form">
+        <label for="password" class="password">Введите пароль: </label>
+        <input type="password" name="password" id="password" class="password"><br>
+        <button type="submit" class="button">Отправить</button>
+    </form>
+    <style>
+        .form__input_correct_password {
+            border: 1px solid green;
+        }
+
+        .form__input_incorrect_password {
+            border: 1px solid red;
+        }
+    </style>
+
+    <script>
+    // Создать поле ввода (пароль)
+    // Кнопка отправить
+    // Если пользователь вводит текст “пароль” то поле ввода должно быть подсвечено зеленым цветом
+    // Если пароль неверный, у поля ввода появляется красная обводка и текст “пароль неверный”
+        const userPassword = '123';
+        const formEl = document.querySelector('form.form');
+        const inputEl = formEl.querySelector('input.password');
+        const buttonEl = formEl.querySelector('button.button');
+        const incorrectPassword = document.createElement('p');
+        incorrectPassword.innerHTML = 'Пароль неверный';
+        
+        buttonEl.addEventListener('click', function(e) {
+            if (inputEl.value === userPassword && inputEl.classList.contains('form__input_incorrect_password')) {
+                incorrectPassword.remove();
+                inputEl.classList.remove('form__input_incorrect_password');
+                inputEl.classList.add('form__input_correct_password');
+            } else if (inputEl.value === userPassword) {
+                inputEl.classList.add('form__input_correct_password');
+            } else if (inputEl.value !== userPassword && !formEl.contains(incorrectPassword)) {
+                formEl.insertBefore(incorrectPassword, buttonEl);
+                inputEl.classList.add('form__input_incorrect_password');
+            } 
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" class="form">
+        <label for="radio__tea">Чай</label>
+        <input type="radio" name="radio" class="tea" id="radio__tea" value="Чай">
+        <label for="radio__coffee">Кофе</label>
+        <input type="radio" name="radio" class="coffee" id="radio__coffee" value="Кофе"><br>
+        <button class="button" type="submit">Отправить</button>
+    </form>
+
+    <script>
+        // В html создать 2 элемента радио кнопки (input type=”radio”) и текст “Чай”, “Кофе” соответственно
+        // Кнопка отправить
+        // Если выбран чай, необходимо вывести сообщение “Чай закончился”
+        // Если выбран кофе, необходимо вывести соообщение “кофе закончился”
+        const formEl = document.querySelector('form.form');
+        const inputElTea = formEl.querySelector('input.tea');
+        const inputElCoffee = formEl.querySelector('input.coffee');
+        const buttonEl = formEl.querySelector('button.button');
+
+        buttonEl.addEventListener('click', function(e) {            
+            if (inputElTea.checked) {
+                console.log('Чай готов!');
+            } else if (inputElCoffee.checked) {
+                console.log('Кофе готов!');
+            } else {
+                console.log('Мы ждем Ваш выбор!');
+            }
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
