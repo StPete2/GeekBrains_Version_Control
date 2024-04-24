@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" class="form">
+        <input type="text" class="input">
+        <h1 class="heading">Заголовок</h1>
+        <h2 class="headingH2"></h2>
+    </form>
+
+    <script>
+    // Создать поле ввода и под ним заголовок h1 с текстом “Заголовок”
+    // При вводе текста в поле ввода необходимо чтобы текст внутри заголовка менялся на введенный в поле ввода
+        const formEl = document.querySelector('form.form');
+        const inputEl = formEl.querySelector('input.input');
+        const h1El = formEl.querySelector('h1.heading');
+        const h2El = formEl.querySelector('h2.headingH2');
+
+        inputEl.addEventListener('input', function(e) {            
+            h1El.innerHTML = e.target.value;
+        });
+
+        inputEl.addEventListener('change', function(e) {
+            h2El.innerHTML = e.target.value;
+        });
+    </script>
+</body>
+</html>
