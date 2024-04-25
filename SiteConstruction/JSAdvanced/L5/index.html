@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="product-box">
+        <div class="product">
+            <img src="#" alt="photo" class="product__img">
+            <div class="product__content">
+                <a href="#" class="product__name">Название товара</a>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p class="product__price">55</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const productData = {
+            src: 'img.png',
+            alt: 'img obj data',
+            name: 'Название из obj data',
+            link: 'product.html',
+            descr: 'Описание из obj data',
+            price: 'Цена из obj data'
+        }
+        
+        const productBox = document.querySelector('div.product-box');
+        const productEl = document.createElement('div');
+        productEl.classList.add('product');
+        
+        const productImg = document.createElement('img');
+        productImg.classList.add('product__img');
+        productImg.setAttribute('alt', productData.alt);
+        productImg.src = productData.src;
+        
+        const productContent = document.createElement('div');
+        productContent.classList.add('product__content');
+
+        const productLink = document.createElement('a');
+        // productLink.href = 'product.html';
+        productLink.href = productData.link;
+        // productLink.innerHTML = 'Название товара из JS';
+        productLink.innerHTML = productData.name;
+
+        const productText = document.createElement('p');
+        productText.classList.add('product__text');
+        productText.innerHTML = productData.descr;
+
+        const productPrice = document.createElement('p');
+        productPrice.classList.add('product__price');
+        // productPrice.innerHTML = 'Цена товара из JS';
+        productPrice.innerHTML = productData.price;
+
+        productContent.appendChild(productLink);
+        productContent.appendChild(productText);
+        productContent.appendChild(productPrice);
+        productEl.appendChild(productImg);
+        productEl.appendChild(productContent);
+        productBox.appendChild(productEl);
+        
+
+
+        const obj = {
+            "first name" : "John",
+            "last name" : "Smith",
+            "location" : "London"
+        }
+
+        const stringObj = JSON.stringify(obj);
+        console.log(stringObj);
+
+    </script>
+</body>
+
+</html>
