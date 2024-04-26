@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./data.js"></script>
 </head>
+
 <body>
-    
+    <div class="container">
+
+    </div>
+    <script>
+        // console.log(dataInfo);
+        // console.log(JSON.parse(dataInfo));
+        const divContEl = document.querySelector('div.container');
+        const parseRes = JSON.parse(dataInfo);
+        parseRes.forEach(element => {
+            // console.log(element);
+            const newDivEl = document.createElement('div');
+            newDivEl.classList.add(element.class);
+            const imgEl = document.createElement('img');
+            const textEl = document.createElement('p');
+            imgEl.src = element.url;
+            imgEl.alt = 'photo';
+            imgEl.width = element.width;
+            textEl.innerHTML = element['текст'];
+            divContEl.appendChild(newDivEl);
+            newDivEl.appendChild(imgEl);
+            newDivEl.appendChild(textEl);
+        });
+        // 4. Создать переменную data и добавить в нее JSON parse данные из
+        // файла data.js
+        // 5. Вывести в консоль объект data
+        // 6. С помощью foreach обойти массив data
+        // 7. Вывести все изображения из данных
+    </script>
 </body>
+
 </html>
