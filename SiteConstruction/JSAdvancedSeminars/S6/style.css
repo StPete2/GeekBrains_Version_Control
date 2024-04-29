@@ -79,7 +79,8 @@ body {
     line-height: normal;
 }
 
-.cart-item__attribute-meaning {
+.cart-item__attribute-meaning,
+.cart-item__attribute-meaning-size {
     color: #6F6E6E;
 }
 
