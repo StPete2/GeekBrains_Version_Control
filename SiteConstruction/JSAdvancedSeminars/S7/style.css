@@ -25,3 +25,11 @@
     display: flex;
     padding-left: 184px;
 }
+
+.container__controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 32px;
+    gap: 16px;
+}

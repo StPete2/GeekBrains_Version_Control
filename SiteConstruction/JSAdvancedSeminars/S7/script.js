@@ -7,7 +7,7 @@ videoEl.height = '480';
 videoEl.setAttribute('loop', 'true');
 containerEl.appendChild(videoEl);
 const brEl = document.createElement('br');
-containerEl.appendChild(brEl.cloneNode());
+// containerEl.appendChild(brEl.cloneNode());
 
 const playEl = document.createElement('div');
 playEl.classList.add('play');
@@ -28,6 +28,10 @@ pauseEl.addEventListener('click', function (e) {
 })
 
 const controlsDiv = document.createElement('div');
+controlsDiv.classList.add('container__controls');
+const volumeControlsDiv = document.createElement('div');
+const videoScrollDiv = document.createElement('div');
+const playBackTimeDiv = document.createElement('div');
 
 const inputEl = document.createElement('input');
 inputEl.setAttribute('type', 'range');
@@ -76,10 +80,13 @@ volumeEl.addEventListener('change', function (e) {
 divButtons.appendChild(playEl);
 divButtons.appendChild(pauseEl);
 
-containerEl.appendChild(volumeLabel);
-containerEl.appendChild(spacesEl);
-containerEl.appendChild(volumeEl);
-containerEl.appendChild(brEl.cloneNode());
-containerEl.appendChild(videoDurationLabel);
+volumeControlsDiv.appendChild(volumeLabel);
+volumeControlsDiv.appendChild(spacesEl);
+volumeControlsDiv.appendChild(volumeEl);
+videoScrollDiv.appendChild(videoDurationLabel);
 videoDurationLabel.append(spacesEl2);
-containerEl.appendChild(inputEl);
+videoScrollDiv.appendChild(inputEl);
+controlsDiv.appendChild(volumeControlsDiv);
+controlsDiv.appendChild(videoScrollDiv);
+controlsDiv.appendChild(playBackTimeDiv);
+containerEl.appendChild(controlsDiv);
