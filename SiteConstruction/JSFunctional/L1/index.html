@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const studentsGroup1 = [
+            {
+                firstName: "Petrov",
+                practiceTime: 56
+            },
+            {
+                firstName: "Ivanov",
+                practiceTime: 120
+            },
+            {
+                firstName: "Sidorov",
+                practiceTime: 160
+            }
+        ];
+        const studentsGroup2 = [
+            {
+                firstName: "Lybimyi",
+                practiceTime: 63
+            },
+            {
+                firstName: "Zadira",
+                practiceTime: 140
+            }
+        ];
+        function findMax() {
+            const values = arguments;
+            let maxValue = -Infinity;
+            for (let i = 0; i < values.length; i++) {
+                if (values[i] > maxValue) maxValue = values[i];
+            }
+            return maxValue;
+        };
+
+        const group1PracticeTime = studentsGroup1.map((student) => student.practiceTime);
+        console.log(group1PracticeTime);
+        const group2PracticeTime = studentsGroup2.map((student) => student.practiceTime);
+                
+        const maxTimeFromGroup1 = findMax(...group1PracticeTime);
+        console.log(maxTimeFromGroup1);
+        const maxTimeFromGroup2 = findMax(...group2PracticeTime);
+        const bothGroupsPracticeTime = [...group1PracticeTime, ...group2PracticeTime];
+        const maxTimeBothGroups = findMax(...bothGroupsPracticeTime);
+        
+        const testConst = studentsGroup1.map((student) => [student.practiceTime, student.firstName]);
+        console.log(testConst);
+
+        const createCounter = () => {
+            let counter = 0;
+            return () => {
+                return ++counter;
+            }
+        };
+
+        const counter1 = createCounter();
+        const counter2 = createCounter();
+        counter1();
+        counter2();
+        counter1();
+        console.log(counter1());
+        console.log(counter2());
+
+        const houses = [];
+        let i = 0;
+        while (i<10) {
+            let house = function() {
+                console.log(i);
+            }
+            houses.push(i);
+            i++;
+        }
+
+        console.log(houses);
+        console.log(houses[3]);
+        
+    </script>
+</body>
+
+</html>
