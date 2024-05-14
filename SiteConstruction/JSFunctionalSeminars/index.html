@@ -37,6 +37,13 @@
             });
         }
         console.log(removeDuplicates(1, 2, 3, 2, 4, 1, 5));
+
+        function removeDuplicates2(...params) {
+            const uniqueArray = [...new Set(params)];
+            return uniqueArray;
+        }
+
+        console.log(removeDuplicates2(1, 2, 3, 2, 4, 1, 5));
     </script>
 </body>
 </html>

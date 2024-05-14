@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. Напишите функцию getEvenNumbers, которая принимает массив
+    чисел в качестве аргумента и возвращает новый массив,
+    содержащий только четные числа.
+    2. Задача: Напишите функцию calculateAverage, которая принимает
+    массив чисел в качестве аргумента и возвращает среднее значение
+    этих чисел.
+    3. Напишите функцию capitalizeFirstLetter, которая принимает строку в
+    качестве аргумента и возвращает новую строку, в которой первая
+    буква каждого слова является заглавной. -->
+    <script>
+        function capitalizeFirstLetter(str) {
+            return str.replace(/(^|\s)\S/g, (char) => {
+                return char.toUpperCase();
+            })
+        };
+        console.log(capitalizeFirstLetter("asdf asdf asdf ljk фыва"));
+
+        function capitalizeFirstLetter2(str) {
+            return str.replace(/\b\w/g, (char) => {
+                return char.toLocaleUpperCase();
+            });
+        }
+        
+        console.log(capitalizeFirstLetter2("asdf asdf lkjljs авва"));
+
+        function getEvenNumbers(params) {
+            return params.filter((elem) => elem % 2 === 0);
+        }
+
+        console.log(getEvenNumbers([1, 2, 3, 4]));
+
+        const getEvenNumbersTwo = (array) => array.filter((elem) => elem % 2 === 0);
+        console.log(getEvenNumbersTwo([2, 5, 8]));
+
+        function calculateAverage(array) {
+            return array.reduce((sum, elem) => (sum + elem)) / array.length; // аккумулятор и элемент, аккум идет первым.
+        }
+
+        console.log(calculateAverage([1, 2, 3, 5]));
+
+
+    </script>
+</body>
+
+</html>
