@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Напишите функцию createCalculator, которая принимает начальное
+    значение и возвращает объект с двумя методами: add и subtract.
+    Метод add должен увеличивать значение на переданное число, а
+    метод subtract должен уменьшать значение на переданное число.
+    Значение должно быть доступно только через методы объекта, а не
+    напрямую. -->
+    <script>
+        function createCalculator(def) {
+            return {
+                value: def,
+                add(num) {
+                    return this.value += num;
+                },
+                subtruct(num) {
+                    return this.value -= num;
+                }
+            };
+        }
+
+        const result = createCalculator(10);
+        console.log(result.add(5));
+        console.log(result.subtruct(3));
+        console.log(result.subtruct(3));
+
+        const result2 = createCalculator(7);
+        console.log(result2.add(5));
+
+        console.log(createCalculator(5).add(5));
+        console.log(createCalculator(3).add(2));
+        console.log(createCalculator(5).add(2));
+        console.log(result2);
+        //         Напишите функцию createGreeting, которая принимает имя
+        // пользователя и возвращает функцию, которая будет выводить
+        // приветствие с использованием этого имени.
+        // // Пример использования:
+        // const greeting = createGreeting('John');
+        // greeting(); // Ожидаемый результат: "Hello, John!"
+
+        function createGreeting(name) {
+            return function () {
+                return `Hello, ${name}`;
+            }
+        }
+        const greeting = createGreeting('John'); // создание экземпляра функции!
+        console.log(greeting()); // вызов экземпляра функции
+
+        // console.log(createGreeting('Ivan'));
+        // console.log(greeting('Sergey'));
+
+        // Задача: Напишите функцию createPasswordChecker, которая
+        // принимает допустимую длину пароля в качестве аргумента и
+        // возвращает функцию для проверки введенного пароля.
+        // Возвращаемая функция должна принимать пароль и возвращать
+        // true, если его длина соответствует допустимой, и false в противном
+        // случае.
+        // // Пример использования:
+        // const isPasswordValid = createPasswordChecker(8);
+        // console.log(isPasswordValid('password')); // Ожидаемый результат:
+        // false
+        // console.log(isPasswordValid('secret')); // Ожидаемый результат: true
+
+        function createPasswordChecker(passwordLength) {
+            return function (password) {
+                return password.length < passwordLength;
+            }
+        }
+
+        const isPasswordValid = createPasswordChecker(8);
+        console.log(isPasswordValid('password'));
+        console.log(isPasswordValid('secret'));
+
+        // Напишите рекурсивную функцию sumDigits, которая принимает
+        // положительное целое число в качестве аргумента и возвращает
+        // сумму его цифр.
+        // // Пример использования:
+        // console.log(sumDigits(123)); // Ожидаемый результат: 6 (1 + 2 + 3)
+        // console.log(sumDigits(456789)); // Ожидаемый результат: 39 (4 + 5 + 6
+        // + 7 + 8 + 9)
+        function sumDigits(number) {
+            if (number < 10) {
+                return number;
+            }
+            else {
+                return number % 10 + sumDigits(Math.floor(number / 10));
+            }
+        }
+        console.log(sumDigits(123));
+        console.log(sumDigits(456789));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__product">
+            <img src="./cart-item__img1.jpg" alt="product photo" class="product__img">
+            <h2 class="product__title"></h2>
+            <p class="product__description"></p>
+            <div class="root"></div>
+        </div>
+    </div>
+
+    <script>
+        // 1) Дан массив const arr = [1, 5, 7, 9] с помощью Math.min и spread оператора, найти минимальное число в массиве, решение задание должно состоять из одной строки
+
+        const arr = [1, 5, 7, 9];
+        console.log('Ответ на задание № 1 (минимальное число в массиве):');
+        console.log(Math.min(...arr));
+
+        // 2) Напишите функцию createCounter, которая создает счетчик и возвращает объект с двумя методами: increment и decrement. Метод increment должен увеличивать значение счетчика на 1, а метод decrement должен уменьшать значение счетчика на 1. Значение счетчика должно быть доступно только через методы объекта, а не напрямую.
+
+        function createCounter() {
+            let counter = 0;
+            return {
+                increment() {
+                    return ++counter;
+                },
+                decrement() {
+                    return --counter;
+                }
+            }
+        }
+
+        const counter = createCounter();
+        console.log('Ответ на задание № 2');
+        // console.log('Возвращаем counter:');
+        // console.log(counter);
+        console.log('Увеличиваем counter:');
+        console.log(counter.increment());
+        console.log('Увеличиваем counter:');
+        console.log(counter.increment());
+        console.log('Уменьшаем counter');
+        console.log(counter.decrement());
+
+        // 3) Напишите рекурсивную функцию findElementByClass, которая принимает корневой элемент дерева DOM и название класса в качестве аргументов и возвращает первый найденный элемент с указанным классом в этом дереве.
+        // Пример
+        // const rootElement = document.getElementById('root');
+        // const targetElement = findElementByClass(rootElement, 'my-class');
+        // console.log(targetElement);
+
+        function findElementByClass() {
+
+        }
+    </script>
+</body>
+
+</html>
