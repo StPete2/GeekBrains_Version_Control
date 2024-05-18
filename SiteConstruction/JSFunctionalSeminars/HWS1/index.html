@@ -12,7 +12,9 @@
         <div class="container__product">
             <img src="./cart-item__img1.jpg" alt="product photo" class="product__img">
             <h2 class="product__title"></h2>
-            <p class="product__description"></p>
+            <div class="product__description">
+                <p class="product__description_test"></p>
+            </div>
             <div class="root"></div>
         </div>
     </div>
@@ -55,9 +57,39 @@
         // const targetElement = findElementByClass(rootElement, 'my-class');
         // console.log(targetElement);
 
-        function findElementByClass() {
-
+        function findElementByClass(rootElement, className) {
+            if (rootElement.classList.contains(className)) {
+                return rootElement;
+            } else {
+                if (rootElement.hasChildNodes()) {
+                    const childrenRootElement = rootElement.children;
+                    // console.log(childrenRootElement);
+                    for (let i = 0; i < childrenRootElement.length; i++) {
+                        return findElementByClass(childrenRootElement[i], className);
+                    }
+                } else if (rootElement.nextElementSibling) {
+                    const siblingRootElement = rootElement.nextElementSibling;
+                    return findElementByClass(siblingRootElement, className);l
+                } else if (!rootElement.nextElementSibling && !rootElement.parentElement.nextElementSibling){
+                    console.log('Элемент с указанным классом в рут элементе не найден');
+                    return;
+                } else if (!rootElement.nextElementSibling) {
+                    // console.log(rootElement.parentElement.nextElementSibling);
+                    return findElementByClass(rootElement.parentElement.nextElementSibling, className);
+                }
+            }
         }
+
+        const rootElement = document.querySelector('div.container');
+        
+        const targetElement = findElementByClass(rootElement, 'container');
+        // console.log(targetElement);        
+        const targetElement2 = findElementByClass(rootElement, 'container__product');
+        // console.log(targetElement2);
+        const targetElement3 = findElementByClass(rootElement, 'root');
+        // console.log(targetElement3);
+        const targetElement4 = findElementByClass(rootElement, 'noSuchClass');
+        console.log(targetElement4);
     </script>
 </body>
 
