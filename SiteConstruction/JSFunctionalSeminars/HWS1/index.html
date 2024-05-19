@@ -72,7 +72,7 @@
                     return findElementByClass(siblingRootElement, className);l
                 } else if (!rootElement.nextElementSibling && !rootElement.parentElement.nextElementSibling){
                     console.log('Элемент с указанным классом в рут элементе не найден');
-                    return;
+                    return null;
                 } else if (!rootElement.nextElementSibling) {
                     // console.log(rootElement.parentElement.nextElementSibling);
                     return findElementByClass(rootElement.parentElement.nextElementSibling, className);

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Одалживание метода
+
+        // Создайте объект Animal со свойством name и методом eat(), который
+        // выводит сообщение о том, что животное ест. Создайте объект Dog со
+        // свойством name и методом bark(), который выводит сообщение о
+        // том, что собака лает. Используйте одалживание метода eat() из
+        // объекта Animal для объекта Dog, чтобы вывести сообщение о том,
+        // что собака ест.
+        // // Одалживание метода eat() из объекта Animal к объекту Dog
+        // Dog.eat = Animal.eat;
+        // Dog.eat(); // Вывод: Rex is eating
+
+        const Animal = {
+            name: "Animal",
+            eat: function () {
+                return console.log(`${this.name} is eating`);
+            },
+        };
+
+        const Dog = {
+            name: "Dog",
+            bark: function () {
+                return console.log(`${this.name} barks`);
+            },
+        };
+
+        Dog.eat = Animal.eat;
+        Dog.eat();
+
+        Animal.eat();
+        Dog.bark();
+
+        // Создайте класс Person, который имеет свойства name и age, а также
+        // метод introduce(), который выводит сообщение с представлением
+        // имени и возраста персоны.
+        // const person = new Person("John", 25);
+        // person.introduce(); Вывод: My name is John and I'm 25 years old.
+
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            introduce() {
+                return console.log(
+                    `My name is ${this.name} and I am ${this.age} years old`
+                );
+            }
+        }
+
+        const John = new Person("John", 25);
+        John.introduce();
+        console.log(John);
+
+        function Person2(name, age) {
+            this.name = name;
+            this.age = age;
+            this.greeting = function () {
+                return console.log(`Hello, ${this.name}!`);
+            };
+        }
+
+        const Ivan = new Person2("Ivan", 26);
+        Ivan.greeting();
+    </script>
+</body>
+
+</html>
