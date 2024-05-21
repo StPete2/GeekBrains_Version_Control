@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
@@ -19,11 +19,11 @@
             return {
                 value: def,
                 add(num) {
-                    return this.value += num;
+                    return (this.value += num);
                 },
                 subtruct(num) {
-                    return this.value -= num;
-                }
+                    return (this.value -= num);
+                },
             };
         }
 
@@ -49,9 +49,9 @@
         function createGreeting(name) {
             return function () {
                 return `Hello, ${name}`;
-            }
+            };
         }
-        const greeting = createGreeting('John'); // создание экземпляра функции!
+        const greeting = createGreeting("John"); // создание экземпляра функции!
         console.log(greeting()); // вызов экземпляра функции
 
         // console.log(createGreeting('Ivan'));
@@ -72,12 +72,12 @@
         function createPasswordChecker(passwordLength) {
             return function (password) {
                 return password.length < passwordLength;
-            }
+            };
         }
 
         const isPasswordValid = createPasswordChecker(8);
-        console.log(isPasswordValid('password'));
-        console.log(isPasswordValid('secret'));
+        console.log(isPasswordValid("password"));
+        console.log(isPasswordValid("secret"));
 
         // Напишите рекурсивную функцию sumDigits, которая принимает
         // положительное целое число в качестве аргумента и возвращает
@@ -89,9 +89,8 @@
         function sumDigits(number) {
             if (number < 10) {
                 return number;
-            }
-            else {
-                return number % 10 + sumDigits(Math.floor(number / 10));
+            } else {
+                return (number % 10) + sumDigits(Math.floor(number / 10));
             }
         }
         console.log(sumDigits(123));
