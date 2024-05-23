@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="module">
+            const myPromise = new Promise((resolve, promise) => {});
+
+            myPromise
+                .then((value) => {})
+                .catch((error) => {
+                    console.log("Ошибка");
+                });
+
+            const url = "https://jsonplaceholder.typicode.com/users";
+            fetch(url).then((response) => console.log(response));
+            fetch(url)
+                .then((response) => response.json())
+                .then((data) => console.log(data))
+                .catch((error) => console.error("Обработка ошибки"));
+
+            const getData = (url) =>
+                new Promise((resolve, reject) => {
+                    fetch(url)
+                        .then((response) => response.json())
+                        .then((data) => resolve(data))
+                        .catch((error) => reject(error));
+                });
+
+            getData(url)
+                .then((data) => console.log(data))
+                .catch((error) => console.log(error.message));
+
+            const getData2 = async (url) => {
+                try {
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    return data;
+                } catch (error) {
+                    console.log(error);
+                }
+            };
+
+            const fetchData = await getData2(url);
+            console.log(fetchData);
+        </script>
+    </body>
+</html>
