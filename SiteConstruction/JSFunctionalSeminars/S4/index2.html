@@ -4,17 +4,22 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" />
     </head>
+
     <body>
         <div class="container">
-            <figure>
-                <img src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/elephant-660-480.jpg" alt="Elephant at sunset" />
+            <!-- <figure>
+                <img
+                    src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/elephant-660-480.jpg"
+                    alt="Elephant at sunset"
+                />
                 <figcaption>An elephant at sunset</figcaption>
-              </figure>
+            </figure> -->
         </div>
         <script type="module">
-            const NASAUrl = 'https://api.nasa.gov/planetary/apod?api_key=VG7hcoFMcSvGDhlJh3ylikHVk7Q8Q4Op8ZFDomGN&count=2';
+            const NASAUrl =
+                "https://api.nasa.gov/planetary/apod?api_key=VG7hcoFMcSvGDhlJh3ylikHVk7Q8Q4Op8ZFDomGN&count=2";
 
             const getNASAData = async (url) => {
                 try {
@@ -29,10 +34,17 @@
             const fetchNASAData = await getNASAData(NASAUrl);
             console.log(fetchNASAData);
 
-            const divEl = document.querySelector('div.container');
+            const divEl = document.querySelector("div.container");
             // console.log(divEl);
-            fetchNASAData.forEach(element => {
-                divEl.insertAdjacentHTML
+            fetchNASAData.forEach((element) => {
+                divEl.insertAdjacentHTML(
+                    "beforeend",
+                    `<figure>
+                    <img src="${element.url}" alt="${element.title}" />
+                    <figcaption>${element.title}</figcaption>
+                    <p class="description">${element.explanation}</p>
+                  </figure>`
+                );                
             });
         </script>
     </body>
