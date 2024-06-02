@@ -19,6 +19,11 @@ const server = http.createServer((req, res) => {
             "Content-Type": "text/html; charset=UTF-8",
         });
         res.end("<h1>About</h1>");
+    } else {
+        res.writeHead(404, {
+            "Content-Type": "text/html; charset=UTF-8",
+        });
+        res.end("<h1>Page not found </h1>");
     }
 });
 
