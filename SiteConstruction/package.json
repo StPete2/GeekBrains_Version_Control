@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node NodeJS/Lection2/script.js"
+    "startl": "node NodeJS/Lection2/script.js",
+    "starts": "node NodeJS_Seminars/Seminar2/script.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "colors": "^1.4.0",
+    "number-precision": "^1.6.0",
     "uuid": "^9.0.1"
   }
 }
