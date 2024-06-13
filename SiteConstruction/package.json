@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "colors": "^1.4.0",
+    "nodejstestgb": "^1.0.0",
     "number-precision": "^1.6.0",
     "uuid": "^9.0.1"
   }
