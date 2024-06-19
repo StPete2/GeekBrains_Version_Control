@@ -13,3 +13,12 @@
 // - Получить доступ к файлу можно напрямую обратившись к имени файла
 // в адресной строке (localhost:3000/index.html)
 
+const express = require('express');
+const app = express();
+
+app.use(express.static("./")) // подключение middleware - программное обеспечение, которое соединяет сервер и приложение. Через него отправляются статичные данные.
+// зарегистрировали папку static
+
+
+const port = 3100;
+app.listen(port);
