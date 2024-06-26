@@ -1,17 +1,39 @@
-const express = require('express');
+const express = require("express");
+const Joi = require('joi');
 const app = express();
 
 let uniqueID = 0;
 const articles = [];
 
+const articleSchema = Joi.object({
+    title: Joi.string().min(5).required(),
+    content: Joi.string().min(10).required(),
+});
+
+const idSchema = Joi.object({
+    id: Joi.number().required(),
+});
 app.use(express.json());
 
-app.get('/articles', (req, res) => {
+/**
+ * Получить все статьи
+ */
+app.get("/articles", (req, res) => {
     res.send({ articles });
 });
 
-app.get('/articles/:id', (req, res) => {
-    const article = articles.find((article) => article.id === Number(req.params.id));
+/**
+ * Получить конкретную статью
+ */
+app.get("/articles/:id", (req, res) => {
+    const idValidationResult = idSchema.validate(req.params);
+    if (idValidationResult.error) {
+        return res.status(400).send(idValidationResult.error.details);
+    }
+
+    const article = articles.find(
+        (article) => article.id === Number(req.params.id)
+    );
 
     if (article) {
         res.send({ article });
@@ -21,11 +43,16 @@ app.get('/articles/:id', (req, res) => {
     }
 });
 
-app.post('/articles', (req, res) => {
+app.post("/articles", (req, res) => {
+    const articleValidationResult = articleSchema.validate(req.body);
+    if (articleValidationResult.error) {
+        return res.status(400).send(articleValidationResult.error.details);
+    }
+
     uniqueID += 1;
     articles.push({
         id: uniqueID,
-        ...req.body
+        ...req.body,
     });
 
     res.send({
@@ -33,8 +60,20 @@ app.post('/articles', (req, res) => {
     });
 });
 
-app.put('/articles/:id', (req, res) => {
-    const article = articles.find((article) => article.id === Number(req.params.id));
+app.put("/articles/:id", (req, res) => {
+    const idValidationResult = idSchema.validate(req.params);
+    if (idValidationResult.error) {
+        return res.status(400).send(idValidationResult.error.details);
+    }
+
+    const articleValidationResult = articleSchema.validate(req.body);
+    if (articleValidationResult.error) {
+        return res.status(400).send(articleValidationResult.error.details);
+    }
+
+    const article = articles.find(
+        (article) => article.id === Number(req.params.id)
+    );
 
     if (article) {
         article.title = req.body.title;
@@ -47,8 +86,10 @@ app.put('/articles/:id', (req, res) => {
     }
 });
 
-app.delete('/articles/:id', (req, res) => {
-    const article = articles.find((article) => article.id === Number(req.params.id));
+app.delete("/articles/:id", (req, res) => {
+    const article = articles.find(
+        (article) => article.id === Number(req.params.id)
+    );
 
     if (article) {
         const articleIndex = articles.indexOf(article);
@@ -59,5 +100,11 @@ app.delete('/articles/:id', (req, res) => {
         res.status(404);
         res.send({ article: null });
     }
+});
+
+app.use((req, res) => {
+    res.status(404).send({
+        message: 'URL not found'
+    })
 })
 app.listen(3000);

@@ -19,8 +19,8 @@ const schema2 = Joi.object({
 
 const result2 = schema2.validate({
     id: 1,
-    title: '1',
-    content: '1',
+    title: '123456',
+    content: '1asdf4asdf',
 })
 
-console.log(result2.error.details);
+console.log(result2.error?.details);
