@@ -1,14 +1,35 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const Joi = require("joi");
+const idFileName = path.join(__dirname, 'id.json');
+
+const uniqueIDObject = JSON.parse(fs.readFileSync(idFileName));
+let uniqueID = uniqueIDObject[0].id;
+
+const userSchema = Joi.object({
+    name: Joi.string().min(5).required(),
+    familyName: Joi.string().min(5).required(),
+    age: Joi.number().required(),
+});
 
 const app = express();
 const port = 3000;
-let uniqueID = 3;
 
 const nameFile = "users.json";
 const pathFile = path.join(__dirname, nameFile);
 
+const users = [];
+
+try {
+    if (!fs.existsSync(pathFile)) {
+        fs.writeFileSync(pathFile, JSON.stringify(users, null, 2));
+    }
+} catch (error) {
+
+}
+
+// let uniqueID = 3;
 app.use(express.json());
 
 app.get("/users", (req, res) => {
@@ -31,6 +52,13 @@ app.get("/users/:id", (req, res) => {
     }
 });
 app.post("/users/", (req, res) => {
+    const result = userSchema.validate(req.body);
+    if (result.error) {
+        return res
+            .status(404)
+            .send({ status: "error", error: result.error.details });
+    }
+
     const users = JSON.parse(fs.readFileSync(pathFile));
     const user = {
         id: uniqueID++,
@@ -40,10 +68,18 @@ app.post("/users/", (req, res) => {
     };
     users.push(user);
     fs.writeFileSync(pathFile, JSON.stringify(users, null, 2));
+    uniqueIDObject[0].id = uniqueID;
+    fs.writeFileSync(idFileName, JSON.stringify(uniqueIDObject, null, 2));
     res.send({ user });
 });
 
 app.put("/users/:id", (req, res) => {
+    const result = userSchema.validate(req.body);
+    if (result.error) {
+        return res
+            .status(404)
+            .send({ status: "error", error: result.error.details });
+    }
     const users = JSON.parse(fs.readFileSync(pathFile));
     const user = users.find((user) => user.id === Number(req.params.id));
     if (user) {
