@@ -8,6 +8,9 @@
 */
 
 // Объявляем символы reviewSymbol, ratingSymbol и tagsSymbol
+const reviewSymbol = Symbol("review");
+const ratingSymbol = Symbol("rating");
+const tagsSymbol = Symbol("tags");
 
 class Book {
     constructor(title, author) {
@@ -16,24 +19,61 @@ class Book {
     }
 
     /**
-     * Метод извлекает из объекта значение под свойством metadataType 
+     * Метод извлекает из объекта значение под свойством metadataType
      * и возвращает его.
-     * @param {Symbol} metadataType 
+     * @param {Symbol} metadataType
      * @returns {Array}
      */
     getMetadata(metadataType) {
-
+        if (!this[metadataType]) {
+            return [];
+        } else {
+            return this[metadataType];
+        }
     }
 
     /**
-     * Метод добавляет в объект массив под ключом metadataType, со значением 
-     * data внутри. Если массив под данным свойством уже существует, 
+     * Метод добавляет в объект массив под ключом metadataType, со значением
+     * data внутри. Если массив под данным свойством уже существует,
      * тогда data просто будет добавлен в данный массив.
-     * @param {Symbol} metadataType 
-     * @param {any} data 
+     * @param {Symbol} metadataType
+     * @param {any} data
      */
     addMetadata(metadataType, data) {
+        if (!this[metadataType]) {
+            this[metadataType] = [];
+        }
+        this[metadataType].push(data);
+    }
 
+    hasTag(tag) {
+        const tagsArray = this.getMetadata(tagsSymbol);
+        if (tagsArray.length === 0) {
+            return false;
+        }
+        // for (let i = 0; i < tagsArray.length; i++) {
+        //     if (tagsArray[i] === tag) {
+        //         return true;
+        //     }
+        // }
+        // return false;
+        // return tagsArray.includes(tag) ? true : false;
+        return tagsArray.includes(tag);
+    }
+    getAverageRating() {
+        const ratingsArray = this.getMetadata(ratingSymbol);
+        if (ratingsArray.length === 0) {
+            return null;
+        }
+        // let sum = 0;
+        // for (let i = 0; i < ratingsArray.length; i++) {
+        //     sum += ratingsArray[i];
+        // }
+        let sum = ratingsArray.reduce((sum, elem) => sum + elem, 0);
+        return Math.round((sum * 10) / ratingsArray.length) / 10;
+    }
+    reviewsCount() {
+        return this.getMetadata(reviewSymbol).length;
     }
 }
 
@@ -46,7 +86,7 @@ book.addMetadata(ratingSymbol, 4);
 
 // ["Отличная книга о дистопии!", "Книга отстой, не покупайте ее."]
 console.log(book.getMetadata(reviewSymbol));
-console.log(book.getMetadata(ratingSymbol)); // [5, 4, 4] 
+console.log(book.getMetadata(ratingSymbol)); // [5, 4, 4]
 console.log(book.getMetadata(tagsSymbol)); // []
 
 book.addMetadata(tagsSymbol, "novel");
