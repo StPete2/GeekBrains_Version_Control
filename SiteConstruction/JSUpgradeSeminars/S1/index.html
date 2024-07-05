@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./task3.js" defer></script>
+    <script src="./task4.js" defer></script>
 </head>
+
 <body>
     <div>Element 1</div>
     <div data-active="true">Element 2</div>
@@ -13,4 +15,21 @@
     <div>Element 4</div>
     <div data-active="false">Element 5</div>
 </body>
+<script>
+    const divEls = document.querySelectorAll("div");
+    console.log(divEls);
+
+    const divElsArray = Array.from(divEls);
+    // const divElsArray2 = [...divEls];
+    console.log(divElsArray);
+
+    const filteredArray = divElsArray.filter((elem) =>
+        elem.hasAttribute("data-active")
+    );
+    console.log(filteredArray);
+    filteredArray.forEach((elem) => {
+        console.log(elem.innerHTML);
+    });
+</script>
+
 </html>
