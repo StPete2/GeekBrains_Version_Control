@@ -29,24 +29,40 @@ class BankAccount {
     }
 
     deposit(amount) {
-        const digitsAfterPoint = amount.toString().includes('.') ? amount.toString().split('.').pop().length : 0;
-        console.log(digitsAfterPoint);
+        this.#correctAmount(amount);
+        return this.#balance = Math.round((this.#balance + amount) * 100) / 100;
+    }
+
+    withdraw(amount) {
+        this.#correctAmount(amount);
+        if (amount > this.#balance) {
+            throw new Error("Withdrawn amount exceeds the balance");
+        }
+        return this.#balance = Math.round((this.#balance - amount) * 100) / 100;
+    }
+
+    #correctAmount(amount) {
         if (typeof amount !== "number") {
             throw new Error("Amount is not a number");
-        } else if (!Number.isFinite(amount)) {
+        }
+        const digitsAfterPoint = amount.toString().includes(".")
+            ? amount.toString().split(".").pop().length
+            : 0;
+        // if (typeof amount !== "number") {
+        //     throw new Error("Amount is not a number");
+        if (!Number.isFinite(amount)) {
             throw new Error("Can't deposit Infinity, sorry :-)");
         } else if (amount < 0) {
             throw new Error("Can't deposit a negative amount");
         } else if (amount == 0) {
             throw new Error("Please, deposit a positive amount");
-        } else if (digitsAfterPoint != 0 && digitsAfterPoint != 1 && digitsAfterPoint != 2) {
+        } else if (
+            digitsAfterPoint !== 0 &&
+            digitsAfterPoint !== 1 &&
+            digitsAfterPoint !== 2
+        ) {
             throw new Error("Please, deposit a valid amount");
         }
-        return (this.#balance += amount);
-    }
-
-    withdraw(amount) {
-        return (this.#balance -= amount);
     }
 }
 
@@ -61,4 +77,7 @@ bankAccount.withdraw(50);
 console.log(bankAccount.getBalance());
 
 bankAccount.deposit(1.23);
+console.log(bankAccount.balance);
+
+bankAccount.withdraw(12.02);
 console.log(bankAccount.balance);
