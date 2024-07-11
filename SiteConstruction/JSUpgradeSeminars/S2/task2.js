@@ -17,21 +17,42 @@ RegularUser такого свойства нет.
 
 class User {
     constructor(name, familyName) {
+        if (this.constructor === User) {
+            throw new Error("Not possible to create an abstract user");
+        }
         this.name = name;
         this.familyName = familyName;
     }
 }
 
 class PremiumUser extends User {
-    constructor(premiumExpiration) {
-        super();
+    constructor(name, familyName, premiumExpiration) {
+        super(name, familyName);
         this.premiumExpiration = premiumExpiration;
     }
 }
 
 class RegularUser extends User {
-    constructor() {
-        super();
+    // constructor(name, familyName) {
+    //     super(name, familyName);
+    // } // можно не писать, так как вызовется автоматически
+}
+
+function getAccountInfo(user) {
+    if (user instanceof PremiumUser) {
+        console.log(`${user.name} is a premium user. Expiration: ${user.premiumExpiration}`);
+    } else if (user instanceof RegularUser) {
+        console.log(`${user.name} is a regular user.`);
+    } else {
+        console.log('Error');
     }
 }
+
+const premiumUser = new PremiumUser("PremiumName", "PremiumFamilyName", "22.10.24");
+const regularUser = new RegularUser("RegularName", "RegularFamilyName");
+// const ordinaryUser = new User("Test", "TestUser");
+
+getAccountInfo(premiumUser);
+getAccountInfo(regularUser);
+// getAccountInfo(ordinaryUser);
 
