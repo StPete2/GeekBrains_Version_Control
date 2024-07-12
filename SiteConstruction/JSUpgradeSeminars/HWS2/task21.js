@@ -9,15 +9,7 @@
 
 // Вы можете использовать этот массив initialData для начальной загрузки данных при запуске вашего приложения.
 
-// const fs = require('fs');
-// const path = require('path');
-// const fileName = "data.json";
-// const fullFileName = path.join(__dirname, fileName);
-
-// const savedData = JSON.parse(fs.readFileSync(fullFileName));
-// console.log(savedData);
-
-const divContainerReviewsEl = document.querySelector('div.container-reviews');
+const divContainerReviewsEl = document.querySelector("div.container-reviews");
 const reviewsData = [
     {
         product: "Apple iPhone 13",
@@ -53,18 +45,44 @@ const reviewsData = [
 ];
 // console.log(reviewsData);
 
-reviewsData.forEach((elem) => {
-    const templateEl = document.querySelector('#review-template');
-    const reviewsBox = document.querySelector('div.reviews-box');
-    // console.log(templateEl.content);
-    // console.log(elem.reviews);
-    const cloneEl = templateEl.content.cloneNode(true);
-    cloneEl.querySelector('h3.device-name').innerHTML = elem.product;
-    if (elem.reviews.length > 1) {
-        elem.reviews.forEach((element) => {
-            cloneEl.querySelector('p.review-number').innerHTML = element.id;
-            cloneEl.querySelector('p.review-text').innerHTML = element.text;
+const deviceNameEl = document.querySelector("h3.device-name");
+const reviewsBoxEl = document.querySelector("div.reviews-box");
+const reviewEl = document.querySelector("div.review");
+const reviewNumberEl = document.querySelector("p.review-number");
+const reviewTextEl = document.querySelector("p.review-text");
+const divDeviceEl = document.querySelector("div.device");
+// console.log(deviceNameEl);
+// console.log(reviewsBoxEl);
+// console.log(reviewEl);
+// console.log(reviewNumberEl);
+// console.log(reviewTextEl);
+
+reviewsData.forEach((element) => {
+    const deviceNameElInside = document.createElement("h3");
+    deviceNameElInside.innerHTML = element.product;
+    console.log(element);
+    const divDeviceElInside = document.createElement("div");
+    divDeviceElInside.appendChild(deviceNameElInside);
+    if (element.reviews.length > 1) {
+        element.reviews.forEach((reviewsElem) => {
+            const reviewNumberElInside = document.createElement("p");
+            reviewNumberElInside.innerHTML = reviewsElem.id;
+            divDeviceElInside.appendChild(reviewNumberElInside);
+            const reviewTextElInside = document.createElement("p");
+            reviewTextElInside.innerHTML = reviewsElem.text;
+            divDeviceElInside.appendChild(reviewTextElInside);
         });
+    } else {
+        const reviewNumberElInside = document.createElement("p");
+        reviewNumberElInside.innerHTML = element.reviews[0].id;
+        divDeviceElInside.appendChild(reviewNumberElInside);
+        const reviewTextElInside = document.createElement("p");
+        reviewTextElInside.innerHTML = element.reviews[0].text;
+        divDeviceElInside.appendChild(reviewTextElInside);
     }
-    divContainerReviewsEl.appendChild(cloneEl);
+    divContainerReviewsEl.appendChild(divDeviceElInside);
 });
+
+// поймать данные, которые вводит пользователь
+
+// записать в свой device отзыв.

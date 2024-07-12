@@ -6,7 +6,7 @@ const cartItemsBox = cartItems.querySelector('div.cart-items__box');
 
 dataJs.forEach(element => {
     const templateEl = document.querySelector('#cart-template');
-    // console.log(templateEl);
+    // console.log(templateEl.content);
     const cloneEl = templateEl.content.cloneNode(true);
 
     cloneEl.querySelector('img.cart-item__img').src = element.imgSrc;
