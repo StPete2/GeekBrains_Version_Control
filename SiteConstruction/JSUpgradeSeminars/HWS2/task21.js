@@ -43,7 +43,7 @@ const reviewsData = [
         ],
     },
 ];
-// console.log(reviewsData);
+console.log(reviewsData);
 
 const deviceNameEl = document.querySelector("h3.device-name");
 const reviewsBoxEl = document.querySelector("div.reviews-box");
@@ -80,9 +80,50 @@ reviewsData.forEach((element) => {
         reviewTextElInside.innerHTML = element.reviews[0].text;
         divDeviceElInside.appendChild(reviewTextElInside);
     }
+    divDeviceElInside.classList.add(`${element.product.replaceAll(" ", "")}`);
     divContainerReviewsEl.appendChild(divDeviceElInside);
 });
 
 // поймать данные, которые вводит пользователь
+let foundDeviceName = "";
+// console.log(newReviewNumber);
 
-// записать в свой device отзыв.
+const inputEl = document.querySelector('input.user-review');
+const buttonEl = document.querySelector('button.submit-button');
+
+const selectValueEl = document.querySelector('select.list-of-devices');
+selectValueEl.addEventListener('change', () => {
+    foundDeviceName = selectValueEl.value;
+});
+
+buttonEl.addEventListener('click', () => {
+    const newReviewNumberEl = document.createElement('p');
+    const newReviewTextEl = document.createElement('p');
+    newReviewTextEl.innerHTML = inputEl.value;
+    if (inputEl.value.length < 3 || inputEl.value.length > 10) {
+        throw new Error("Отзыв не может быть меньше 3 и более 10 символов");
+    }
+    let newReviewNumber = 0;
+    reviewsData.forEach((el) => {
+        newReviewNumber += el.reviews.length;
+    });
+    reviewsData.forEach((element) => {
+        if (foundDeviceName === element.product) {
+            element.reviews.push({ id: `${(newReviewNumber + 1)}`, text: inputEl.value });
+            console.log(reviewsData);
+            newReviewNumberEl.innerHTML = newReviewNumber + 1;
+
+            let divContainerNextElement = divContainerReviewsEl.firstElementChild;
+            for (let i = 0; i < divContainerReviewsEl.children.length; i++) {
+                // console.log(divContainerNextElement);
+                if (divContainerNextElement.classList.contains(`${element.product.replaceAll(" ", "")}`)) {
+                    console.log('bingo');
+                    divContainerNextElement.appendChild(newReviewNumberEl);
+                    divContainerNextElement.appendChild(newReviewTextEl);
+                }
+                divContainerNextElement = divContainerNextElement.nextElementSibling;
+            }
+        }
+    });
+
+});
