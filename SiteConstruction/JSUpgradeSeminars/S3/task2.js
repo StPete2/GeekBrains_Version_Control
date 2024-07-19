@@ -22,9 +22,37 @@ const localStorageKey = "settings";
 saveButtonEl.addEventListener("click", () => {
     const tableColorValue = tableColorEl.value;
     const chairMaterialValue = chairMaterialEl.value;
-    localStorage.setItem(localStorageKey, JSON.stringify({
-        tableColor: `${tableColorValue}`,
-        chairMaterialValue: `${chairMaterialValue}`,
-    }));
+    localStorage.setItem(
+        localStorageKey,
+        JSON.stringify({
+            // tableColor: `${tableColorValue}`,
+            tableColorValue,
+            chairMaterialValue,
+            // chairMaterialValue: `${chairMaterialValue}`,
+        })
+    );
     console.log(localStorage);
+});
+
+function loadSettings() {
+    if (localStorage.getItem(localStorageKey)) {
+        const settings = JSON.parse(localStorage.getItem(localStorageKey));
+        tableColorEl.value = settings.tableColorValue;
+        chairMaterialEl.value = settings.chairMaterialValue;
+    }
+}
+
+loadSettings();
+
+loadButtonEl.addEventListener("click", () => {
+    loadSettings();
+});
+
+clearButtonEl.addEventListener("click", () => {
+    if (localStorage.getItem(localStorageKey)) {
+        const settings = JSON.parse(localStorage.getItem(localStorageKey));
+        tableColorEl.value = "";
+        chairMaterialEl.value = "";
+        // localStorage.removeItem(localStorageKey); // добавить, если необходимо удалить полностью все настройки. Я бы так не делал.
+    }
 });
