@@ -3,8 +3,7 @@
 // const fs = require("fs");
 // const path = require("path");
 
-let checkIfFileExists = (file) => {
-};
+let checkIfFileExists = (file) => { };
 
 let checkFileExists = (file) => {
     return new Promise((resolve, reject) => {

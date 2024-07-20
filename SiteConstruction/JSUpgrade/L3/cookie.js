@@ -17,7 +17,7 @@ console.log(document.cookie);
 let getCookie = (name) => {
     let cookies = document.cookie.split(";");
     for (let cookie of cookies) {
-        let [cookieName, cookieValue] = cookie.trim().split("=");
+        let [cookieName, cookieValue] = cookie.trim().split("="); // деструктуризация, или распаковка
         if (cookieName === name) {
             return decodeURIComponent(cookieValue);
         }
