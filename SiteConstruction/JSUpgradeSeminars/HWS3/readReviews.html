@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read reviews</title>
+    <style>
+        .products-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .product-review-box {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+        }
+
+        .review-box {
+            display: flex;
+            gap: 16px;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="products-list">
+        Список всех продуктов, на которые были оставлены отзывы
+        <div class="product-review-box">
+            Название продукта
+            <div class="review-box">
+                <li class="review">Отзыв о продукте</li>
+                <button class="delete-review-button">Delete review</button>
+            </div>
+        </div>
+        <div class="product-review-box">
+            Название продукта
+            <div class="review-box">
+                <li class="review">Отзыв о продукте</li>
+                <button class="delete-review-button">Delete review</button>
+            </div>
+            <div class="review-box">
+                <li class="review">Отзыв о продукте</li>
+                <button class="delete-review-button">Delete review</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
